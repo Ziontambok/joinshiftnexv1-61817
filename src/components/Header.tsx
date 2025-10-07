@@ -47,12 +47,15 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <Link to="/">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/498766fa-35a5-4bb6-b222-6e9081788490.png" 
               alt="Prime Virtual Solutions Logo" 
               className="h-10 md:h-12"
             />
+            <span className="text-xl md:text-2xl font-bold text-shiftnex-deep-blue">
+              Prime Virtual Solutions
+            </span>
           </Link>
         </div>
 
