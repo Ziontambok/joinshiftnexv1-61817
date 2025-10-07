@@ -11,24 +11,24 @@ const Footer = () => {
           <div>
             <img 
               src="/lovable-uploads/498766fa-35a5-4bb6-b222-6e9081788490.png" 
-              alt="ShiftNex AI Logo" 
+              alt="Prime Virtual Solutions Logo" 
               className="h-12 mb-4"
             />
             <p className="text-gray-600 mb-6">
-              Redefining healthcare staffing through AI-powered Smart Shifts™, blockchain-verified 
-              credentials, and real-time scheduling.
+              Professional virtual assistant and call center services helping businesses scale 
+              efficiently with 24/7 support and expert remote professionals.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/shiftnex" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/primevirtualsolutions" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Facebook">
                 <Facebook size={20} />
               </a>
-              <a href="https://twitter.com/shiftnex" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Twitter">
+              <a href="https://twitter.com/primevirtualsol" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Twitter">
                 <Twitter size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/shiftnex" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/prime-virtual-solutions" target="_blank" rel="noopener noreferrer" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="LinkedIn">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@shiftnex.app" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Email">
+              <a href="mailto:contact@primevirtualsolutions.com" className="text-shiftnex-deep-blue hover:text-shiftnex-teal transition-colors" aria-label="Email">
                 <Mail size={20} />
               </a>
             </div>
@@ -94,13 +94,13 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-bold text-shiftnex-deep-blue mb-4">Newsletter</h3>
             <p className="text-gray-600 mb-4">
-              Stay in the loop on the future of healthcare staffing.
+              Stay updated on the latest in virtual assistant services.
             </p>
             <form 
               className="flex"
               onSubmit={(e) => {
                 e.preventDefault();
-                window.open("https://www.shiftnex.app", "_blank", "noopener,noreferrer");
+                window.open("https://www.primevirtualsolutions.com", "_blank", "noopener,noreferrer");
               }}
             >
               <input 
@@ -114,12 +114,12 @@ const Footer = () => {
             </form>
             <div className="mt-4">
               <a 
-                href="https://www.shiftnex.app" 
+                href="https://www.primevirtualsolutions.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-shiftnex-teal hover:underline"
               >
-                Join the Network
+                Get Started Today
               </a>
             </div>
           </div>
@@ -127,7 +127,7 @@ const Footer = () => {
         
         <div className="border-t border-gray-200 pt-8">
           <p className="text-center text-gray-600">
-            © 2025 ShiftNex AI. All rights reserved.
+            © 2025 Prime Virtual Solutions. All rights reserved.
           </p>
         </div>
       </div>

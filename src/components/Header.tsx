@@ -50,7 +50,7 @@ const Header = () => {
           <Link to="/">
             <img 
               src="/lovable-uploads/498766fa-35a5-4bb6-b222-6e9081788490.png" 
-              alt="ShiftNex AI Logo" 
+              alt="Prime Virtual Solutions Logo" 
               className="h-10 md:h-12"
             />
           </Link>
@@ -96,7 +96,7 @@ const Header = () => {
           </button>
           <div className="flex items-center space-x-4">
             <a 
-              href="https://www.shiftnex.app" 
+              href="https://www.primevirtualsolutions.com" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
@@ -104,12 +104,12 @@ const Header = () => {
               Login
             </a>
             <a 
-              href="https://www.shiftnex.app" 
+              href="https://www.primevirtualsolutions.com" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn-primary"
             >
-              Join the Network
+              Get Started
             </a>
           </div>
         </nav>
@@ -168,7 +168,7 @@ const Header = () => {
             </button>
             <div className="flex flex-col space-y-4">
               <a 
-                href="https://www.shiftnex.app" 
+                href="https://www.primevirtualsolutions.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
@@ -176,12 +176,12 @@ const Header = () => {
                 Login
               </a>
               <a 
-                href="https://www.shiftnex.app" 
+                href="https://www.primevirtualsolutions.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn-primary w-full text-center"
               >
-                Join the Network
+                Get Started
               </a>
             </div>
           </div>

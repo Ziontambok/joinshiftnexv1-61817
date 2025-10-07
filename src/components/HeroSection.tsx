@@ -15,15 +15,15 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-20 h-screen flex flex-col justify-center">
         <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">The Freedom to work and make an impact your way.</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Scale Your Business with Expert Virtual Assistants</h1>
           
           <p className="text-xl md:text-2xl text-white mb-8 max-w-lg">
-            Join thousands of healthcare professionals who have found flexibility and better pay with ShiftNex A.i.
+            Professional virtual assistant and call center services that help businesses grow without the overhead.
           </p>
           
-          <a href="https://www.shiftnex.app/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
             <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center">
-              Start Your Journey <ArrowRight className="ml-2" />
+              Get Started <ArrowRight className="ml-2" />
             </Button>
           </a>
         </div>
@@ -33,22 +33,22 @@ const HeroSection = () => {
       <div className="bg-white py-24 relative z-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why join ShiftNex A.i?</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Join a community of healthcare professionals who are taking control of their careers.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Prime Virtual Solutions?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Join businesses worldwide that trust us to handle their virtual assistance and customer support needs.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             <div className="text-center">
-              <h3 className="text-5xl font-bold text-gray-900 mb-4">$9,500</h3>
-              <p className="text-lg text-gray-600">Average monthly earnings for healthcare professionals working full-time</p>
+              <h3 className="text-5xl font-bold text-gray-900 mb-4">60%</h3>
+              <p className="text-lg text-gray-600">Average cost savings compared to hiring in-house staff</p>
             </div>
             <div className="text-center">
-              <h3 className="text-5xl font-bold text-gray-900 mb-4">75%</h3>
-              <p className="text-lg text-gray-600">Work-life balance improvement reported by our healthcare providers</p>
+              <h3 className="text-5xl font-bold text-gray-900 mb-4">24/7</h3>
+              <p className="text-lg text-gray-600">Round-the-clock support available for your business needs</p>
             </div>
             <div className="text-center">
-              <h3 className="text-5xl font-bold text-gray-900 mb-4">100M+</h3>
-              <p className="text-lg text-gray-600">Hours filled across thousands of healthcare facilities</p>
+              <h3 className="text-5xl font-bold text-gray-900 mb-4">500+</h3>
+              <p className="text-lg text-gray-600">Businesses trust us with their virtual assistance needs</p>
             </div>
           </div>
         </div>
@@ -58,8 +58,8 @@ const HeroSection = () => {
       <div className="bg-gray-50 py-24 relative z-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How ShiftNex A.i works</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">We make it simple to start earning and taking control of your schedule.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Prime Virtual Solutions Works</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Getting started with our virtual assistant services is simple and straightforward.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -67,28 +67,28 @@ const HeroSection = () => {
               <div className="w-16 h-16 bg-soft-teal rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">1</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Create your profile</h3>
-              <p className="text-lg text-gray-600 text-center">Set up your credentials, specialties, and preferences in minutes</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Consultation</h3>
+              <p className="text-lg text-gray-600 text-center">Tell us about your business needs and goals in a free consultation</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-soft-orange rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Browse opportunities</h3>
-              <p className="text-lg text-gray-600 text-center">Find shifts that match your skills and schedule preferences</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Match & Onboard</h3>
+              <p className="text-lg text-gray-600 text-center">We match you with skilled virtual assistants and handle all onboarding</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-soft-purple rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">Get paid quickly</h3>
-              <p className="text-lg text-gray-600 text-center">Receive secure payments directly to your account after each shift</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Scale & Grow</h3>
+              <p className="text-lg text-gray-600 text-center">Focus on your core business while we handle administrative tasks</p>
             </div>
           </div>
           
           <div className="text-center mt-16">
             <Button className="bg-soft-teal hover:bg-opacity-90 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
-              Learn more about healthcare shifts
+              Learn more about our services
             </Button>
           </div>
         </div>
@@ -97,11 +97,11 @@ const HeroSection = () => {
       {/* Start healthcare CTA */}
       <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-24 relative z-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to start your healthcare journey?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to transform your business?</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-            Join ShiftNex A.i today and discover the freedom of working on your own terms while making a difference in healthcare.
+            Join Prime Virtual Solutions today and discover how expert virtual assistants can help you scale efficiently.
           </p>
-          <a href="https://www.shiftnex.app/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
             <Button className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
               Get Started Today
             </Button>

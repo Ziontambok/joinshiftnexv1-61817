@@ -12,16 +12,16 @@ const VisionSection = () => {
               <div className="absolute top-4 left-4 right-4 bottom-4 border-2 border-shiftnex-teal rounded-xl"></div>
               <div className="bg-shiftnex-teal bg-opacity-10 rounded-xl p-12">
                 <div className="relative z-10 space-y-3">
-                  <h3 className="text-3xl font-bold mb-6">The Future of Care Delivery</h3>
+                  <h3 className="text-3xl font-bold mb-6">The Future of Business Support</h3>
                   <p className="text-lg text-white text-opacity-90 mb-8">
-                    Freedom and stability to make an impact in healthcare your way.
+                    Empowering businesses to scale efficiently with expert virtual assistance.
                   </p>
                   <p className="text-lg text-white text-opacity-90 mb-8">
-                    Let work fit into your life, not the other way around.
+                    Focus on growth while we handle your administrative and customer service needs.
                   </p>
                   <p className="text-lg text-white text-opacity-90">
-                    Our AI-powered platform is reshaping how healthcare staffing works, creating a more efficient 
-                    and equitable system for both professionals and facilities.
+                    Our platform connects businesses with skilled virtual assistants and call center professionals, 
+                    creating a more efficient and cost-effective solution for business operations.
                   </p>
                 </div>
               </div>
@@ -31,26 +31,26 @@ const VisionSection = () => {
           <div className="w-full lg:w-1/2 reveal-right">
             <div className="space-y-8">
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:border-opacity-30 transition-all hover:-translate-y-1 duration-300">
-                <h4 className="text-xl font-bold mb-3">Transforming Healthcare Delivery</h4>
+                <h4 className="text-xl font-bold mb-3">Transforming Business Operations</h4>
                 <p className="text-white text-opacity-80">
-                  Our platform's intelligent matching system ensures the right professionals 
-                  are at the right facilities at the right time, improving care quality and efficiency.
+                  Our intelligent matching system ensures you get the right virtual assistant 
+                  with the perfect skill set for your specific business needs.
                 </p>
               </div>
               
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:border-opacity-30 transition-all hover:-translate-y-1 duration-300">
-                <h4 className="text-xl font-bold mb-3">Empowering Healthcare Professionals</h4>
+                <h4 className="text-xl font-bold mb-3">Empowering Business Growth</h4>
                 <p className="text-white text-opacity-80">
-                  Take control of your career with flexible scheduling, fair compensation, 
-                  and opportunities to grow professionally while making a meaningful impact.
+                  Scale your operations efficiently with flexible virtual assistance, 
+                  reducing overhead costs while maintaining high-quality service standards.
                 </p>
               </div>
               
               <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover:border-opacity-30 transition-all hover:-translate-y-1 duration-300">
-                <h4 className="text-xl font-bold mb-3">Strengthening Community Care</h4>
+                <h4 className="text-xl font-bold mb-3">Enhancing Customer Experience</h4>
                 <p className="text-white text-opacity-80">
-                  By optimizing healthcare staffing, we help ensure communities have access 
-                  to quality care when and where they need it most.
+                  With 24/7 call center support and expert virtual assistants, ensure your customers 
+                  always receive prompt, professional service when they need it.
                 </p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const VisionSection = () => {
         
         <div className="mt-16 text-center reveal">
           <a 
-            href="https://www.shiftnex.app/" 
+            href="https://www.primevirtualsolutions.com/" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-accent text-lg px-10 py-4 rounded-xl inline-block"

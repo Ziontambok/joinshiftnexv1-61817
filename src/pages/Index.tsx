@@ -41,10 +41,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>ShiftNex AI - Intelligent Care Delivery Network</title>
-        <meta name="description" content="ShiftNex AI matches healthcare professionals with optimal shifts using AI-powered scheduling. Find flexible healthcare jobs that fit your skills, lifestyle, and preferences." />
-        <meta name="keywords" content="healthcare staffing, nursing jobs, healthcare scheduling, AI healthcare, flexible healthcare shifts, medical staffing platform, healthcare workforce management" />
-        <link rel="canonical" href="https://shiftnex.app/" />
+        <title>Prime Virtual Solutions - Professional Virtual Assistant & Call Center Services</title>
+        <meta name="description" content="Prime Virtual Solutions provides expert virtual assistant and call center services to help businesses scale efficiently. 24/7 support, skilled professionals, and cost-effective solutions." />
+        <meta name="keywords" content="virtual assistant, call center services, customer support, business process outsourcing, remote staff, virtual receptionist, administrative support, customer service outsourcing" />
+        <link rel="canonical" href="https://primevirtualsolutions.com/" />
       </Helmet>
       
       <Header />
