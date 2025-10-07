@@ -57,9 +57,7 @@ const Header = () => {
           <Link to="/how-it-works" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             How It Works
           </Link>
-          <button onClick={() => handleNavigation('benefits')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
-            Benefits
-          </button>
+          
           <Link to="/careers" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Careers
           </Link>
