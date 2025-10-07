@@ -3,30 +3,14 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
-  return <section className="relative min-h-screen">
-      {/* Hero Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* White gradient overlay at the top */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/70 to-transparent h-32 z-20"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent z-10"></div>
-        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=2070&q=80" alt="Healthcare professional" className="w-full h-full object-cover" />
-      </div>
-      
-      {/* Hero Content */}
-      <div className="container mx-auto px-4 relative z-20 h-screen flex flex-col justify-center">
-        <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Empower Your SME with Expert Virtual Assistants</h1>
-          
-          <p className="text-xl md:text-2xl text-white mb-8 max-w-lg">
-            From virtual assistants to technical support and web development - comprehensive remote services for growing businesses.
-          </p>
-          
-          <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-gradient-to-r from-blue-600 to-blue-800 hover:from-blue-700 hover:to-blue-900 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300 flex items-center">
-              Get Started <ArrowRight className="ml-2" />
-            </Button>
-          </a>
-        </div>
+  return <section className="relative">
+      {/* Hero Banner */}
+      <div className="relative w-full">
+        <img 
+          src="/images/hero-banner.png" 
+          alt="Prime Virtual Solutions - Premium virtual solutions you can rely on" 
+          className="w-full h-auto object-cover"
+        />
       </div>
       
       {/* Airbnb-style stats section */}
