@@ -43,6 +43,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/#industries" className="text-gray-600 hover:text-shiftnex-teal transition-colors">
+                  Industries
+                </Link>
+              </li>
+              <li>
                 <Link to="/#how-it-works" className="text-gray-600 hover:text-shiftnex-teal transition-colors">
                   How It Works
                 </Link>
@@ -60,11 +65,6 @@ const Footer = () => {
               <li>
                 <Link to="/support" className="text-gray-600 hover:text-shiftnex-teal transition-colors">
                   Support
-                </Link>
-              </li>
-              <li>
-                <Link to="/#vision" className="text-gray-600 hover:text-shiftnex-teal transition-colors">
-                  Vision
                 </Link>
               </li>
             </ul>

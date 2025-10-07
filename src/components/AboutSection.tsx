@@ -12,13 +12,13 @@ const AboutSection = () => {
           <h2 className="section-title text-xl sm:text-2xl md:text-3xl lg:text-4xl">What is Prime Virtual Solutions?</h2>
           
           <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-3 sm:mb-4 md:mb-6">
-            We're a premier virtual assistant and call center agency dedicated to helping businesses scale 
-            efficiently through expert remote support services.
+            We're a premier virtual assistant and call center agency specializing in supporting SMEs 
+            across e-commerce, real estate, legal, healthcare, and professional services industries.
           </p>
           
           <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-4 sm:mb-6 md:mb-8">
-            Our platform connects businesses with highly skilled virtual assistants and customer service professionals, 
-            enabling cost-effective solutions that drive growth and improve operational efficiency.
+            Our industry-specific virtual assistants understand your unique challenges and deliver 
+            tailored solutions that drive growth and improve operational efficiency for small and medium businesses.
           </p>
           
           <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mt-4 sm:mt-6 md:mt-8">

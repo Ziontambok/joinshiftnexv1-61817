@@ -64,6 +64,12 @@ const Header = () => {
           >
             About
           </button>
+          <button 
+            onClick={() => handleNavigation('industries')} 
+            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+          >
+            Industries
+          </button>
           <Link
             to="/how-it-works"
             className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
@@ -132,6 +138,12 @@ const Header = () => {
               className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
             >
               About
+            </button>
+            <button 
+              onClick={() => handleNavigation('industries')} 
+              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+            >
+              Industries
             </button>
             <Link
               to="/how-it-works"

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import IndustriesSection from '@/components/IndustriesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import BenefitsSection from '@/components/BenefitsSection';
 import NetworkSection from '@/components/NetworkSection';
@@ -41,9 +42,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Prime Virtual Solutions - Professional Virtual Assistant & Call Center Services</title>
-        <meta name="description" content="Prime Virtual Solutions provides expert virtual assistant and call center services to help businesses scale efficiently. 24/7 support, skilled professionals, and cost-effective solutions." />
-        <meta name="keywords" content="virtual assistant, call center services, customer support, business process outsourcing, remote staff, virtual receptionist, administrative support, customer service outsourcing" />
+        <title>Prime Virtual Solutions - Virtual Assistants for SMEs & Specific Industries</title>
+        <meta name="description" content="Prime Virtual Solutions provides specialized virtual assistant and call center services for SMEs in e-commerce, real estate, legal, healthcare, and professional services industries. Industry-specific expertise, 24/7 support." />
+        <meta name="keywords" content="virtual assistant for SMEs, call center services, e-commerce virtual assistant, real estate virtual assistant, legal virtual assistant, healthcare admin support, professional services support, business process outsourcing" />
         <link rel="canonical" href="https://primevirtualsolutions.com/" />
       </Helmet>
       
@@ -54,6 +55,10 @@ const Index = () => {
         
         <ScrollReveal threshold={0.1}>
           <AboutSection />
+        </ScrollReveal>
+        
+        <ScrollReveal threshold={0.1}>
+          <IndustriesSection />
         </ScrollReveal>
         
         <ScrollReveal threshold={0.1}>

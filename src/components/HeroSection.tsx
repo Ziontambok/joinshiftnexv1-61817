@@ -15,10 +15,10 @@ const HeroSection = () => {
       {/* Hero Content */}
       <div className="container mx-auto px-4 relative z-20 h-screen flex flex-col justify-center">
         <div className="max-w-2xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Scale Your Business with Expert Virtual Assistants</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Empower Your SME with Expert Virtual Assistants</h1>
           
           <p className="text-xl md:text-2xl text-white mb-8 max-w-lg">
-            Professional virtual assistant and call center services that help businesses grow without the overhead.
+            Specialized virtual assistant and call center services for e-commerce, real estate, legal, healthcare, and professional services businesses.
           </p>
           
           <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
@@ -33,8 +33,8 @@ const HeroSection = () => {
       <div className="bg-white py-24 relative z-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Prime Virtual Solutions?</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Join businesses worldwide that trust us to handle their virtual assistance and customer support needs.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why SMEs Choose Prime Virtual Solutions?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by small and medium businesses across e-commerce, real estate, legal, healthcare, and professional services industries.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -48,7 +48,7 @@ const HeroSection = () => {
             </div>
             <div className="text-center">
               <h3 className="text-5xl font-bold text-gray-900 mb-4">500+</h3>
-              <p className="text-lg text-gray-600">Businesses trust us with their virtual assistance needs</p>
+              <p className="text-lg text-gray-600">SMEs trust us across multiple industries</p>
             </div>
           </div>
         </div>
