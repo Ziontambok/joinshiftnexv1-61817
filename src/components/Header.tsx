@@ -54,9 +54,7 @@ const Header = () => {
           <button onClick={() => handleNavigation('industries')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Industries
           </button>
-          <Link to="/how-it-works" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
-            How It Works
-          </Link>
+          
           
           <Link to="/careers" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Careers

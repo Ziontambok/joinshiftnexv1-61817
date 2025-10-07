@@ -1,24 +1,19 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
-
 const HeroSection = () => {
   return <section className="relative pt-28">
       {/* Hero Banner */}
       <div className="relative w-full">
-        <img 
-          src="/images/hero-banner.png" 
-          alt="Prime Virtual Solutions - Premium virtual solutions you can rely on" 
-          className="w-full h-auto object-cover"
-        />
+        <img src="/images/hero-banner.png" alt="Prime Virtual Solutions - Premium virtual solutions you can rely on" className="w-full h-auto object-cover" />
       </div>
       
       {/* Airbnb-style stats section */}
       <div className="bg-white py-24 relative z-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why SMEs Choose Prime Virtual Solutions?</h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by small and medium businesses across e-commerce, real estate, legal, healthcare, and professional services industries.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Enterprises and SMEs Choose Prime Virtual Solutions?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by enterprises and SMB businesses across e-commerce, real estate, legal, healthcare, and professional services industries.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -94,5 +89,4 @@ const HeroSection = () => {
       </div>
     </section>;
 };
-
 export default HeroSection;
