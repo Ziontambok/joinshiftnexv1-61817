@@ -20,7 +20,7 @@ export const HealthcareRoles = ({ categories, roleDescriptions }: HealthcareRole
           key={category.id}
           className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-500 border border-gray-100"
         >
-          <h4 className="font-bold text-xl text-shiftnex-deep-blue mb-5">{category.name}</h4>
+          <h4 className="font-bold text-xl text-brand-blue mb-5">{category.name}</h4>
           <div className="flex flex-wrap justify-center gap-3">
             {category.roles.map((role) => (
               <TooltipProvider key={role}>
@@ -42,7 +42,7 @@ export const HealthcareRoles = ({ categories, roleDescriptions }: HealthcareRole
                     <PopoverContent className="w-80 p-0 bg-white shadow-2xl rounded-xl border-0 overflow-hidden">
                       {roleDescriptions[role] && (
                         <div className="p-0">
-                          <div className="bg-gradient-to-r from-shiftnex-teal to-purple-500 p-4 mb-0">
+                          <div className="bg-gradient-to-r from-brand-teal to-purple-500 p-4 mb-0">
                             <h5 className="font-bold text-white text-lg">{roleDescriptions[role].title}</h5>
                           </div>
                           <div className="p-4">
@@ -52,7 +52,7 @@ export const HealthcareRoles = ({ categories, roleDescriptions }: HealthcareRole
                             <RoleDescription role={roleDescriptions[role]} />
                             <div className="mt-4 text-center">
                               <Link to={`/careers/${role.toLowerCase()}`}>
-                                <Button className="bg-gradient-to-r from-shiftnex-teal to-purple-500 hover:opacity-90 text-white border-0">
+                                <Button className="bg-gradient-to-r from-brand-teal to-purple-500 hover:opacity-90 text-white border-0">
                                   View {role} Opportunities
                                 </Button>
                               </Link>

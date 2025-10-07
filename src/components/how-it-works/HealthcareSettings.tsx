@@ -38,11 +38,11 @@ export const HealthcareSettings = ({ settings }: HealthcareSettingsProps) => {
                 openCategories.includes(category.category) ? "bg-gradient-to-r from-gray-50 to-white" : ""
               )}
             >
-              <span className="text-lg font-bold text-shiftnex-deep-blue">{category.category}</span>
+              <span className="text-lg font-bold text-brand-blue">{category.category}</span>
               {openCategories.includes(category.category) ? (
-                <ChevronUp className="h-5 w-5 text-shiftnex-teal transition-transform duration-300" />
+                <ChevronUp className="h-5 w-5 text-brand-teal transition-transform duration-300" />
               ) : (
-                <ChevronDown className="h-5 w-5 text-shiftnex-teal transition-transform duration-300" />
+                <ChevronDown className="h-5 w-5 text-brand-teal transition-transform duration-300" />
               )}
             </Button>
           </CollapsibleTrigger>
@@ -55,9 +55,9 @@ export const HealthcareSettings = ({ settings }: HealthcareSettingsProps) => {
                 >
                   <div className="mb-4 bg-gradient-to-br from-teal-50 to-blue-50 p-3 rounded-full">
                     {/* Render the icon component by instantiating it */}
-                    {<setting.icon size={24} className="text-shiftnex-teal" />}
+                    {<setting.icon size={24} className="text-brand-teal" />}
                   </div>
-                  <span className="font-bold text-shiftnex-deep-blue mb-2">{setting.name}</span>
+                  <span className="font-bold text-brand-blue mb-2">{setting.name}</span>
                   <p className="text-sm text-gray-600">{setting.description}</p>
                   <div className="mt-3 flex items-center gap-1 text-xs text-teal-600">
                     <CheckCircle size={12} />

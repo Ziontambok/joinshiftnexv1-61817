@@ -15,21 +15,21 @@ import { healthcareRoles, roleDescriptions, healthcareSettings } from '@/data/he
 const steps = [
   {
     id: 1,
-    icon: <UserCircle size={48} className="text-shiftnex-teal" />,
+    icon: <UserCircle size={48} className="text-brand-teal" />,
     title: "Create Your Profile",
     description: "Upload credentials. Our AI instantly verifies and matches your state-specific requirements.",
     delay: "0s"
   },
   {
     id: 2,
-    icon: <Calendar size={48} className="text-shiftnex-teal" />,
+    icon: <Calendar size={48} className="text-brand-teal" />,
     title: "Get Matched with Smart Shifts™",
     description: "AI analyzes your skills, location, and availability to recommend shifts.",
     delay: "0.2s"
   },
   {
     id: 3,
-    icon: <TrendingUp size={48} className="text-shiftnex-teal" />,
+    icon: <TrendingUp size={48} className="text-brand-teal" />,
     title: "Work, Earn, and Grow",
     description: "Instant pay, real-time earnings tracking, and professional growth.",
     delay: "0.4s"
@@ -51,8 +51,8 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-          <h2 className="text-3xl sm:text-4xl font-bold text-shiftnex-deep-blue mb-6 bg-clip-text">
-            The ShiftNex Process
+          <h2 className="text-3xl sm:text-4xl font-bold text-brand-blue mb-6 bg-clip-text">
+            How It Works
           </h2>
           <p className="text-lg text-gray-700 mb-12">
             Our intelligent platform streamlines healthcare staffing with a simple three-step process.
@@ -71,18 +71,18 @@ const HowItWorksSection = () => {
                   </div>
                   
                   <div className="relative mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-shiftnex-teal to-purple-400 rounded-full flex items-center justify-center mx-auto shadow-md">
+                    <div className="w-16 h-16 bg-gradient-to-br from-brand-teal to-purple-400 rounded-full flex items-center justify-center mx-auto shadow-md">
                       <span className="text-3xl font-bold text-white">{step.id}</span>
                     </div>
                     
                     {step.id < steps.length && (
-                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-shiftnex-teal to-purple-400">
-                        <div className="absolute right-0 -top-1.5 w-3 h-3 rounded-full bg-shiftnex-teal"></div>
+                      <div className="hidden md:block absolute top-8 left-full w-full h-0.5 bg-gradient-to-r from-brand-teal to-purple-400">
+                        <div className="absolute right-0 -top-1.5 w-3 h-3 rounded-full bg-brand-teal"></div>
                       </div>
                     )}
                   </div>
                   
-                  <h3 className="text-xl font-bold text-shiftnex-deep-blue mb-4">{step.title}</h3>
+                  <h3 className="text-xl font-bold text-brand-blue mb-4">{step.title}</h3>
                   <p className="text-gray-600">{step.description}</p>
                 </CardContent>
               </Card>
@@ -93,12 +93,12 @@ const HowItWorksSection = () => {
         <div className="mt-20 mb-20 reveal">
           <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-gray-100/50 opacity-70"></div>
-            <div className="absolute -right-20 -top-20 w-40 h-40 bg-shiftnex-teal rounded-full opacity-10"></div>
+            <div className="absolute -right-20 -top-20 w-40 h-40 bg-brand-teal rounded-full opacity-10"></div>
             <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-purple-400 rounded-full opacity-10"></div>
             
             <div className="relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-bold text-center mb-10 bg-gradient-to-r from-shiftnex-deep-blue via-shiftnex-teal to-purple-500 bg-clip-text text-transparent">
-                Ways to Work with ShiftNex
+              <h3 className="text-2xl sm:text-3xl font-bold text-center mb-10 bg-gradient-to-r from-brand-blue via-brand-teal to-purple-500 bg-clip-text text-transparent">
+                Ways to Work with Prime Virtual Solutions
               </h3>
               
               <Tabs defaultValue="roles" className="w-full max-w-4xl mx-auto">
@@ -119,9 +119,9 @@ const HowItWorksSection = () => {
                 
                 <TabsContent value="roles" className="mt-4 animate-fade-in">
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 bg-blue-50/50 p-5 rounded-xl border border-blue-100/50">
-                    <Shield size={24} className="text-shiftnex-teal" />
+                    <Shield size={24} className="text-brand-teal" />
                     <p className="text-md text-gray-700 text-center sm:text-left">
-                      ShiftNex supports a wide range of healthcare professionals with verified credentials
+                      Prime Virtual Solutions supports a wide range of healthcare professionals with verified credentials
                     </p>
                   </div>
                   <HealthcareRoles
@@ -132,7 +132,7 @@ const HowItWorksSection = () => {
                 
                 <TabsContent value="settings" className="mt-2 animate-fade-in">
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 bg-teal-50/50 p-5 rounded-xl border border-teal-100/50">
-                    <Building size={24} className="text-shiftnex-teal" />
+                    <Building size={24} className="text-brand-teal" />
                     <p className="text-md text-gray-700 text-center sm:text-left">
                       Find opportunities across diverse healthcare environments with competitive pay rates
                     </p>
@@ -146,10 +146,10 @@ const HowItWorksSection = () => {
         
         <div className="mt-20 text-center reveal">
           <a 
-            href="https://www.shiftnex.app" 
+            href="https://www.primevirtualsolutions.com" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="btn-primary text-lg inline-block bg-gradient-to-r from-shiftnex-deep-blue to-shiftnex-teal hover:opacity-90 transition-opacity px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
+            className="btn-primary text-lg inline-block bg-gradient-to-r from-brand-blue to-brand-teal hover:opacity-90 transition-opacity px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300"
           >
             Join Now – It's Free
           </a>

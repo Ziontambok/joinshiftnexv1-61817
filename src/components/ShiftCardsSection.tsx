@@ -123,7 +123,7 @@ const ShiftCardsSection = () => {
     <section id="shift-cards" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-shiftnex-deep-blue mb-4">Find Your Perfect Opportunity</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Find Your Perfect Opportunity</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Browse through available shifts and jobs that match your skills, preferences, and schedule.
           </p>
@@ -134,21 +134,21 @@ const ShiftCardsSection = () => {
             <TabsList className="bg-white shadow-md p-1 rounded-full">
               <TabsTrigger 
                 value="instant" 
-                className="data-[state=active]:bg-shiftnex-teal data-[state=active]:text-white px-4 py-2 rounded-full"
+                className="data-[state=active]:bg-brand-teal data-[state=active]:text-white px-4 py-2 rounded-full"
               >
                 <Clock size={18} className="mr-2" />
                 Instant Shifts
               </TabsTrigger>
               <TabsTrigger 
                 value="block" 
-                className="data-[state=active]:bg-shiftnex-teal data-[state=active]:text-white px-4 py-2 rounded-full"
+                className="data-[state=active]:bg-brand-teal data-[state=active]:text-white px-4 py-2 rounded-full"
               >
                 <Calendar size={18} className="mr-2" />
                 Block Assignments
               </TabsTrigger>
               <TabsTrigger 
                 value="jobs" 
-                className="data-[state=active]:bg-shiftnex-teal data-[state=active]:text-white px-4 py-2 rounded-full"
+                className="data-[state=active]:bg-brand-teal data-[state=active]:text-white px-4 py-2 rounded-full"
               >
                 <Briefcase size={18} className="mr-2" />
                 Job Opportunities

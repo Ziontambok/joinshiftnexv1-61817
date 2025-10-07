@@ -4,13 +4,13 @@ import { Button } from '@/components/ui/button';
 
 const VisionSection = () => {
   return (
-    <section id="vision" className="py-20 bg-shiftnex-deep-blue text-white">
+    <section id="vision" className="py-20 bg-brand-blue text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
           <div className="w-full lg:w-1/2 reveal-left">
             <div className="relative">
-              <div className="absolute top-4 left-4 right-4 bottom-4 border-2 border-shiftnex-teal rounded-xl"></div>
-              <div className="bg-shiftnex-teal bg-opacity-10 rounded-xl p-12">
+              <div className="absolute top-4 left-4 right-4 bottom-4 border-2 border-brand-teal rounded-xl"></div>
+              <div className="bg-brand-teal bg-opacity-10 rounded-xl p-12">
                 <div className="relative z-10 space-y-3">
                   <h3 className="text-3xl font-bold mb-6">The Future of Business Support</h3>
                   <p className="text-lg text-white text-opacity-90 mb-8">
