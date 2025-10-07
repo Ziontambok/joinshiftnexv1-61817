@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import headerLogo from '@/assets/header-logo.png';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +38,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="flex items-center space-x-3">
-            
+            <img src={headerLogo} alt="Prime Virtual Solutions Logo" className="h-8 md:h-10 w-auto" />
             <span className="text-xl md:text-2xl font-bold text-brand-blue">Prime Virtual Solutions</span>
           </Link>
         </div>
