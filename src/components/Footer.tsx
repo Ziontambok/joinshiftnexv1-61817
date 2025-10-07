@@ -1,20 +1,13 @@
-
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const Footer = () => {
-  return (
-    <footer className="bg-gray-50 pt-16 pb-8">
+  return <footer className="bg-gray-50 pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img 
-                src="/images/footer-logo.png" 
-                alt="Prime Virtual Solutions Logo" 
-                className="h-12"
-              />
+              <img src="/images/footer-logo.png" alt="Prime Virtual Solutions Logo" className="h-12" />
               <span className="text-xl font-bold text-brand-blue">
                 Prime Virtual Solutions
               </span>
@@ -106,29 +99,17 @@ const Footer = () => {
             <p className="text-gray-600 mb-4">
               Stay updated on the latest in virtual assistant services.
             </p>
-            <form 
-              className="flex"
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.open("https://www.primevirtualsolutions.com", "_blank", "noopener,noreferrer");
-              }}
-            >
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent flex-grow"
-              />
+            <form className="flex" onSubmit={e => {
+            e.preventDefault();
+            window.open("https://www.primevirtualsolutions.com", "_blank", "noopener,noreferrer");
+          }}>
+              <input type="email" placeholder="Your email" className="px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-brand-teal focus:border-transparent flex-grow" />
               <button className="bg-brand-teal text-white px-4 py-2 rounded-r-md hover:bg-opacity-90 transition-colors">
                 <Mail size={20} />
               </button>
             </form>
             <div className="mt-4">
-              <a 
-                href="https://www.primevirtualsolutions.com" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-brand-teal hover:underline"
-              >
+              <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:underline">
                 Get Started Today
               </a>
             </div>
@@ -136,13 +117,9 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-200 pt-8">
-          <p className="text-center text-gray-600">
-            © 2025 Prime Virtual Solutions. All rights reserved.
-          </p>
+          <p className="text-center text-gray-600">© 2020 Prime Virtual Solutions. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
