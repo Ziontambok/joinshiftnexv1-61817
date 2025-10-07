@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 const HeroSection = () => {
-  return <section className="relative">
+  return <section className="relative pt-20">
       {/* Hero Banner */}
       <div className="relative w-full">
         <img 
