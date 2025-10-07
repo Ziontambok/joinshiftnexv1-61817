@@ -50,14 +50,14 @@ const HeroSection = () => {
               <p className="text-lg text-gray-600 text-center">Tell us about your business needs and goals in a free consultation</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-soft-orange rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-soft-teal rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">2</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Match & Onboard</h3>
               <p className="text-lg text-gray-600 text-center">We match you with skilled virtual assistants and handle all onboarding</p>
             </div>
             <div className="flex flex-col items-center">
-              <div className="w-16 h-16 bg-soft-purple rounded-full flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-soft-teal rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">3</span>
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-3">Scale & Grow</h3>
