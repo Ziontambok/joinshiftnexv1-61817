@@ -8,14 +8,14 @@ const NetworkSection = () => {
     <section id="network" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-          <span className="text-shiftnex-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Network</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-shiftnex-deep-blue mb-6">Business Partners</h2>
+          <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Network</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Business Partners</h2>
           <p className="text-lg text-gray-700">
             Join hundreds of businesses that trust Prime Virtual Solutions for their virtual assistant and call center needs.
           </p>
         </div>
         
-        <div className="bg-gradient-to-r from-shiftnex-deep-blue to-blue-800 rounded-2xl p-10 max-w-5xl mx-auto">
+        <div className="bg-gradient-to-r from-brand-blue to-blue-800 rounded-2xl p-10 max-w-5xl mx-auto">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="text-white">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">Partner With Us</h3>
@@ -27,7 +27,7 @@ const NetworkSection = () => {
                 href="https://www.primevirtualsolutions.com/partners" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="inline-flex items-center bg-white text-shiftnex-deep-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all"
+                className="inline-flex items-center bg-white text-brand-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all"
               >
                 Become a Partner <ExternalLink className="ml-2 h-4 w-4" />
               </a>

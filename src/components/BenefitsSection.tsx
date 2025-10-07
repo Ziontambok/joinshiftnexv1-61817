@@ -5,25 +5,25 @@ import { Button } from './ui/button';
 
 const benefits = [
   {
-    icon: <Clock size={42} className="text-shiftnex-teal" />,
+    icon: <Clock size={42} className="text-brand-teal" />,
     title: "24/7 Availability",
     description: "Round-the-clock virtual assistant and call center support ensures your business never misses an opportunity.",
     delay: "0s"
   },
   {
-    icon: <CreditCard size={42} className="text-shiftnex-teal" />,
+    icon: <CreditCard size={42} className="text-brand-teal" />,
     title: "Cost Effective",
     description: "Save up to 60% compared to hiring in-house staff. Pay only for the services you need, when you need them.",
     delay: "0.1s"
   },
   {
-    icon: <Shield size={42} className="text-shiftnex-teal" />,
+    icon: <Shield size={42} className="text-brand-teal" />,
     title: "Vetted Professionals",
     description: "All our virtual assistants are carefully screened, trained, and verified to ensure top-quality service.",
     delay: "0.2s"
   },
   {
-    icon: <Heart size={42} className="text-shiftnex-teal" />,
+    icon: <Heart size={42} className="text-brand-teal" />,
     title: "Scalable Solutions",
     description: "Easily scale your support team up or down based on business needs without the hassle of hiring and firing.",
     delay: "0.3s"
@@ -63,8 +63,8 @@ const BenefitsSection = () => {
     <section id="benefits" className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20 reveal">
-          <span className="text-shiftnex-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Why Choose Prime Virtual Solutions</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-shiftnex-deep-blue mb-6">Benefits & Features</h2>
+          <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Why Choose Prime Virtual Solutions</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Benefits & Features</h2>
           <p className="text-lg text-gray-700">
             Prime Virtual Solutions offers unique advantages designed specifically for growing businesses.
           </p>
@@ -74,21 +74,21 @@ const BenefitsSection = () => {
           {benefits.map((benefit, index) => (
             <div 
               key={index}
-              className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 card-hover reveal transition-all duration-300 hover:border-shiftnex-teal/30"
+              className="bg-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 card-hover reveal transition-all duration-300 hover:border-brand-teal/30"
               style={{ animationDelay: benefit.delay }}
             >
-              <div className="bg-shiftnex-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-brand-teal/10 w-16 h-16 rounded-full flex items-center justify-center mb-6">
                 {benefit.icon}
               </div>
               
-              <h3 className="text-xl font-bold text-shiftnex-deep-blue mb-4">{benefit.title}</h3>
+              <h3 className="text-xl font-bold text-brand-blue mb-4">{benefit.title}</h3>
               <p className="text-gray-600 leading-relaxed">{benefit.description}</p>
             </div>
           ))}
         </div>
         
         {/* Statistics Section */}
-        <div className="my-24 py-16 px-8 md:px-12 bg-gradient-to-r from-shiftnex-deep-blue to-blue-800 rounded-2xl shadow-lg max-w-5xl mx-auto reveal">
+        <div className="my-24 py-16 px-8 md:px-12 bg-gradient-to-r from-brand-blue to-blue-800 rounded-2xl shadow-lg max-w-5xl mx-auto reveal">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {statistics.map((stat, index) => (
               <div key={index} className="text-center">
@@ -101,8 +101,8 @@ const BenefitsSection = () => {
         
         <div className="mt-24 reveal">
           <div className="text-center mb-16">
-            <span className="text-shiftnex-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Testimonials</span>
-            <h3 className="text-3xl md:text-4xl font-bold text-shiftnex-deep-blue mb-4">What Our Clients Say</h3>
+            <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Testimonials</span>
+            <h3 className="text-3xl md:text-4xl font-bold text-brand-blue mb-4">What Our Clients Say</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">Join hundreds of businesses who have scaled efficiently with Prime Virtual Solutions.</p>
           </div>
           
@@ -112,15 +112,15 @@ const BenefitsSection = () => {
                 <div key={index} className="bg-white rounded-xl shadow-sm p-8 text-left hover:shadow-md transition-all duration-300 hover:-translate-y-1">
                   <div className="flex items-start mb-6">
                     <div className="relative">
-                      <Quote size={24} className="text-shiftnex-teal absolute -top-2 -left-2" />
+                      <Quote size={24} className="text-brand-teal absolute -top-2 -left-2" />
                       <img 
                         src={testimonial.image} 
                         alt={testimonial.name} 
-                        className="w-16 h-16 rounded-full object-cover border-2 border-shiftnex-teal"
+                        className="w-16 h-16 rounded-full object-cover border-2 border-brand-teal"
                       />
                     </div>
                     <div className="ml-4">
-                      <p className="font-bold text-shiftnex-deep-blue">{testimonial.name}</p>
+                      <p className="font-bold text-brand-blue">{testimonial.name}</p>
                       <p className="text-sm text-gray-500">{testimonial.role}</p>
                     </div>
                   </div>
@@ -135,7 +135,7 @@ const BenefitsSection = () => {
               href="https://www.primevirtualsolutions.com/" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="bg-gradient-to-r from-shiftnex-teal to-shiftnex-light-blue text-white px-8 py-6 text-lg rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group inline-block"
+              className="bg-gradient-to-r from-brand-teal to-brand-light-blue text-white px-8 py-6 text-lg rounded-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group inline-block"
             >
               Start Your Business Transformation
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform inline" />

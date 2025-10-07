@@ -68,16 +68,16 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // ShiftNex custom colors - softer palette
-        shiftnex: {
+        // Brand custom colors
+        brand: {
           teal: "#5ECFC8",
           orange: "#FF8A50",
-          "deep-blue": "#3E5F96",
+          blue: "#3E5F96",
           "light-blue": "#3B82F6",
           "dark-gray": "#2D3748",
           "light-gray": "#E2E8F0"
         },
-        // Soft color palette - slightly adjusted for better harmony
+        // Soft color palette
         soft: {
           teal: "#6AD4CE",
           blue: "#3E5F96",

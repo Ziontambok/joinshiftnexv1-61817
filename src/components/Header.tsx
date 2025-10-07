@@ -53,7 +53,7 @@ const Header = () => {
               alt="Prime Virtual Solutions Logo" 
               className="h-10 md:h-12"
             />
-            <span className="text-xl md:text-2xl font-bold text-shiftnex-deep-blue">
+            <span className="text-xl md:text-2xl font-bold text-brand-blue">
               Prime Virtual Solutions
             </span>
           </Link>
@@ -63,49 +63,49 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => handleNavigation('about')} 
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             About
           </button>
           <button 
             onClick={() => handleNavigation('services')} 
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Services
           </button>
           <button 
             onClick={() => handleNavigation('industries')} 
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Industries
           </button>
           <Link
             to="/how-it-works"
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             How It Works
           </Link>
           <button 
             onClick={() => handleNavigation('benefits')} 
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Benefits
           </button>
           <Link
             to="/careers"
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Careers
           </Link>
           <Link
             to="/support"
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Support
           </Link>
           <button 
             onClick={() => handleNavigation('vision')} 
-            className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+            className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
           >
             Vision
           </button>
@@ -114,7 +114,7 @@ const Header = () => {
               href="https://www.primevirtualsolutions.com" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors"
             >
               Login
             </a>
@@ -131,7 +131,7 @@ const Header = () => {
 
         {/* Mobile Navigation Toggle */}
         <button 
-          className="md:hidden text-shiftnex-deep-blue"
+          className="md:hidden text-brand-blue"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -144,52 +144,52 @@ const Header = () => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <button 
               onClick={() => handleNavigation('about')} 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
             >
               About
             </button>
             <button 
               onClick={() => handleNavigation('services')} 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
             >
               Services
             </button>
             <button 
               onClick={() => handleNavigation('industries')} 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
             >
               Industries
             </button>
             <Link
               to="/how-it-works"
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               How It Works
             </Link>
             <button 
               onClick={() => handleNavigation('benefits')} 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
             >
               Benefits
             </button>
             <Link
               to="/careers"
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Careers
             </Link>
             <Link
               to="/support"
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
               onClick={() => setIsMenuOpen(false)}
             >
               Support
             </Link>
             <button 
               onClick={() => handleNavigation('vision')} 
-              className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+              className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
             >
               Vision
             </button>
@@ -198,7 +198,7 @@ const Header = () => {
                 href="https://www.primevirtualsolutions.com" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-shiftnex-deep-blue hover:text-shiftnex-teal font-medium transition-colors py-2 px-4 text-left"
+                className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left"
               >
                 Login
               </a>

@@ -3,7 +3,7 @@ import { Users, Headphones, Code, Database, TrendingUp, FileText, Mail, Calendar
 
 const services = [
   {
-    icon: <Users size={48} className="text-shiftnex-teal" />,
+    icon: <Users size={48} className="text-brand-teal" />,
     title: "Virtual Assistants",
     description: "Dedicated virtual assistants for administrative tasks, email management, scheduling, and general business support.",
     features: [
@@ -15,7 +15,7 @@ const services = [
     ]
   },
   {
-    icon: <Headphones size={48} className="text-shiftnex-teal" />,
+    icon: <Headphones size={48} className="text-brand-teal" />,
     title: "Customer Support",
     description: "Professional customer service representatives providing multichannel support to enhance customer satisfaction.",
     features: [
@@ -27,7 +27,7 @@ const services = [
     ]
   },
   {
-    icon: <Settings size={48} className="text-shiftnex-teal" />,
+    icon: <Settings size={48} className="text-brand-teal" />,
     title: "Technical Support",
     description: "Skilled technical support specialists to assist your customers with product issues and troubleshooting.",
     features: [
@@ -39,7 +39,7 @@ const services = [
     ]
   },
   {
-    icon: <Code size={48} className="text-shiftnex-teal" />,
+    icon: <Code size={48} className="text-brand-teal" />,
     title: "Web Development",
     description: "Expert web developers to build, maintain, and optimize your online presence with modern technologies.",
     features: [
@@ -51,7 +51,7 @@ const services = [
     ]
   },
   {
-    icon: <TrendingUp size={48} className="text-shiftnex-teal" />,
+    icon: <TrendingUp size={48} className="text-brand-teal" />,
     title: "Digital Marketing",
     description: "Strategic digital marketing support to grow your online presence and drive business results.",
     features: [
@@ -63,7 +63,7 @@ const services = [
     ]
   },
   {
-    icon: <Database size={48} className="text-shiftnex-teal" />,
+    icon: <Database size={48} className="text-brand-teal" />,
     title: "Data Management",
     description: "Accurate data entry, management, and analysis services to keep your business information organized.",
     features: [
@@ -75,7 +75,7 @@ const services = [
     ]
   },
   {
-    icon: <FileText size={48} className="text-shiftnex-teal" />,
+    icon: <FileText size={48} className="text-brand-teal" />,
     title: "Content & Writing",
     description: "Professional content creation and copywriting services for your marketing and communication needs.",
     features: [
@@ -87,7 +87,7 @@ const services = [
     ]
   },
   {
-    icon: <Phone size={48} className="text-shiftnex-teal" />,
+    icon: <Phone size={48} className="text-brand-teal" />,
     title: "Call Center Services",
     description: "Professional inbound and outbound call center services to handle customer interactions efficiently.",
     features: [
@@ -99,7 +99,7 @@ const services = [
     ]
   },
   {
-    icon: <Calendar size={48} className="text-shiftnex-teal" />,
+    icon: <Calendar size={48} className="text-brand-teal" />,
     title: "Project Management",
     description: "Experienced project coordinators to help manage timelines, tasks, and team collaboration.",
     features: [
@@ -111,7 +111,7 @@ const services = [
     ]
   },
   {
-    icon: <Mail size={48} className="text-shiftnex-teal" />,
+    icon: <Mail size={48} className="text-brand-teal" />,
     title: "Sales Support",
     description: "Dedicated sales assistants to support your team with lead generation, follow-ups, and CRM management.",
     features: [
@@ -129,8 +129,8 @@ const ServicesSection = () => {
     <section id="services" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20 reveal">
-          <span className="text-shiftnex-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Services</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-shiftnex-deep-blue mb-6">Comprehensive Virtual Support Solutions</h2>
+          <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Services</span>
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Comprehensive Virtual Support Solutions</h2>
           <p className="text-lg text-gray-700">
             From virtual assistants to technical support, we provide a complete range of services to help your SME thrive.
           </p>
@@ -140,22 +140,22 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-shiftnex-teal/30 transition-all duration-300 hover:-translate-y-1 reveal"
+              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-teal/30 transition-all duration-300 hover:-translate-y-1 reveal"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="bg-shiftnex-teal/10 w-20 h-20 rounded-full flex items-center justify-center mb-6">
+              <div className="bg-brand-teal/10 w-20 h-20 rounded-full flex items-center justify-center mb-6">
                 {service.icon}
               </div>
               
-              <h3 className="text-2xl font-bold text-shiftnex-deep-blue mb-4">{service.title}</h3>
+              <h3 className="text-2xl font-bold text-brand-blue mb-4">{service.title}</h3>
               <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
               
               <div className="border-t border-gray-200 pt-4">
-                <p className="text-sm font-semibold text-shiftnex-deep-blue mb-3">Key Features:</p>
+                <p className="text-sm font-semibold text-brand-blue mb-3">Key Features:</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="text-sm text-gray-600 flex items-start">
-                      <span className="w-1.5 h-1.5 bg-shiftnex-teal rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
+                      <span className="w-1.5 h-1.5 bg-brand-teal rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -165,7 +165,7 @@ const ServicesSection = () => {
           ))}
         </div>
         
-        <div className="mt-20 bg-gradient-to-r from-shiftnex-deep-blue to-blue-800 rounded-2xl p-12 text-center reveal">
+        <div className="mt-20 bg-gradient-to-r from-brand-blue to-blue-800 rounded-2xl p-12 text-center reveal">
           <h3 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h3>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             We can tailor our services to match your specific business requirements. Let's discuss how we can help.
@@ -174,7 +174,7 @@ const ServicesSection = () => {
             href="https://www.primevirtualsolutions.com/contact" 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="bg-white text-shiftnex-deep-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg"
+            className="bg-white text-brand-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg"
           >
             Request a Custom Quote
           </a>
