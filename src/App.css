@@ -1,0 +1,43 @@
+
+/* Custom App styles - overriding defaults */
+#root {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+/* Added for full-width content */
+.full-width {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Enhanced styles for modern design */
+::selection {
+  background-color: rgba(94, 207, 200, 0.3);
+  color: #1E3A8A;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5ECFC8;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1E3A8A;
+}

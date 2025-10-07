@@ -1,0 +1,26 @@
+
+User-agent: *
+Allow: /
+
+# Disallow paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Allow Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Allow Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Allow Twitterbot
+User-agent: Twitterbot
+Allow: /
+
+# Allow Facebook
+User-agent: facebookexternalhit
+Allow: /
+
+Sitemap: https://shiftnex.com/sitemap.xml
