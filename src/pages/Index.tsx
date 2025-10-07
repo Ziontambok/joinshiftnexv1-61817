@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
+import ServicesSection from '@/components/ServicesSection';
 import IndustriesSection from '@/components/IndustriesSection';
 import HowItWorksSection from '@/components/HowItWorksSection';
 import BenefitsSection from '@/components/BenefitsSection';
@@ -42,9 +43,9 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Prime Virtual Solutions - Virtual Assistants for SMEs & Specific Industries</title>
-        <meta name="description" content="Prime Virtual Solutions provides specialized virtual assistant and call center services for SMEs in e-commerce, real estate, legal, healthcare, and professional services industries. Industry-specific expertise, 24/7 support." />
-        <meta name="keywords" content="virtual assistant for SMEs, call center services, e-commerce virtual assistant, real estate virtual assistant, legal virtual assistant, healthcare admin support, professional services support, business process outsourcing" />
+        <title>Prime Virtual Solutions - Virtual Assistants, Customer Support & Web Development for SMEs</title>
+        <meta name="description" content="Prime Virtual Solutions offers virtual assistants, customer support, technical support, web development, and more for SMEs. Specialized services for e-commerce, real estate, legal, healthcare, and professional services. 24/7 support, industry expertise." />
+        <meta name="keywords" content="virtual assistant services, customer support outsourcing, technical support, web development services, digital marketing, call center, data management, content writing, SME services, business process outsourcing" />
         <link rel="canonical" href="https://primevirtualsolutions.com/" />
       </Helmet>
       
@@ -55,6 +56,10 @@ const Index = () => {
         
         <ScrollReveal threshold={0.1}>
           <AboutSection />
+        </ScrollReveal>
+        
+        <ScrollReveal threshold={0.1}>
+          <ServicesSection />
         </ScrollReveal>
         
         <ScrollReveal threshold={0.1}>

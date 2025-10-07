@@ -18,7 +18,7 @@ const HeroSection = () => {
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">Empower Your SME with Expert Virtual Assistants</h1>
           
           <p className="text-xl md:text-2xl text-white mb-8 max-w-lg">
-            Specialized virtual assistant and call center services for e-commerce, real estate, legal, healthcare, and professional services businesses.
+            From virtual assistants to technical support and web development - comprehensive remote services for growing businesses.
           </p>
           
           <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
