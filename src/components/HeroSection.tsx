@@ -9,14 +9,14 @@ const HeroSection = () => {
       </div>
       
       {/* Airbnb-style stats section */}
-      <div className="bg-white py-24 relative z-20">
+      <div className="bg-white py-12 relative z-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Enterprises and SMEs Choose Prime Virtual Solutions?</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by enterprises and SMB businesses across e-commerce, real estate, legal, healthcare, and professional services industries.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <h3 className="text-5xl font-bold text-gray-900 mb-4">60%</h3>
               <p className="text-lg text-gray-600">Average cost savings compared to hiring in-house staff</p>
@@ -34,14 +34,14 @@ const HeroSection = () => {
       </div>
       
       {/* How it works section */}
-      <div className="bg-gray-50 py-24 relative z-20">
+      <div className="bg-gray-50 py-12 relative z-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Prime Virtual Solutions Works</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Getting started with our virtual assistant services is simple and straightforward.</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex flex-col items-center">
               <div className="w-16 h-16 bg-soft-teal rounded-full flex items-center justify-center mb-6">
                 <span className="text-white text-2xl font-bold">1</span>
@@ -65,7 +65,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="text-center mt-16">
+          <div className="text-center mt-8">
             <Button className="bg-soft-teal hover:bg-opacity-90 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
               Learn more about our services
             </Button>
@@ -74,7 +74,7 @@ const HeroSection = () => {
       </div>
       
       {/* Start healthcare CTA */}
-      <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-24 relative z-20">
+      <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-12 relative z-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Ready to transform your business?</h2>
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
