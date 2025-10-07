@@ -9,6 +9,16 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
+            <div className="flex items-center gap-3 mb-4">
+              <img 
+                src="/images/footer-logo.png" 
+                alt="Prime Virtual Solutions Logo" 
+                className="h-12"
+              />
+              <span className="text-xl font-bold text-brand-blue">
+                Prime Virtual Solutions
+              </span>
+            </div>
             <p className="text-gray-600 mb-6">
               Professional virtual assistant and call center services helping businesses scale 
               efficiently with 24/7 support and expert remote professionals.
