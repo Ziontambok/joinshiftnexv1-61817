@@ -13,6 +13,10 @@ import Careers from "./pages/Careers";
 import HowItWorks from "./pages/HowItWorks";
 import JobDescription from "./pages/JobDescription";
 import Support from "./pages/Support";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Industries from "./pages/Industries";
+import Benefits from "./pages/Benefits";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +30,10 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/benefits" element={<Benefits />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiePolicy />} />

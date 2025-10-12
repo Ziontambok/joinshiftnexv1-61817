@@ -45,26 +45,27 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <button onClick={() => handleNavigation('about')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
+          <Link to="/about" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             About
-          </button>
-          <button onClick={() => handleNavigation('services')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
+          </Link>
+          <Link to="/services" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Services
-          </button>
-          <button onClick={() => handleNavigation('industries')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
+          </Link>
+          <Link to="/industries" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Industries
-          </button>
-          
-          
+          </Link>
+          <Link to="/how-it-works" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
+            How It Works
+          </Link>
+          <Link to="/benefits" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
+            Benefits
+          </Link>
           <Link to="/careers" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Careers
           </Link>
           <Link to="/support" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Support
           </Link>
-          <button onClick={() => handleNavigation('vision')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
-            Vision
-          </button>
           <div className="flex items-center space-x-4">
             <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
               Login
@@ -84,30 +85,27 @@ const Header = () => {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && <div className="md:hidden bg-white w-full border-t border-gray-100 shadow-md">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <button onClick={() => handleNavigation('about')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
+            <Link to="/about" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               About
-            </button>
-            <button onClick={() => handleNavigation('services')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
+            </Link>
+            <Link to="/services" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Services
-            </button>
-            <button onClick={() => handleNavigation('industries')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
+            </Link>
+            <Link to="/industries" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Industries
-            </button>
+            </Link>
             <Link to="/how-it-works" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               How It Works
             </Link>
-            <button onClick={() => handleNavigation('benefits')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
+            <Link to="/benefits" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Benefits
-            </button>
+            </Link>
             <Link to="/careers" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Careers
             </Link>
             <Link to="/support" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Support
             </Link>
-            <button onClick={() => handleNavigation('vision')} className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
-              Vision
-            </button>
             <div className="flex flex-col space-y-4">
               <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
                 Login

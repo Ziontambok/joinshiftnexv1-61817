@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return <section className="relative pt-28">
       {/* Hero Banner */}
@@ -66,9 +67,11 @@ const HeroSection = () => {
           </div>
           
           <div className="text-center mt-8">
-            <Button className="bg-soft-teal hover:bg-opacity-90 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
-              Learn more about our services
-            </Button>
+            <Link to="/services">
+              <Button className="bg-soft-teal hover:bg-opacity-90 text-white text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
+                Learn more about our services
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
