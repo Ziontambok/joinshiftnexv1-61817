@@ -1,8 +1,36 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect } from "react";
 import { Headphones, ClipboardCheck, FolderCog, CalendarDays, Wrench } from "lucide-react";
 
+/**
+ * Simple hook to add "in-view" class to elements with data-observe attribute.
+ * Uses IntersectionObserver (no external libs).
+ */
+function useInViewObserver() {
+  useEffect(() => {
+    const els = Array.from(document.querySelectorAll("[data-observe]"));
+    if (!els.length) return;
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+            // If you want the animation only once, unobserve after in view:
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.12 },
+    );
+
+    els.forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, []);
+}
+
 export default function Services() {
+  useInViewObserver();
+
   const services = [
     {
       icon: Headphones,
@@ -39,60 +67,39 @@ export default function Services() {
         <div className="absolute bottom-0 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-30" />
       </div>
 
-      {/* Header */}
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#002D62] relative z-10"
-      >
-        Our Services
-      </motion.h1>
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#002D62] relative z-10">Our Services</h1>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-center text-gray-600 mb-16 text-lg max-w-3xl mx-auto relative z-10"
-      >
+      <p className="text-center text-gray-600 mb-16 text-lg max-w-3xl mx-auto relative z-10">
         Comprehensive, reliable, and professional virtual support designed to help your business thrive.
-      </motion.p>
+      </p>
 
-      {/* Divider Line */}
+      {/* Divider */}
       <div className="h-px w-32 bg-blue-200 mx-auto mb-12 relative z-10" />
 
       {/* Services Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
         {services.map(({ icon: Icon, title, desc }, i) => (
-          <motion.div
+          <div
             key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1, duration: 0.6 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            className="p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition border border-gray-100 text-center"
+            data-observe
+            className="service-card p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-md transition-transform duration-300 border border-gray-100 text-center opacity-0 translate-y-6"
+            // hover scale via tailwind
+            style={{ willChange: "transform, opacity" }}
           >
-            <motion.div whileHover={{ rotate: 3 }}>
-              <Icon className="w-12 h-12 mx-auto mb-4 text-[#0056B3]" />
-            </motion.div>
+            <div className="icon-wrap inline-block mb-4">
+              <Icon className="w-12 h-12 mx-auto text-[#0056B3]" />
+            </div>
             <h2 className="font-semibold text-xl mb-3 text-[#0056B3]">{title}</h2>
             <p className="text-gray-700 leading-relaxed">{desc}</p>
-          </motion.div>
+          </div>
         ))}
       </div>
 
-      {/* Divider Line */}
+      {/* Divider */}
       <div className="h-px w-32 bg-blue-200 mx-auto mt-20 mb-16 relative z-10" />
 
-      {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-center bg-[#eaf3ff] py-16 px-6 rounded-2xl shadow-sm relative z-10"
-      >
+      {/* CTA */}
+      <div className="text-center bg-[#eaf3ff] py-16 px-6 rounded-2xl shadow-sm relative z-10">
         <h3 className="text-3xl font-bold mb-3 text-[#003366]">Let’s Streamline Your Business Together</h3>
         <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
           Partner with Prime Virtual Solutions and experience reliable, professional virtual support tailored for your
@@ -104,7 +111,19 @@ export default function Services() {
         >
           Contact Us
         </a>
-      </motion.div>
+      </div>
+
+      {/* Inline CSS to animate cards (no external lib) */}
+      <style>{`
+        /* initial state set in className via tailwind-like utilities */
+        .service-card.in-view {
+          opacity: 1 !important;
+          transform: translateY(0) !important;
+        }
+        .service-card:hover {
+          transform: translateY(-6px) scale(1.03);
+        }
+      `}</style>
     </div>
   );
 }
