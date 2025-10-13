@@ -1,110 +1,103 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { Headphones, ClipboardCheck, FolderCog, CalendarDays, Wrench } from "lucide-react";
+import React, { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ServicesSection from "@/components/ServicesSection";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-export default function Services() {
-  const services = [
-    {
-      icon: Headphones,
-      title: "Customer Service Support",
-      desc: "Deliver excellent service through our skilled customer support team. We handle inquiries, resolve issues, and ensure every interaction reflects your brand’s professionalism and care.",
-    },
-    {
-      icon: ClipboardCheck,
-      title: "Administrative Assistance",
-      desc: "From data entry and documentation to daily coordination, our virtual admins handle the details that keep your operations efficient and organized.",
-    },
-    {
-      icon: FolderCog,
-      title: "Back Office Solutions",
-      desc: "Behind every successful business is a reliable back office. We manage essential functions such as reporting, record-keeping, and task tracking to keep your systems running seamlessly.",
-    },
-    {
-      icon: CalendarDays,
-      title: "Booking & Scheduling Management",
-      desc: "We coordinate appointments, reservations, and dispatch schedules with precision — keeping your customers and team aligned every step of the way.",
-    },
-    {
-      icon: Wrench,
-      title: "Technical & Dispatch Support",
-      desc: "For service-based industries, we provide specialized virtual dispatch and tech coordination to streamline workflows and enhance response times.",
-    },
-  ];
+const Services = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div className="relative bg-gradient-to-b from-[#f9fbff] via-white to-[#f4f7ff] py-24 px-8">
-      {/* Decorative Background Blur */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40" />
-        <div className="absolute bottom-0 -left-40 w-80 h-80 bg-blue-200 rounded-full blur-3xl opacity-30" />
-      </div>
+    <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Our Services - Virtual Assistant, Customer Service, Back Office | Prime Virtual Solutions</title>
+        <meta
+          name="description"
+          content="Prime Virtual Solutions serves multiple industries including e-commerce, real estate, legal, healthcare, and professional services with specialized virtual assistant solutions."
+        />
+        <link rel="canonical" href="https://primevirtualsolutions.com/industries" />
+      </Helmet>
 
-      {/* Header */}
-      <motion.h1
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#002D62] relative z-10"
-      >
-        Our Services
-      </motion.h1>
+      <Header />
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.8 }}
-        className="text-center text-gray-600 mb-16 text-lg max-w-3xl mx-auto relative z-10"
-      >
-        Comprehensive, reliable, and professional virtual support designed to help your business thrive.
-      </motion.p>
+      <main className="pt-20">
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Industries We Serve</h1>
+            <p className="text-xl text-white/90 max-w-3xl mx-auto">
+              Specialized virtual assistant solutions tailored to your industry's unique needs
+            </p>
+          </div>
+        </div>
 
-      {/* Divider Line */}
-      <div className="h-px w-32 bg-blue-200 mx-auto mb-12 relative z-10" />
+        <IndustriesSection />
 
-      {/* Services Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 relative z-10">
-        {services.map(({ icon: Icon, title, desc }, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1, duration: 0.6 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            className="p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-md hover:shadow-xl transition border border-gray-100 text-center"
-          >
-            <motion.div whileHover={{ rotate: 3 }}>
-              <Icon className="w-12 h-12 mx-auto mb-4 text-[#0056B3]" />
-            </motion.div>
-            <h2 className="font-semibold text-xl mb-3 text-[#0056B3]">{title}</h2>
-            <p className="text-gray-700 leading-relaxed">{desc}</p>
-          </motion.div>
-        ))}
-      </div>
+        <div className="bg-gray-50 py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Why Industry Expertise Matters</h2>
+              <p className="text-lg text-gray-600 mb-8">
+                We don't just provide virtual assistants—we provide industry-specific professionals who understand your
+                business challenges, regulations, and best practices. This means faster onboarding, better results, and
+                solutions that truly fit your needs.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Compliance-Ready</h3>
+                  <p className="text-gray-600">
+                    Our team is trained in industry-specific regulations, from HIPAA for healthcare to data privacy laws
+                    for e-commerce.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Domain Knowledge</h3>
+                  <p className="text-gray-600">
+                    Virtual assistants with experience in your industry hit the ground running, understanding
+                    terminology and workflows from day one.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Best Practices</h3>
+                  <p className="text-gray-600">
+                    We apply proven methodologies and tools specific to your sector, ensuring optimal efficiency and
+                    results.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">Scalable Solutions</h3>
+                  <p className="text-gray-600">
+                    Whether you're a startup or enterprise, our solutions scale with your business growth and changing
+                    needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      {/* Divider Line */}
-      <div className="h-px w-32 bg-blue-200 mx-auto mt-20 mb-16 relative z-10" />
+        <div className="bg-gradient-to-r from-blue-600 to-blue-800 py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Don't See Your Industry?</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              We work with businesses across many sectors. Contact us to discuss your specific industry needs.
+            </p>
+            <Link to="/support">
+              <Button className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-6 rounded-lg">
+                Contact Us <ArrowRight className="ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </main>
 
-      {/* CTA Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.7 }}
-        viewport={{ once: true }}
-        className="text-center bg-[#eaf3ff] py-16 px-6 rounded-2xl shadow-sm relative z-10"
-      >
-        <h3 className="text-3xl font-bold mb-3 text-[#003366]">Let’s Streamline Your Business Together</h3>
-        <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-          Partner with Prime Virtual Solutions and experience reliable, professional virtual support tailored for your
-          business.
-        </p>
-        <a
-          href="/contact"
-          className="bg-[#0056B3] text-white px-10 py-4 rounded-xl text-lg font-medium hover:bg-[#004080] transition"
-        >
-          Contact Us
-        </a>
-      </motion.div>
+      <Footer />
     </div>
   );
-}
+};
+
+export default Industries;
