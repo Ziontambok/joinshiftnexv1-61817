@@ -1,6 +1,28 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Building, UserCircle, Info, Heart, Calendar, Shield, Hospital, Home, Brain, Book, Activity, Briefcase, MapPin, Users, ExternalLink, CheckCircle, Award, CreditCard, Clipboard } from 'lucide-react';
+import { 
+  ChevronRight, 
+  Building, 
+  UserCircle, 
+  Info, 
+  Heart, 
+  Calendar, 
+  Shield, 
+  Hospital, 
+  Home, 
+  Brain, 
+  Book, 
+  Activity,
+  Briefcase,
+  MapPin,
+  Users,
+  ExternalLink,
+  CheckCircle,
+  Award,
+  CreditCard,
+  Clipboard
+} from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -11,71 +33,75 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import ChatwootWidget from '@/components/ChatwootWidget';
+
 import { roleDescriptions } from '@/data/roleData';
-const healthcareSettings = [{
-  category: "Hospital Settings",
-  items: [{
-    name: "Hospitals",
-    icon: <Hospital size={24} className="text-shiftnex-teal" />
-  }, {
-    name: "Urgent Care",
-    icon: <Activity size={24} className="text-shiftnex-teal" />
-  }]
-}, {
-  category: "Residential Care",
-  items: [{
-    name: "Skilled Nursing",
-    icon: <UserCircle size={24} className="text-shiftnex-teal" />
-  }, {
-    name: "Assisted Living",
-    icon: <Home size={24} className="text-shiftnex-teal" />
-  }, {
-    name: "Memory Care",
-    icon: <Brain size={24} className="text-shiftnex-teal" />
-  }]
-}, {
-  category: "Specialized Care",
-  items: [{
-    name: "Rehabilitation",
-    icon: <Activity size={24} className="text-shiftnex-teal" />
-  }, {
-    name: "Home Health",
-    icon: <Home size={24} className="text-shiftnex-teal" />
-  }, {
-    name: "Hospice",
-    icon: <Heart size={24} className="text-shiftnex-teal" />
-  }]
-}];
-const testimonials = [{
-  name: "Sarah Johnson, RN",
-  role: "Registered Nurse",
-  image: "/placeholder.svg",
-  quote: "ShiftNex has completely transformed how I approach my nursing career. I can pick shifts that fit around my family life, and the pay is consistently better than what I was making at the hospital.",
-  experience: "3 years with ShiftNex"
-}, {
-  name: "Michael Chen",
-  role: "Respiratory Therapist",
-  image: "/placeholder.svg",
-  quote: "As an RT, finding flexible work that still pays well was always a challenge. With ShiftNex, I've been able to work in different facilities and expand my skills while maintaining control of my schedule.",
-  experience: "2 years with ShiftNex"
-}, {
-  name: "Latisha Williams",
-  role: "Licensed Practical Nurse",
-  image: "/placeholder.svg",
-  quote: "The credential verification process was so quick compared to other agencies. I was verified and booking shifts within days, not weeks. The app is incredibly easy to use.",
-  experience: "1.5 years with ShiftNex"
-}];
+
+const healthcareSettings = [
+  {
+    category: "Hospital Settings",
+    items: [
+      { name: "Hospitals", icon: <Hospital size={24} className="text-shiftnex-teal" /> },
+      { name: "Urgent Care", icon: <Activity size={24} className="text-shiftnex-teal" /> }
+    ]
+  },
+  {
+    category: "Residential Care",
+    items: [
+      { name: "Skilled Nursing", icon: <UserCircle size={24} className="text-shiftnex-teal" /> },
+      { name: "Assisted Living", icon: <Home size={24} className="text-shiftnex-teal" /> },
+      { name: "Memory Care", icon: <Brain size={24} className="text-shiftnex-teal" /> }
+    ]
+  },
+  {
+    category: "Specialized Care",
+    items: [
+      { name: "Rehabilitation", icon: <Activity size={24} className="text-shiftnex-teal" /> },
+      { name: "Home Health", icon: <Home size={24} className="text-shiftnex-teal" /> },
+      { name: "Hospice", icon: <Heart size={24} className="text-shiftnex-teal" /> }
+    ]
+  }
+];
+
+const testimonials = [
+  {
+    name: "Sarah Johnson, RN",
+    role: "Registered Nurse",
+    image: "/placeholder.svg",
+    quote: "ShiftNex has completely transformed how I approach my nursing career. I can pick shifts that fit around my family life, and the pay is consistently better than what I was making at the hospital.",
+    experience: "3 years with ShiftNex"
+  },
+  {
+    name: "Michael Chen",
+    role: "Respiratory Therapist",
+    image: "/placeholder.svg",
+    quote: "As an RT, finding flexible work that still pays well was always a challenge. With ShiftNex, I've been able to work in different facilities and expand my skills while maintaining control of my schedule.",
+    experience: "2 years with ShiftNex"
+  },
+  {
+    name: "Latisha Williams",
+    role: "Licensed Practical Nurse",
+    image: "/placeholder.svg",
+    quote: "The credential verification process was so quick compared to other agencies. I was verified and booking shifts within days, not weeks. The app is incredibly easy to use.",
+    experience: "1.5 years with ShiftNex"
+  }
+];
+
 const CareerPage = () => {
   useEffect(() => {
     document.title = "Healthcare Careers & Job Opportunities | ShiftNex";
+    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute("content", "Find flexible healthcare jobs with ShiftNex. Nursing, respiratory care, and caregiver positions with competitive pay and work-life balance.");
     }
+    
     window.scrollTo(0, 0);
   }, []);
+
   const roleKeys = Object.keys(roleDescriptions);
-  return <div className="min-h-screen bg-background">
+
+  return (
+    <div className="min-h-screen bg-background">
       <Header />
       
       <main className="pt-16 sm:pt-0">
@@ -153,7 +179,8 @@ const CareerPage = () => {
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {roleKeys.slice(0, 3).map(role => <Card key={role} className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-gray-200 hover:border-blue-200 flex flex-col h-full">
+                {roleKeys.slice(0, 3).map(role => (
+                  <Card key={role} className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-gray-200 hover:border-blue-200 flex flex-col h-full">
                     <CardHeader className="bg-gradient-to-r from-blue-50 to-teal-50 border-b p-4 sm:p-6">
                       <div className="flex justify-between items-start">
                         <CardTitle className="text-xl">{roleDescriptions[role].title}</CardTitle>
@@ -176,9 +203,11 @@ const CareerPage = () => {
                     <CardContent className="p-4 sm:p-6 pt-5 sm:pt-6 flex-grow">
                       <h4 className="font-semibold text-gray-800 mb-3 text-base sm:text-lg">Common Work Settings:</h4>
                       <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
-                        {roleDescriptions[role].settings.map((setting: string, idx: number) => <Badge key={idx} variant="secondary" className="bg-gray-100 text-xs sm:text-sm py-1.5">
+                        {roleDescriptions[role].settings.map((setting: string, idx: number) => (
+                          <Badge key={idx} variant="secondary" className="bg-gray-100 text-xs sm:text-sm py-1.5">
                             {setting}
-                          </Badge>)}
+                          </Badge>
+                        ))}
                       </div>
                       <h4 className="font-semibold text-gray-800 mb-3 text-base sm:text-lg">Requirements:</h4>
                       <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 line-clamp-4">{roleDescriptions[role].requirements}</p>
@@ -193,7 +222,8 @@ const CareerPage = () => {
                         </Button>
                       </Link>
                     </CardFooter>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
@@ -206,14 +236,17 @@ const CareerPage = () => {
                 <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
                   Success stories
                 </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-4 sm:mb-6">What Healthcare Professionals Say About PrimeVirtual Solutions</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-4 sm:mb-6">
+                  What Healthcare Professionals Say About ShiftNex
+                </h2>
                 <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
                   Hear from professionals like you who have transformed their careers with our platform.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {testimonials.map((testimonial, index) => <Card key={index} className="overflow-hidden border-0 shadow-lg">
+                {testimonials.map((testimonial, index) => (
+                  <Card key={index} className="overflow-hidden border-0 shadow-lg">
                     <CardContent className="p-5 sm:p-8">
                       <div className="flex items-center mb-5 sm:mb-6">
                         <Avatar className="h-14 w-14 sm:h-16 sm:w-16 border-4 border-white shadow-sm">
@@ -231,13 +264,16 @@ const CareerPage = () => {
                       <div className="flex items-center justify-between">
                         <span className="text-xs sm:text-sm font-medium text-blue-600">{testimonial.experience}</span>
                         <div className="flex">
-                          {[...Array(5)].map((_, i) => <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
+                          {[...Array(5)].map((_, i) => (
+                            <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
                               <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-                            </svg>)}
+                            </svg>
+                          ))}
                         </div>
                       </div>
                     </CardContent>
-                  </Card>)}
+                  </Card>
+                ))}
               </div>
             </div>
           </div>
@@ -344,12 +380,19 @@ const CareerPage = () => {
               
               <Tabs defaultValue={roleKeys[0]} className="w-full">
                 <TabsList className="flex w-full flex-wrap justify-center mb-8 sm:mb-12 bg-transparent max-w-full overflow-x-auto p-2">
-                  {roleKeys.map(role => <TabsTrigger key={role} value={role} className="m-1 px-3 py-2 text-xs sm:text-sm rounded-full data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 flex-shrink-0">
+                  {roleKeys.map(role => (
+                    <TabsTrigger 
+                      key={role}
+                      value={role}
+                      className="m-1 px-3 py-2 text-xs sm:text-sm rounded-full data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 flex-shrink-0"
+                    >
                       {roleDescriptions[role].title}
-                    </TabsTrigger>)}
+                    </TabsTrigger>
+                  ))}
                 </TabsList>
                 
-                {roleKeys.map(role => <TabsContent key={role} value={role} className="mt-0">
+                {roleKeys.map(role => (
+                  <TabsContent key={role} value={role} className="mt-0">
                     <Card className="border-0 shadow-sm">
                       <CardHeader className="bg-gradient-to-r from-blue-50 to-teal-50 p-4 sm:p-6">
                         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
@@ -376,10 +419,12 @@ const CareerPage = () => {
                             <div>
                               <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Key Responsibilities</h3>
                               <ul className="space-y-2">
-                                {roleDescriptions[role].responsibilities.map((item, idx) => <li key={idx} className="flex items-start text-sm sm:text-base">
+                                {roleDescriptions[role].responsibilities.map((item, idx) => (
+                                  <li key={idx} className="flex items-start text-sm sm:text-base">
                                     <span className="text-blue-500 mr-2 mt-0.5">•</span>
                                     <span>{item}</span>
-                                  </li>)}
+                                  </li>
+                                ))}
                               </ul>
                             </div>
                             
@@ -389,10 +434,12 @@ const CareerPage = () => {
                               
                               <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 mt-4 sm:mt-6">Preferred Qualifications</h4>
                               <ul className="space-y-2">
-                                {roleDescriptions[role].preferredQualifications?.map((item, idx) => <li key={idx} className="flex items-start text-sm sm:text-base">
+                                {roleDescriptions[role].preferredQualifications?.map((item, idx) => (
+                                  <li key={idx} className="flex items-start text-sm sm:text-base">
                                     <span className="text-teal-500 mr-2 mt-0.5">•</span>
                                     <span>{item}</span>
-                                  </li>)}
+                                  </li>
+                                ))}
                               </ul>
                             </div>
                           </div>
@@ -406,19 +453,23 @@ const CareerPage = () => {
                           
                           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
                             {roleDescriptions[role].settings.map((setting, idx) => {
-                          let icon = <Building size={20} className="text-shiftnex-teal" />;
-                          healthcareSettings.forEach(category => {
-                            category.items.forEach(item => {
-                              if (item.name === setting) {
-                                icon = item.icon;
-                              }
-                            });
-                          });
-                          return <div key={idx} className="flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow-sm border border-gray-100">
+                              let icon = <Building size={20} className="text-shiftnex-teal" />;
+                              
+                              healthcareSettings.forEach(category => {
+                                category.items.forEach(item => {
+                                  if (item.name === setting) {
+                                    icon = item.icon;
+                                  }
+                                });
+                              });
+                              
+                              return (
+                                <div key={idx} className="flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow-sm border border-gray-100">
                                   <div className="mb-2">{icon}</div>
                                   <span className="text-xs sm:text-sm font-medium text-center text-gray-700">{setting}</span>
-                                </div>;
-                        })}
+                                </div>
+                              );
+                            })}
                           </div>
                           
                           <div className="mt-6 sm:mt-10 text-center">
@@ -434,7 +485,8 @@ const CareerPage = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </TabsContent>)}
+                  </TabsContent>
+                ))}
               </Tabs>
             </div>
           </div>
@@ -444,6 +496,8 @@ const CareerPage = () => {
       <Footer />
       
       <ChatwootWidget websiteToken="YOUR_CHATWOOT_TOKEN" />
-    </div>;
+    </div>
+  );
 };
+
 export default CareerPage;
