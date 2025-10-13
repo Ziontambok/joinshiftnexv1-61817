@@ -35,7 +35,7 @@ const Services = () => {
           </div>
         </div>
 
-        <IndustriesSection />
+        <ServicesSection />
 
         <div className="bg-gray-50 py-16">
           <div className="container mx-auto px-4">
@@ -100,4 +100,4 @@ const Services = () => {
   );
 };
 
-export default Industries;
+export default Services;
