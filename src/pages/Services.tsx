@@ -118,7 +118,7 @@ const Services = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-20 overflow-hidden">
-          <div className="absolute inset-0 opacity-10 py-0 px-0 mx-0 my-[1px]">
+          <div className="absolute top-1 bottom-1 left-0 right-0 opacity-10">
             <div className="absolute top-[20px] bottom-[20px] left-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-4 right-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse" style={{
             animationDelay: "1s"
