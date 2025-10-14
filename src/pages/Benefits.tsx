@@ -133,7 +133,7 @@ const Benefits = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[15px]">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{
