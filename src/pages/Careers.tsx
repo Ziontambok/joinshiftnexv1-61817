@@ -139,7 +139,7 @@ const Careers = () => {
                 <Button onClick={handleApplyNow} className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold flex items-center gap-2">
                   Apply Now <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold" onClick={() => document.getElementById('open-positions')?.scrollIntoView({
+                <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg font-semibold transition-all" onClick={() => document.getElementById('open-positions')?.scrollIntoView({
                 behavior: 'smooth'
               })}>
                   View Open Positions
