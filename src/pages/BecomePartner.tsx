@@ -263,7 +263,7 @@ const BecomePartner = () => {
         </section>
 
         {/* Contact Form Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="bg-gray-50 py-0">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-12">
