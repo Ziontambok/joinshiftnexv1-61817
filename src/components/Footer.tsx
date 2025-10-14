@@ -26,7 +26,7 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="https://twitter.com/primevirtualsol"
+                href="https://twitter.com/primevsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-blue hover:text-brand-teal transition-colors"
@@ -35,7 +35,7 @@ const Footer = () => {
                 <Twitter size={20} />
               </a>
               <a
-                href="https://www.linkedin.com/company/prime-virtual-solutions"
+                href="https://www.linkedin.com/company/primevsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-blue hover:text-brand-teal transition-colors"
@@ -44,7 +44,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contact@primevirtualsolutions.com"
+                href="mailto:contact@primevsolutions.com"
                 className="text-brand-blue hover:text-brand-teal transition-colors"
                 aria-label="Email"
               >
@@ -122,7 +122,7 @@ const Footer = () => {
               className="flex"
               onSubmit={(e) => {
                 e.preventDefault();
-                window.open("https://www.primevirtualsolutions.com", "_blank", "noopener,noreferrer");
+                window.open("https://www.primevsolutions.com", "_blank", "noopener,noreferrer");
               }}
             >
               <input
@@ -136,7 +136,7 @@ const Footer = () => {
             </form>
             <div className="mt-4">
               <a
-                href="https://www.primevirtualsolutions.com"
+                href="https://www.primevsolutions.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-teal hover:underline"
