@@ -10,17 +10,37 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Handshake, TrendingUp, Users, Award, CheckCircle, Building2, Globe, Target } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
-
 const partnerSchema = z.object({
-  name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
-  email: z.string().trim().email({ message: "Invalid email address" }).max(255, { message: "Email must be less than 255 characters" }),
-  phone: z.string().trim().min(1, { message: "Phone number is required" }).max(20, { message: "Phone must be less than 20 characters" }),
-  address: z.string().trim().min(1, { message: "Address is required" }).max(200, { message: "Address must be less than 200 characters" }),
-  message: z.string().trim().min(10, { message: "Message must be at least 10 characters" }).max(1000, { message: "Message must be less than 1000 characters" })
+  name: z.string().trim().min(1, {
+    message: "Name is required"
+  }).max(100, {
+    message: "Name must be less than 100 characters"
+  }),
+  email: z.string().trim().email({
+    message: "Invalid email address"
+  }).max(255, {
+    message: "Email must be less than 255 characters"
+  }),
+  phone: z.string().trim().min(1, {
+    message: "Phone number is required"
+  }).max(20, {
+    message: "Phone must be less than 20 characters"
+  }),
+  address: z.string().trim().min(1, {
+    message: "Address is required"
+  }).max(200, {
+    message: "Address must be less than 200 characters"
+  }),
+  message: z.string().trim().min(10, {
+    message: "Message must be at least 10 characters"
+  }).max(1000, {
+    message: "Message must be less than 1000 characters"
+  })
 });
-
 const BecomePartner = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -30,34 +50,37 @@ const BecomePartner = () => {
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const {
+      name,
+      value
+    } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: "" }));
+      setErrors(prev => ({
+        ...prev,
+        [name]: ""
+      }));
     }
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrors({});
-    
     try {
       const validatedData = partnerSchema.parse(formData);
       setIsSubmitting(true);
 
       // Encode data for WhatsApp message
       const message = `*New Partnership Inquiry*\n\nName: ${encodeURIComponent(validatedData.name)}\nEmail: ${encodeURIComponent(validatedData.email)}\nPhone: ${encodeURIComponent(validatedData.phone)}\nAddress: ${encodeURIComponent(validatedData.address)}\n\nMessage:\n${encodeURIComponent(validatedData.message)}`;
-      
       const whatsappUrl = `https://wa.me/639173132145?text=${message}`;
       window.open(whatsappUrl, '_blank');
-
       toast({
         title: "Message Sent!",
-        description: "We'll get back to you shortly to discuss partnership opportunities.",
+        description: "We'll get back to you shortly to discuss partnership opportunities."
       });
-
       setFormData({
         name: "",
         email: "",
@@ -68,7 +91,7 @@ const BecomePartner = () => {
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
-        error.errors.forEach((err) => {
+        error.errors.forEach(err => {
           if (err.path[0]) {
             newErrors[err.path[0].toString()] = err.message;
           }
@@ -79,15 +102,10 @@ const BecomePartner = () => {
       setIsSubmitting(false);
     }
   };
-
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
+  return <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>Become a Partner - Prime Virtual Solutions</title>
-        <meta
-          name="description"
-          content="Partner with Prime Virtual Solutions to grow your business. Join our network of successful partners and unlock new opportunities together."
-        />
+        <meta name="description" content="Partner with Prime Virtual Solutions to grow your business. Join our network of successful partners and unlock new opportunities together." />
       </Helmet>
 
       <Header />
@@ -116,7 +134,7 @@ const BecomePartner = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="bg-gray-50 py-[30px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-brand-blue">
@@ -264,15 +282,7 @@ const BecomePartner = () => {
                       <Label htmlFor="name" className="text-brand-blue font-semibold">
                         Full Name *
                       </Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        type="text"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="John Doe"
-                        className={errors.name ? "border-red-500" : ""}
-                      />
+                      <Input id="name" name="name" type="text" value={formData.name} onChange={handleChange} placeholder="John Doe" className={errors.name ? "border-red-500" : ""} />
                       {errors.name && <p className="text-sm text-red-500">{errors.name}</p>}
                     </div>
 
@@ -281,15 +291,7 @@ const BecomePartner = () => {
                         <Label htmlFor="email" className="text-brand-blue font-semibold">
                           Email Address *
                         </Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="john@company.com"
-                          className={errors.email ? "border-red-500" : ""}
-                        />
+                        <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} placeholder="john@company.com" className={errors.email ? "border-red-500" : ""} />
                         {errors.email && <p className="text-sm text-red-500">{errors.email}</p>}
                       </div>
 
@@ -297,15 +299,7 @@ const BecomePartner = () => {
                         <Label htmlFor="phone" className="text-brand-blue font-semibold">
                           Phone Number *
                         </Label>
-                        <Input
-                          id="phone"
-                          name="phone"
-                          type="tel"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="+1 (555) 000-0000"
-                          className={errors.phone ? "border-red-500" : ""}
-                        />
+                        <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="+1 (555) 000-0000" className={errors.phone ? "border-red-500" : ""} />
                         {errors.phone && <p className="text-sm text-red-500">{errors.phone}</p>}
                       </div>
                     </div>
@@ -314,15 +308,7 @@ const BecomePartner = () => {
                       <Label htmlFor="address" className="text-brand-blue font-semibold">
                         Company Address *
                       </Label>
-                      <Input
-                        id="address"
-                        name="address"
-                        type="text"
-                        value={formData.address}
-                        onChange={handleChange}
-                        placeholder="123 Business St, City, Country"
-                        className={errors.address ? "border-red-500" : ""}
-                      />
+                      <Input id="address" name="address" type="text" value={formData.address} onChange={handleChange} placeholder="123 Business St, City, Country" className={errors.address ? "border-red-500" : ""} />
                       {errors.address && <p className="text-sm text-red-500">{errors.address}</p>}
                     </div>
 
@@ -330,23 +316,11 @@ const BecomePartner = () => {
                       <Label htmlFor="message" className="text-brand-blue font-semibold">
                         Tell Us About Your Partnership Interest *
                       </Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Please describe your business, partnership goals, and how you envision working with us..."
-                        rows={6}
-                        className={errors.message ? "border-red-500" : ""}
-                      />
+                      <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Please describe your business, partnership goals, and how you envision working with us..." rows={6} className={errors.message ? "border-red-500" : ""} />
                       {errors.message && <p className="text-sm text-red-500">{errors.message}</p>}
                     </div>
 
-                    <Button
-                      type="submit"
-                      className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white py-6 text-lg font-semibold"
-                      disabled={isSubmitting}
-                    >
+                    <Button type="submit" className="w-full bg-brand-teal hover:bg-brand-teal/90 text-white py-6 text-lg font-semibold" disabled={isSubmitting}>
                       {isSubmitting ? "Sending..." : "Submit Partnership Inquiry"}
                     </Button>
 
@@ -362,8 +336,6 @@ const BecomePartner = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default BecomePartner;
