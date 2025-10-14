@@ -182,7 +182,7 @@ const Benefits = () => {
         </section>
 
         {/* Benefits Grid Section */}
-        <section className="bg-gray-50 py-0">
+        <section className="bg-gray-50 py-[5px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-[20px]">
