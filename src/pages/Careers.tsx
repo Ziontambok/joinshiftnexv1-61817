@@ -122,7 +122,7 @@ const Careers = () => {
 
       <main className="flex-grow pt-24 pb-16">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden my-[20px]">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -163,7 +163,7 @@ const Careers = () => {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white my-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -219,7 +219,7 @@ const Careers = () => {
         </section>
 
         {/* Open Positions Section */}
-        <section id="open-positions" className="py-20 bg-gray-50">
+        <section id="open-positions" className="py-20 bg-gray-50 my-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -274,7 +274,7 @@ const Careers = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white my-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -308,7 +308,7 @@ const Careers = () => {
         </section>
 
         {/* Growth & Development Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-blue to-brand-teal text-white">
+        <section className="py-20 bg-gradient-to-br from-brand-blue to-brand-teal text-white my-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Award className="h-16 w-16 mx-auto mb-6" />
@@ -335,7 +335,7 @@ const Careers = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white my-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="bg-gradient-to-br from-gray-50 to-white border-2 border-brand-teal shadow-2xl">
