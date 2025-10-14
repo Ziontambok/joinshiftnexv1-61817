@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { Building, ExternalLink } from 'lucide-react';
 import { Button } from './ui/button';
-
 const NetworkSection = () => {
-  return (
-    <section id="network" className="py-24 bg-white">
+  return <section id="network" className="py-5 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal">
           <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Network</span>
@@ -23,12 +20,7 @@ const NetworkSection = () => {
                 Looking for reliable virtual assistant services for your business? 
                 Partner with Prime Virtual Solutions to access our network of skilled professionals.
               </p>
-              <a 
-                href="https://www.primevirtualsolutions.com/partners" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center bg-white text-brand-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all"
-              >
+              <a href="https://www.primevirtualsolutions.com/partners" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-brand-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
                 Become a Partner <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </div>
@@ -40,8 +32,6 @@ const NetworkSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default NetworkSection;
