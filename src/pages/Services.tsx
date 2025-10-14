@@ -197,7 +197,7 @@ const Services = () => {
         </section>
 
         {/* Stats Section */}
-        <section className="py-12 bg-gradient-to-r from-gray-50 to-white">
+        <section className="bg-gradient-to-r from-gray-50 to-white py-[27px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
