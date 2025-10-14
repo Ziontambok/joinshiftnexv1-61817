@@ -122,13 +122,13 @@ const Careers = () => {
 
       <main className="flex-grow pt-24 pb-16">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden mb-[20px]">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[15px] mb-[20px]">
+          <div className="absolute top-50px bottom-50px opacity-10 py-0 px-0 mx-0 my-[1px]">
+            <div className="absolute top-4 left-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-4 right-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
           
-          <div className="container mx-auto px-4 relative z-10">
+          <div className="container relative z-10 mx-0 px-0 my-0 py-0">
             <div className="max-w-4xl mx-auto text-center text-white">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 animate-fade-in">
                 <Briefcase className="h-5 w-5" />
