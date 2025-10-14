@@ -51,54 +51,11 @@ const HowItWorksSection = () => {
         </div>
         
         <div className="mt-20 mb-20 reveal">
-          <div className="bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-white via-gray-50/50 to-gray-100/50 opacity-70"></div>
-            <div className="absolute -right-20 -top-20 w-40 h-40 bg-brand-teal rounded-full opacity-10"></div>
-            <div className="absolute -left-16 -bottom-16 w-32 h-32 bg-purple-400 rounded-full opacity-10"></div>
-            
-            <div className="relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-bold text-center mb-10 bg-gradient-to-r from-brand-blue via-brand-teal to-purple-500 bg-clip-text text-transparent">
-                Ways to Work with Prime Virtual Solutions
-              </h3>
-              
-              <Tabs defaultValue="roles" className="w-full max-w-4xl mx-auto">
-                <TabsList className="w-full grid grid-cols-2 mb-10 rounded-xl bg-gray-100/80 p-1.5">
-                  <TabsTrigger value="roles" className="text-lg py-3 font-medium rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-md transition-all duration-300">
-                    Healthcare Roles
-                  </TabsTrigger>
-                  <TabsTrigger value="settings" className="text-lg py-3 font-medium rounded-xl data-[state=active]:bg-white data-[state=active]:shadow-md transition-all duration-300">
-                    Work Settings
-                  </TabsTrigger>
-                </TabsList>
-                
-                <TabsContent value="roles" className="mt-4 animate-fade-in">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 bg-blue-50/50 p-5 rounded-xl border border-blue-100/50">
-                    <Shield size={24} className="text-brand-teal" />
-                    <p className="text-md text-gray-700 text-center sm:text-left">
-                      Prime Virtual Solutions supports a wide range of healthcare professionals with verified credentials
-                    </p>
-                  </div>
-                  <HealthcareRoles categories={healthcareRoles} roleDescriptions={roleDescriptions} />
-                </TabsContent>
-                
-                <TabsContent value="settings" className="mt-2 animate-fade-in">
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8 bg-teal-50/50 p-5 rounded-xl border border-teal-100/50">
-                    <Building size={24} className="text-brand-teal" />
-                    <p className="text-md text-gray-700 text-center sm:text-left">
-                      Find opportunities across diverse healthcare environments with competitive pay rates
-                    </p>
-                  </div>
-                  <HealthcareSettings settings={healthcareSettings} />
-                </TabsContent>
-              </Tabs>
-            </div>
-          </div>
+          
         </div>
         
         <div className="mt-20 text-center reveal">
-          <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="btn-primary text-lg inline-block bg-gradient-to-r from-brand-blue to-brand-teal hover:opacity-90 transition-opacity px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 duration-300">
-            Join Now – It's Free
-          </a>
+          
         </div>
       </div>
     </section>;
