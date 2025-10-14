@@ -307,7 +307,7 @@ const Careers = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-white mb-[20px]">
+        <section className="bg-white mb-[20px] py-0">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <Card className="bg-gradient-to-br from-gray-50 to-white border-2 border-brand-teal shadow-2xl">
