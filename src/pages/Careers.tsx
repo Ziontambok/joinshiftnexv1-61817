@@ -5,127 +5,119 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import ChatwootWidget from "@/components/ChatwootWidget";
-import {
-  Users,
-  Headphones,
-  Code,
-  TrendingUp,
-  FileText,
-  Phone,
-  Settings,
-  BookOpen,
-  Briefcase,
-  Calendar,
-  Mail,
-  Database,
-  Heart,
-  Globe,
-  Award,
-  Target,
-  Zap,
-  CheckCircle,
-  ArrowRight,
-  Sparkles,
-  TrendingUpIcon,
-  Shield,
-  Clock
-} from "lucide-react";
-
+import { Users, Headphones, Code, TrendingUp, FileText, Phone, Settings, BookOpen, Briefcase, Calendar, Mail, Database, Heart, Globe, Award, Target, Zap, CheckCircle, ArrowRight, Sparkles, TrendingUpIcon, Shield, Clock } from "lucide-react";
 const Careers = () => {
   const handleApplyNow = () => {
     const message = encodeURIComponent("Hi! I'm interested in career opportunities at Prime Virtual Solutions. I'd like to learn more about open positions.");
     window.open(`https://wa.me/639173132145?text=${message}`, '_blank');
   };
-
-  const skills = [
-    { icon: <Users className="h-8 w-8" />, title: "Virtual Assistants", color: "from-blue-500 to-blue-600" },
-    { icon: <Headphones className="h-8 w-8" />, title: "Customer Support", color: "from-teal-500 to-teal-600" },
-    { icon: <Settings className="h-8 w-8" />, title: "Technical Support", color: "from-purple-500 to-purple-600" },
-    { icon: <Code className="h-8 w-8" />, title: "Web Development", color: "from-indigo-500 to-indigo-600" },
-    { icon: <TrendingUp className="h-8 w-8" />, title: "Digital Marketing", color: "from-pink-500 to-pink-600" },
-    { icon: <Database className="h-8 w-8" />, title: "Data Management", color: "from-orange-500 to-orange-600" },
-    { icon: <FileText className="h-8 w-8" />, title: "Content & Writing", color: "from-green-500 to-green-600" },
-    { icon: <Phone className="h-8 w-8" />, title: "Call Center Services", color: "from-red-500 to-red-600" },
-    { icon: <Calendar className="h-8 w-8" />, title: "Project Management", color: "from-yellow-500 to-yellow-600" },
-    { icon: <Mail className="h-8 w-8" />, title: "Sales Support", color: "from-cyan-500 to-cyan-600" },
-    { icon: <BookOpen className="h-8 w-8" />, title: "Bookkeeping & Finance", color: "from-violet-500 to-violet-600" },
-    { icon: <Briefcase className="h-8 w-8" />, title: "HR & Recruitment", color: "from-emerald-500 to-emerald-600" }
-  ];
-
-  const benefits = [
-    {
-      icon: <TrendingUpIcon className="h-6 w-6" />,
-      title: "Competitive Compensation",
-      description: "Industry-leading salaries and performance bonuses"
-    },
-    {
-      icon: <Clock className="h-6 w-6" />,
-      title: "Flexible Work Hours",
-      description: "Work-life balance with flexible scheduling options"
-    },
-    {
-      icon: <Award className="h-6 w-6" />,
-      title: "Career Development",
-      description: "Continuous learning and professional growth opportunities"
-    },
-    {
-      icon: <Heart className="h-6 w-6" />,
-      title: "Health & Wellness",
-      description: "Comprehensive health benefits and wellness programs"
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Remote-First Culture",
-      description: "Work from anywhere with a global team"
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Job Security",
-      description: "Stable employment with a growing company"
-    }
-  ];
-
-  const values = [
-    {
-      title: "Excellence",
-      description: "We pursue excellence in every interaction, delivering world-class service that exceeds expectations",
-      icon: <Sparkles className="h-12 w-12 text-brand-teal" />
-    },
-    {
-      title: "Innovation",
-      description: "We embrace cutting-edge solutions and continuously improve our processes to stay ahead",
-      icon: <Zap className="h-12 w-12 text-brand-teal" />
-    },
-    {
-      title: "Integrity",
-      description: "We operate with transparency, honesty, and ethical standards in everything we do",
-      icon: <Shield className="h-12 w-12 text-brand-teal" />
-    },
-    {
-      title: "Collaboration",
-      description: "We believe in the power of teamwork and foster a culture of mutual support and respect",
-      icon: <Users className="h-12 w-12 text-brand-teal" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
+  const skills = [{
+    icon: <Users className="h-8 w-8" />,
+    title: "Virtual Assistants",
+    color: "from-blue-500 to-blue-600"
+  }, {
+    icon: <Headphones className="h-8 w-8" />,
+    title: "Customer Support",
+    color: "from-teal-500 to-teal-600"
+  }, {
+    icon: <Settings className="h-8 w-8" />,
+    title: "Technical Support",
+    color: "from-purple-500 to-purple-600"
+  }, {
+    icon: <Code className="h-8 w-8" />,
+    title: "Web Development",
+    color: "from-indigo-500 to-indigo-600"
+  }, {
+    icon: <TrendingUp className="h-8 w-8" />,
+    title: "Digital Marketing",
+    color: "from-pink-500 to-pink-600"
+  }, {
+    icon: <Database className="h-8 w-8" />,
+    title: "Data Management",
+    color: "from-orange-500 to-orange-600"
+  }, {
+    icon: <FileText className="h-8 w-8" />,
+    title: "Content & Writing",
+    color: "from-green-500 to-green-600"
+  }, {
+    icon: <Phone className="h-8 w-8" />,
+    title: "Call Center Services",
+    color: "from-red-500 to-red-600"
+  }, {
+    icon: <Calendar className="h-8 w-8" />,
+    title: "Project Management",
+    color: "from-yellow-500 to-yellow-600"
+  }, {
+    icon: <Mail className="h-8 w-8" />,
+    title: "Sales Support",
+    color: "from-cyan-500 to-cyan-600"
+  }, {
+    icon: <BookOpen className="h-8 w-8" />,
+    title: "Bookkeeping & Finance",
+    color: "from-violet-500 to-violet-600"
+  }, {
+    icon: <Briefcase className="h-8 w-8" />,
+    title: "HR & Recruitment",
+    color: "from-emerald-500 to-emerald-600"
+  }];
+  const benefits = [{
+    icon: <TrendingUpIcon className="h-6 w-6" />,
+    title: "Competitive Compensation",
+    description: "Industry-leading salaries and performance bonuses"
+  }, {
+    icon: <Clock className="h-6 w-6" />,
+    title: "Flexible Work Hours",
+    description: "Work-life balance with flexible scheduling options"
+  }, {
+    icon: <Award className="h-6 w-6" />,
+    title: "Career Development",
+    description: "Continuous learning and professional growth opportunities"
+  }, {
+    icon: <Heart className="h-6 w-6" />,
+    title: "Health & Wellness",
+    description: "Comprehensive health benefits and wellness programs"
+  }, {
+    icon: <Globe className="h-6 w-6" />,
+    title: "Remote-First Culture",
+    description: "Work from anywhere with a global team"
+  }, {
+    icon: <Shield className="h-6 w-6" />,
+    title: "Job Security",
+    description: "Stable employment with a growing company"
+  }];
+  const values = [{
+    title: "Excellence",
+    description: "We pursue excellence in every interaction, delivering world-class service that exceeds expectations",
+    icon: <Sparkles className="h-12 w-12 text-brand-teal" />
+  }, {
+    title: "Innovation",
+    description: "We embrace cutting-edge solutions and continuously improve our processes to stay ahead",
+    icon: <Zap className="h-12 w-12 text-brand-teal" />
+  }, {
+    title: "Integrity",
+    description: "We operate with transparency, honesty, and ethical standards in everything we do",
+    icon: <Shield className="h-12 w-12 text-brand-teal" />
+  }, {
+    title: "Collaboration",
+    description: "We believe in the power of teamwork and foster a culture of mutual support and respect",
+    icon: <Users className="h-12 w-12 text-brand-teal" />
+  }];
+  return <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>Careers - Join Our Global Team | Prime Virtual Solutions</title>
-        <meta
-          name="description"
-          content="Join Prime Virtual Solutions and build a rewarding career in virtual assistance, customer support, tech support, development, marketing, and more. Work remotely with competitive benefits."
-        />
+        <meta name="description" content="Join Prime Virtual Solutions and build a rewarding career in virtual assistance, customer support, tech support, development, marketing, and more. Work remotely with competitive benefits." />
       </Helmet>
 
       <Header />
 
       <main className="flex-grow pt-24 pb-16">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[15px] mb-[20px]">
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[20px] mb-[20px]">
           <div className="absolute top-50px bottom-50px opacity-10 py-0 px-0 mx-0 my-[1px]">
             <div className="absolute top-4 left-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-4 right-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute bottom-4 right-10 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse" style={{
+            animationDelay: '1s'
+          }}></div>
           </div>
           
           <div className="container relative z-10 mx-0 px-0 my-0 py-0">
@@ -144,17 +136,12 @@ const Careers = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-                <Button
-                  onClick={handleApplyNow}
-                  className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold flex items-center gap-2"
-                >
+                <Button onClick={handleApplyNow} className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold flex items-center gap-2">
                   Apply Now <ArrowRight className="h-5 w-5" />
                 </Button>
-                <Button
-                  variant="outline"
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold"
-                  onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
-                >
+                <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold" onClick={() => document.getElementById('open-positions')?.scrollIntoView({
+                behavior: 'smooth'
+              })}>
                   View Open Positions
                 </Button>
               </div>
@@ -203,15 +190,13 @@ const Careers = () => {
               <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12">
                 <h3 className="text-3xl font-bold text-center mb-12 text-brand-blue">Our Core Values</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                  {values.map((value, index) => (
-                    <div key={index} className="text-center">
+                  {values.map((value, index) => <div key={index} className="text-center">
                       <div className="w-20 h-20 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
                         {value.icon}
                       </div>
                       <h4 className="text-xl font-bold mb-3 text-brand-blue">{value.title}</h4>
                       <p className="text-gray-600">{value.description}</p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
@@ -233,11 +218,7 @@ const Careers = () => {
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                {skills.map((skill, index) => (
-                  <Card
-                    key={index}
-                    className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-transparent hover:border-brand-teal"
-                  >
+                {skills.map((skill, index) => <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-transparent hover:border-brand-teal">
                     <CardContent className="p-6">
                       <div className={`w-16 h-16 bg-gradient-to-br ${skill.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
                         {skill.icon}
@@ -249,8 +230,7 @@ const Careers = () => {
                         <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" />
                       </div>
                     </CardContent>
-                  </Card>
-                ))}
+                  </Card>)}
               </div>
 
               <div className="text-center">
@@ -260,10 +240,7 @@ const Careers = () => {
                     <p className="text-lg mb-6 text-white/90">
                       We're always looking for talented individuals with diverse skills. Send us your resume and let's explore opportunities together.
                     </p>
-                    <Button
-                      onClick={handleApplyNow}
-                      className="bg-white text-brand-teal hover:bg-gray-100 px-6 py-3 text-lg font-semibold"
-                    >
+                    <Button onClick={handleApplyNow} className="bg-white text-brand-teal hover:bg-gray-100 px-6 py-3 text-lg font-semibold">
                       Submit Your Application
                     </Button>
                   </CardContent>
@@ -290,18 +267,13 @@ const Careers = () => {
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-teal"
-                  >
+                {benefits.map((benefit, index) => <div key={index} className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-teal">
                     <div className="w-14 h-14 bg-brand-teal/10 rounded-full flex items-center justify-center mb-4 text-brand-teal">
                       {benefit.icon}
                     </div>
                     <h3 className="text-xl font-bold mb-3 text-brand-blue">{benefit.title}</h3>
                     <p className="text-gray-600">{benefit.description}</p>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -346,18 +318,11 @@ const Careers = () => {
                     Join a team that values your talent, supports your growth, and celebrates your success. Your dream career awaits.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      onClick={handleApplyNow}
-                      className="bg-brand-teal hover:bg-brand-teal/90 text-white px-8 py-6 text-lg font-semibold flex items-center gap-2"
-                    >
+                    <Button onClick={handleApplyNow} className="bg-brand-teal hover:bg-brand-teal/90 text-white px-8 py-6 text-lg font-semibold flex items-center gap-2">
                       <CheckCircle className="h-5 w-5" />
                       Apply for a Position
                     </Button>
-                    <Button
-                      variant="outline"
-                      className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/5 px-8 py-6 text-lg font-semibold flex items-center gap-2"
-                      onClick={() => window.location.href = 'mailto:info@primevsolutions.com'}
-                    >
+                    <Button variant="outline" className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/5 px-8 py-6 text-lg font-semibold flex items-center gap-2" onClick={() => window.location.href = 'mailto:info@primevsolutions.com'}>
                       <Mail className="h-5 w-5" />
                       Email Us Your Resume
                     </Button>
@@ -374,8 +339,6 @@ const Careers = () => {
 
       <Footer />
       <ChatwootWidget />
-    </div>
-  );
+    </div>;
 };
-
 export default Careers;
