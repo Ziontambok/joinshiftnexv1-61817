@@ -216,7 +216,7 @@ const Benefits = () => {
         </section>
 
         {/* Case Studies Section */}
-        <section className="py-20 bg-white">
+        <section className="bg-white py-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
