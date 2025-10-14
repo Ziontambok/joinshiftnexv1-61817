@@ -5,7 +5,7 @@ const NetworkSection = () => {
   return <section id="network" className="py-5 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-          <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Network</span>
+          <span className="text-brand-teal uppercase tracking-wider mb-3 inline-block text-3xl font-semibold">Our Network</span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Business Partners</h2>
           <p className="text-lg text-gray-700">
             Join hundreds of businesses that trust Prime Virtual Solutions for their virtual assistant and call center needs.
