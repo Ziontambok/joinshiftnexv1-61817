@@ -136,6 +136,32 @@ const ServicesSection = () => {
                 </ul>
               </div>
             </div>
+      <div
+              key={index}
+              className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-teal/30 transition-all duration-300 hover:-translate-y-1 reveal"
+              style={{
+                animationDelay: `${index * 0.1}s`,
+              }}
+            >
+              <div className="bg-brand-teal/10 w-20 h-20 rounded-full flex items-center justify-center mb-6">
+                {service.icon}
+              </div>
+
+              <h3 className="text-2xl font-bold text-brand-blue mb-4">{service.title}</h3>
+              <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>
+
+              <div className="border-t border-gray-200 pt-4">
+                <p className="text-sm font-semibold text-brand-blue mb-3">Key Features:</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx} className="text-sm text-gray-600 flex items-start">
+                      <span className="w-1.5 h-1.5 bg-brand-teal rounded-full mr-2 mt-1.5 flex-shrink-0"></span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
 
