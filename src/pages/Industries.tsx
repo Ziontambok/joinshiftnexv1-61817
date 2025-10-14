@@ -120,7 +120,7 @@ const Industries = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="bg-white pt-[40px] pb-0">
-          <div className="container mx-auto px-4">
+          <div className="container mx-auto px-4 py-0 my-0">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-brand-blue mb-6">
                 Industries We Serve
@@ -133,7 +133,7 @@ const Industries = () => {
         </section>
 
         {/* Industries Grid */}
-        <section className="bg-gray-50 py-[50px]">
+        <section className="bg-gray-50 py-[19px]">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -168,7 +168,7 @@ const Industries = () => {
         </section>
 
         {/* Why Expertise Matters */}
-        <section className="py-20 bg-white">
+        <section className="bg-white py-[19px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
