@@ -221,7 +221,7 @@ const Industries = () => {
         </section>
       </main>
 
-      <Footer className="py-0" />
+      <Footer />
     </div>;
 };
 export default Industries;
