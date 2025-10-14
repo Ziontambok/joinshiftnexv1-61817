@@ -51,8 +51,7 @@ const statistics = [{
   label: "Support availability"
 }];
 const BenefitsSection = () => {
-  return (
-    <section className="bg-gray-50 py-16">
+  return <section className="bg-gray-50 py-1">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Key Benefits</h2>
@@ -60,16 +59,13 @@ const BenefitsSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+          {benefits.map((benefit, index) => <div key={index} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
               <div className="mb-4">{benefit.icon}</div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
               <p className="text-gray-600">{benefit.description}</p>
-            </div>
-          ))}
+            </div>)}
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default BenefitsSection;
