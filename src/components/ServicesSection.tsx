@@ -96,7 +96,7 @@ const ServicesSection = () => {
     <section id="services" className="gap-y-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20 reveal">
-          <span className="text-brand-teal font-medium text-4xl uppercase tracking-wider mb-3 inline-block">
+          <span className="text-brand-teal font-medium text-4xl uppercase tracking-wider mb-3 inline-block mt-[15px]">
             Our Services
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">
