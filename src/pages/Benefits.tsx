@@ -37,6 +37,27 @@ const Benefits = () => {
         <div className="bg-white py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              {/* Stats section */}
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Enterprises and SMEs Choose Prime Virtual Solutions?</h2>
+                <p className="text-xl text-gray-600 max-w-2xl mx-auto">Trusted by enterprises and SMB businesses across e-commerce, real estate, legal, healthcare, and professional services industries.</p>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div className="text-center">
+                  <h3 className="text-5xl font-bold text-gray-900 mb-4">60%</h3>
+                  <p className="text-lg text-gray-600">Average cost savings compared to hiring in-house staff</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-5xl font-bold text-gray-900 mb-4">24/7</h3>
+                  <p className="text-lg text-gray-600">Round-the-clock support available for your business needs</p>
+                </div>
+                <div className="text-center">
+                  <h3 className="text-5xl font-bold text-gray-900 mb-4">500+</h3>
+                  <p className="text-lg text-gray-600">SMEs trust us across multiple industries</p>
+                </div>
+              </div>
+
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">Real Results from Real Businesses</h2>
               
               <div className="space-y-8">
