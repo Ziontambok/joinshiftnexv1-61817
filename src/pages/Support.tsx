@@ -6,98 +6,60 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Button } from "@/components/ui/button";
 import { Mail, MessageCircle, HeadphonesIcon, BookOpen, HelpCircle, ChevronDown } from "lucide-react";
 import ChatwootWidget from "@/components/ChatwootWidget";
-
 const Support = () => {
   const [showAllFaqs, setShowAllFaqs] = useState(false);
-
-  const faqs = [
-    {
-      question: "What is Prime Virtual Solutions?",
-      answer:
-        "Prime Virtual Solutions is a full-service outsourcing company providing customized virtual support solutions for businesses worldwide. Our team of professionals offers services in customer support, technical assistance, digital marketing, web development, content creation, bookkeeping, HR, and more — empowering enterprises and SMEs to scale efficiently.",
-    },
-    {
-      question: "Where are your virtual assistants and specialists located?",
-      answer:
-        "Our highly trained professionals are based in the Philippines — known for its skilled, English-proficient workforce that delivers global-standard service quality across industries.",
-    },
-    {
-      question: "What makes Prime Virtual Solutions different from other outsourcing firms?",
-      answer:
-        "We combine industry-specific expertise, process transparency, and personalized service. Unlike one-size-fits-all agencies, PrimeV Solutions tailors each solution to your business goals, ensuring efficiency, cost savings, and measurable growth.",
-    },
-    {
-      question: "What types of services do you provide?",
-      answer:
-        "We offer comprehensive virtual support, including: Administrative and Executive Assistance, Customer and Technical Support, Web and Software Development, Digital Marketing and SEO, Content and Copywriting, Bookkeeping and Finance, HR & Recruitment, Sales Support and Lead Generation, and Project Management.",
-    },
-    {
-      question: "Can I hire a single virtual assistant or an entire team?",
-      answer:
-        "Absolutely! We can assign a dedicated individual, a shared assistant, or a full managed team — depending on your business size and workload.",
-    },
-    {
-      question: "Are your services customizable?",
-      answer:
-        "Yes. Every client receives a custom plan aligned with their workflow, preferred tools, and business objectives. We adapt to your systems, not the other way around.",
-    },
-    {
-      question: "What channels do your customer support agents handle?",
-      answer:
-        "Our agents manage live chat, email, social media, and phone support, ensuring consistent, multichannel customer engagement.",
-    },
-    {
-      question: "Do you offer technical troubleshooting support?",
-      answer:
-        "Yes. Our technical specialists provide help desk assistance, software support, and system monitoring, ensuring smooth operations and rapid problem resolution.",
-    },
-    {
-      question: "What web development services do you offer?",
-      answer:
-        "We build, maintain, and optimize websites for performance and conversion. Services include e-commerce setup, CMS management, landing page design, and website maintenance.",
-    },
-    {
-      question: "Can you manage my social media and online campaigns?",
-      answer:
-        "Yes! Our digital marketing team handles social media management, SEO, content creation, email campaigns, and analytics to help grow your online presence.",
-    },
-    {
-      question: "What kind of writing services do you provide?",
-      answer:
-        "We offer blog writing, copywriting, proofreading, and technical writing. Each piece is crafted to reflect your brand voice and connect with your audience.",
-    },
-    {
-      question: "Do you provide accounting or bookkeeping support?",
-      answer:
-        "Yes. Our finance assistants handle accounts payable/receivable, invoice processing, payroll support, and expense tracking, helping keep your books accurate and compliant.",
-    },
-    {
-      question: "How can Prime Virtual Solutions help with recruitment?",
-      answer:
-        "We manage resume screening, interview scheduling, onboarding, and employee record management, ensuring you get the right talent quickly and efficiently.",
-    },
-    {
-      question: "Can you manage projects remotely?",
-      answer:
-        "Definitely. Our project coordinators handle task coordination, progress tracking, resource planning, and team communication, ensuring timely delivery and accountability.",
-    },
-    {
-      question: "How do your sales assistants help increase revenue?",
-      answer:
-        "Our dedicated sales support specialists assist with lead generation, follow-ups, CRM management, and proposal preparation, keeping your pipeline active and organized.",
-    },
-    {
-      question: "How can I start working with Prime Virtual Solutions?",
-      answer:
-        "Simply contact us through our Facebook page or website. We'll discuss your goals, design a custom plan, and assign a dedicated account manager to onboard you smoothly.",
-    },
-    {
-      question: "How do you ensure quality and data security?",
-      answer:
-        "We follow strict confidentiality policies, use secure cloud-based tools, and conduct regular QA checks to ensure data protection and consistent performance.",
-    },
-  ];
-
+  const faqs = [{
+    question: "What is Prime Virtual Solutions?",
+    answer: "Prime Virtual Solutions is a full-service outsourcing company providing customized virtual support solutions for businesses worldwide. Our team of professionals offers services in customer support, technical assistance, digital marketing, web development, content creation, bookkeeping, HR, and more — empowering enterprises and SMEs to scale efficiently."
+  }, {
+    question: "Where are your virtual assistants and specialists located?",
+    answer: "Our highly trained professionals are based in the Philippines — known for its skilled, English-proficient workforce that delivers global-standard service quality across industries."
+  }, {
+    question: "What makes Prime Virtual Solutions different from other outsourcing firms?",
+    answer: "We combine industry-specific expertise, process transparency, and personalized service. Unlike one-size-fits-all agencies, PrimeV Solutions tailors each solution to your business goals, ensuring efficiency, cost savings, and measurable growth."
+  }, {
+    question: "What types of services do you provide?",
+    answer: "We offer comprehensive virtual support, including: Administrative and Executive Assistance, Customer and Technical Support, Web and Software Development, Digital Marketing and SEO, Content and Copywriting, Bookkeeping and Finance, HR & Recruitment, Sales Support and Lead Generation, and Project Management."
+  }, {
+    question: "Can I hire a single virtual assistant or an entire team?",
+    answer: "Absolutely! We can assign a dedicated individual, a shared assistant, or a full managed team — depending on your business size and workload."
+  }, {
+    question: "Are your services customizable?",
+    answer: "Yes. Every client receives a custom plan aligned with their workflow, preferred tools, and business objectives. We adapt to your systems, not the other way around."
+  }, {
+    question: "What channels do your customer support agents handle?",
+    answer: "Our agents manage live chat, email, social media, and phone support, ensuring consistent, multichannel customer engagement."
+  }, {
+    question: "Do you offer technical troubleshooting support?",
+    answer: "Yes. Our technical specialists provide help desk assistance, software support, and system monitoring, ensuring smooth operations and rapid problem resolution."
+  }, {
+    question: "What web development services do you offer?",
+    answer: "We build, maintain, and optimize websites for performance and conversion. Services include e-commerce setup, CMS management, landing page design, and website maintenance."
+  }, {
+    question: "Can you manage my social media and online campaigns?",
+    answer: "Yes! Our digital marketing team handles social media management, SEO, content creation, email campaigns, and analytics to help grow your online presence."
+  }, {
+    question: "What kind of writing services do you provide?",
+    answer: "We offer blog writing, copywriting, proofreading, and technical writing. Each piece is crafted to reflect your brand voice and connect with your audience."
+  }, {
+    question: "Do you provide accounting or bookkeeping support?",
+    answer: "Yes. Our finance assistants handle accounts payable/receivable, invoice processing, payroll support, and expense tracking, helping keep your books accurate and compliant."
+  }, {
+    question: "How can Prime Virtual Solutions help with recruitment?",
+    answer: "We manage resume screening, interview scheduling, onboarding, and employee record management, ensuring you get the right talent quickly and efficiently."
+  }, {
+    question: "Can you manage projects remotely?",
+    answer: "Definitely. Our project coordinators handle task coordination, progress tracking, resource planning, and team communication, ensuring timely delivery and accountability."
+  }, {
+    question: "How do your sales assistants help increase revenue?",
+    answer: "Our dedicated sales support specialists assist with lead generation, follow-ups, CRM management, and proposal preparation, keeping your pipeline active and organized."
+  }, {
+    question: "How can I start working with Prime Virtual Solutions?",
+    answer: "Simply contact us through our Facebook page or website. We'll discuss your goals, design a custom plan, and assign a dedicated account manager to onboard you smoothly."
+  }, {
+    question: "How do you ensure quality and data security?",
+    answer: "We follow strict confidentiality policies, use secure cloud-based tools, and conduct regular QA checks to ensure data protection and consistent performance."
+  }];
   const displayedFaqs = showAllFaqs ? faqs : faqs.slice(0, 10);
 
   // Function to open Facebook Messenger
@@ -108,23 +70,13 @@ const Support = () => {
   // Function to compose email with template
   const composeEmail = () => {
     const subject = encodeURIComponent('Support Request - Prime Virtual Solutions');
-    const body = encodeURIComponent(
-      'Name: [Your Full Name]\n\n' +
-      'Phone: [Your Phone Number]\n\n' +
-      'Email: [Your Email Address]\n\n' +
-      'Issue/Question:\n[Please describe your issue or question here]\n\n'
-    );
+    const body = encodeURIComponent('Name: [Your Full Name]\n\n' + 'Phone: [Your Phone Number]\n\n' + 'Email: [Your Email Address]\n\n' + 'Issue/Question:\n[Please describe your issue or question here]\n\n');
     window.location.href = `mailto:info@primevsolutions.com?subject=${subject}&body=${body}`;
   };
-
-  return (
-    <div className="min-h-screen bg-background flex flex-col">
+  return <div className="min-h-screen bg-background flex flex-col">
       <Helmet>
         <title>Support - ShiftNex AI</title>
-        <meta
-          name="description"
-          content="Get help with ShiftNex AI platform. Find answers to common questions and learn how to use our intelligent healthcare staffing platform."
-        />
+        <meta name="description" content="Get help with ShiftNex AI platform. Find answers to common questions and learn how to use our intelligent healthcare staffing platform." />
       </Helmet>
 
       <Header />
@@ -180,8 +132,7 @@ const Support = () => {
               </h2>
 
               <Accordion type="single" collapsible className="w-full">
-                {displayedFaqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
+                {displayedFaqs.map((faq, index) => <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="text-left">
                       <span className="flex items-start gap-3">
                         <span className="font-semibold text-shiftnex-teal min-w-[2rem]">{String(index + 1).padStart(2, '0')}.</span>
@@ -189,26 +140,19 @@ const Support = () => {
                       </span>
                     </AccordionTrigger>
                     <AccordionContent className="ml-11">{faq.answer}</AccordionContent>
-                  </AccordionItem>
-                ))}
+                  </AccordionItem>)}
               </Accordion>
 
-              {faqs.length > 10 && (
-                <div className="mt-6 text-center">
-                  <Button
-                    variant="outline"
-                    onClick={() => setShowAllFaqs(!showAllFaqs)}
-                    className="flex items-center gap-2 mx-auto"
-                  >
+              {faqs.length > 10 && <div className="mt-6 text-center my-[12px]">
+                  <Button variant="outline" onClick={() => setShowAllFaqs(!showAllFaqs)} className="flex items-center gap-2 mx-auto">
                     {showAllFaqs ? "Show Less" : "See More Questions"}
                     <ChevronDown className={`h-4 w-4 transition-transform ${showAllFaqs ? "rotate-180" : ""}`} />
                   </Button>
-                </div>
-              )}
+                </div>}
             </div>
 
             {/* Contact Box */}
-            <div className="bg-gray-50 rounded-lg p-8 text-center">
+            <div className="bg-gray-50 rounded-lg p-8 text-center py-0">
               <h2 className="text-2xl font-bold text-shiftnex-deep-blue mb-4">Still Have Questions?</h2>
               <p className="text-gray-600 mb-6 max-w-lg mx-auto">
                 Our support team is here to help. Reach out to us directly and we'll get back to you as soon as
@@ -232,8 +176,6 @@ const Support = () => {
       <Footer />
 
       <ChatwootWidget />
-    </div>
-  );
+    </div>;
 };
-
 export default Support;
