@@ -133,7 +133,7 @@ const Benefits = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[15px]">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{
@@ -160,7 +160,7 @@ const Benefits = () => {
         </section>
 
         {/* Statistics Section */}
-        <section className="bg-white -mt-16 relative z-10 my-0 py-[27px]">
+        <section className="bg-white py-[27px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -182,10 +182,10 @@ const Benefits = () => {
         </section>
 
         {/* Benefits Grid Section */}
-        <section className="bg-gray-50 py-[5px]">
-          <div className="container mx-auto px-4">
+        <section className="py-1 bg-gray-50">
+          <div className="container mx-auto px-4 pt-6 my-[10px]">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-[20px]">
+              <div className="text-center mb-16">
                 <span className="text-brand-teal font-semibold text-lg uppercase tracking-wider mb-3 inline-block">
                   Key Advantages
                 </span>
@@ -216,7 +216,7 @@ const Benefits = () => {
         </section>
 
         {/* Case Studies Section */}
-        <section className="bg-white py-[25px]">
+        <section className="bg-white py-[27px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -266,7 +266,7 @@ const Benefits = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="bg-gray-50 py-[25px]">
+        <section className="bg-gray-50 py-[27px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
@@ -304,29 +304,42 @@ const Benefits = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue">
+        <section className="py-5 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Sparkles className="h-16 w-16 text-white mx-auto mb-6" />
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-                Ready to Experience These Benefits?
-              </h2>
-              <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
-                Join hundreds of businesses saving time and money with Prime Virtual Solutions. Start your free consultation today.
-              </p>
+            <div className="max-w-5xl mx-auto">
+              <Card className="overflow-hidden border-0 shadow-2xl">
+                <CardContent className="p-0">
+                  <div className="bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue p-12 text-center relative overflow-hidden">
+                    <div className="absolute inset-0 opacity-10">
+                      <div className="absolute top-0 left-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                      <div className="absolute bottom-0 right-0 w-64 h-64 bg-white rounded-full blur-3xl"></div>
+                    </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/support">
-                  <Button className="bg-white text-brand-blue hover:bg-gray-100 text-lg px-8 py-6 rounded-lg font-semibold flex items-center gap-2">
-                    Start Your Free Consultation <ArrowRight className="h-5 w-5" />
-                  </Button>
-                </Link>
-                <Link to="/services">
-                  <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-lg font-semibold">
-                    Explore Our Services
-                  </Button>
-                </Link>
-              </div>
+                    <div className="relative z-10">
+                      <Sparkles className="h-16 w-16 text-white mx-auto mb-6" />
+                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                        Ready to Experience These Benefits?
+                      </h2>
+                      <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                        Join hundreds of businesses saving time and money with Prime Virtual Solutions. Start your free consultation today.
+                      </p>
+
+                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Link to="/support">
+                          <Button className="bg-white text-brand-blue hover:bg-gray-100 text-lg px-8 py-6 rounded-lg font-semibold flex items-center gap-2">
+                            Start Your Free Consultation <ArrowRight className="h-5 w-5" />
+                          </Button>
+                        </Link>
+                        <Link to="/services">
+                          <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-lg font-semibold">
+                            Explore Our Services
+                          </Button>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
