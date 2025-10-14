@@ -191,8 +191,13 @@ const Support = () => {
               <Accordion type="single" collapsible className="w-full">
                 {displayedFaqs.map((faq, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger>{faq.question}</AccordionTrigger>
-                    <AccordionContent>{faq.answer}</AccordionContent>
+                    <AccordionTrigger className="text-left">
+                      <span className="flex items-start gap-3">
+                        <span className="font-semibold text-shiftnex-teal min-w-[2rem]">{String(index + 1).padStart(2, '0')}.</span>
+                        <span>{faq.question}</span>
+                      </span>
+                    </AccordionTrigger>
+                    <AccordionContent className="ml-11">{faq.answer}</AccordionContent>
                   </AccordionItem>
                 ))}
               </Accordion>
