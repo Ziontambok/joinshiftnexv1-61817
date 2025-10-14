@@ -331,7 +331,7 @@ const Benefits = () => {
                           </Button>
                         </Link>
                         <Link to="/services">
-                          <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-6 rounded-lg font-semibold">
+                          <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue text-lg px-8 py-6 rounded-lg font-semibold transition-all">
                             Explore Our Services
                           </Button>
                         </Link>
