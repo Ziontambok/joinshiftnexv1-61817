@@ -35,6 +35,6 @@ const HowItWorksSection = () => {
   const toggleCategory = (category: string) => {
     setOpenCategories(current => current.includes(category) ? current.filter(c => c !== category) : [...current, category]);
   };
-  return;
+  return null;
 };
 export default HowItWorksSection;

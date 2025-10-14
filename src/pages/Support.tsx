@@ -1,13 +1,88 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
-import { Mail, MessageCircle, HeadphonesIcon, BookOpen, HelpCircle } from "lucide-react";
+import { Mail, MessageCircle, HeadphonesIcon, BookOpen, HelpCircle, ChevronDown } from "lucide-react";
 import ChatwootWidget from "@/components/ChatwootWidget";
 
 const Support = () => {
+  const [showAllFaqs, setShowAllFaqs] = useState(false);
+
+  const faqs = [
+    {
+      question: "What is PrimeV Solutions?",
+      answer: "PrimeV Solutions is a full-service outsourcing company providing customized virtual support solutions for businesses worldwide. Our team of professionals offers services in customer support, technical assistance, digital marketing, web development, content creation, bookkeeping, HR, and more — empowering enterprises and SMEs to scale efficiently."
+    },
+    {
+      question: "Where are your virtual assistants and specialists located?",
+      answer: "Our highly trained professionals are based in the Philippines — known for its skilled, English-proficient workforce that delivers global-standard service quality across industries."
+    },
+    {
+      question: "What makes PrimeV Solutions different from other outsourcing firms?",
+      answer: "We combine industry-specific expertise, process transparency, and personalized service. Unlike one-size-fits-all agencies, PrimeV Solutions tailors each solution to your business goals, ensuring efficiency, cost savings, and measurable growth."
+    },
+    {
+      question: "What types of services do you provide?",
+      answer: "We offer comprehensive virtual support, including: Administrative and Executive Assistance, Customer and Technical Support, Web and Software Development, Digital Marketing and SEO, Content and Copywriting, Bookkeeping and Finance, HR & Recruitment, Sales Support and Lead Generation, and Project Management."
+    },
+    {
+      question: "Can I hire a single virtual assistant or an entire team?",
+      answer: "Absolutely! We can assign a dedicated individual, a shared assistant, or a full managed team — depending on your business size and workload."
+    },
+    {
+      question: "Are your services customizable?",
+      answer: "Yes. Every client receives a custom plan aligned with their workflow, preferred tools, and business objectives. We adapt to your systems, not the other way around."
+    },
+    {
+      question: "What channels do your customer support agents handle?",
+      answer: "Our agents manage live chat, email, social media, and phone support, ensuring consistent, multichannel customer engagement."
+    },
+    {
+      question: "Do you offer technical troubleshooting support?",
+      answer: "Yes. Our technical specialists provide help desk assistance, software support, and system monitoring, ensuring smooth operations and rapid problem resolution."
+    },
+    {
+      question: "What web development services do you offer?",
+      answer: "We build, maintain, and optimize websites for performance and conversion. Services include e-commerce setup, CMS management, landing page design, and website maintenance."
+    },
+    {
+      question: "Can you manage my social media and online campaigns?",
+      answer: "Yes! Our digital marketing team handles social media management, SEO, content creation, email campaigns, and analytics to help grow your online presence."
+    },
+    {
+      question: "What kind of writing services do you provide?",
+      answer: "We offer blog writing, copywriting, proofreading, and technical writing. Each piece is crafted to reflect your brand voice and connect with your audience."
+    },
+    {
+      question: "Do you provide accounting or bookkeeping support?",
+      answer: "Yes. Our finance assistants handle accounts payable/receivable, invoice processing, payroll support, and expense tracking, helping keep your books accurate and compliant."
+    },
+    {
+      question: "How can PrimeV Solutions help with recruitment?",
+      answer: "We manage resume screening, interview scheduling, onboarding, and employee record management, ensuring you get the right talent quickly and efficiently."
+    },
+    {
+      question: "Can you manage projects remotely?",
+      answer: "Definitely. Our project coordinators handle task coordination, progress tracking, resource planning, and team communication, ensuring timely delivery and accountability."
+    },
+    {
+      question: "How do your sales assistants help increase revenue?",
+      answer: "Our dedicated sales support specialists assist with lead generation, follow-ups, CRM management, and proposal preparation, keeping your pipeline active and organized."
+    },
+    {
+      question: "How can I start working with PrimeV Solutions?",
+      answer: "Simply contact us through our Facebook page or website. We'll discuss your goals, design a custom plan, and assign a dedicated account manager to onboard you smoothly."
+    },
+    {
+      question: "How do you ensure quality and data security?",
+      answer: "We follow strict confidentiality policies, use secure cloud-based tools, and conduct regular QA checks to ensure data protection and consistent performance."
+    }
+  ];
+
+  const displayedFaqs = showAllFaqs ? faqs : faqs.slice(0, 10);
+
   // Function to open Chatwoot chat widget
   const openChatwootWidget = () => {
     // This is a workaround since TypeScript doesn't know about the toggleBubble method
@@ -97,51 +172,26 @@ const Support = () => {
               </h2>
 
               <Accordion type="single" collapsible className="w-full">
-                <AccordionItem value="item-1">
-                  <AccordionTrigger>How does ShiftNex AI match me with healthcare shifts?</AccordionTrigger>
-                  <AccordionContent>
-                    ShiftNex AI uses advanced artificial intelligence algorithms to analyze your skills, preferences,
-                    location, and availability. It then compares these factors with available shifts to find optimal
-                    matches. The system continues to learn from your feedback to improve matches over time.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-2">
-                  <AccordionTrigger>How do I update my credentials on the platform?</AccordionTrigger>
-                  <AccordionContent>
-                    Log in to your ShiftNex account, navigate to your profile settings, and select "Credentials" from
-                    the menu. From there, you can upload new documents, update existing ones, and manage your credential
-                    verification status.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3">
-                  <AccordionTrigger>Can I set my own availability schedule?</AccordionTrigger>
-                  <AccordionContent>
-                    Yes! ShiftNex AI is designed to work with your schedule. In your account settings, you can specify
-                    your available days and hours, set recurring availability patterns, and mark specific dates as
-                    unavailable for personal time.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-4">
-                  <AccordionTrigger>How quickly can I start working once I join?</AccordionTrigger>
-                  <AccordionContent>
-                    Once your profile is complete and your credentials are verified, you can begin receiving shift
-                    matches immediately. The verification process typically takes 24-48 hours, and our team works to
-                    expedite this process whenever possible.
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-5">
-                  <AccordionTrigger>How do payments work on ShiftNex?</AccordionTrigger>
-                  <AccordionContent>
-                    ShiftNex processes payments securely through our integrated payment system. You can set up direct
-                    deposit in your account settings. Payments are processed on a weekly basis, and you can track all
-                    your earnings in your personal dashboard.
-                  </AccordionContent>
-                </AccordionItem>
+                {displayedFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger>{faq.question}</AccordionTrigger>
+                    <AccordionContent>{faq.answer}</AccordionContent>
+                  </AccordionItem>
+                ))}
               </Accordion>
+
+              {faqs.length > 10 && (
+                <div className="mt-6 text-center">
+                  <Button
+                    variant="outline"
+                    onClick={() => setShowAllFaqs(!showAllFaqs)}
+                    className="flex items-center gap-2 mx-auto"
+                  >
+                    {showAllFaqs ? "Show Less" : "See More Questions"}
+                    <ChevronDown className={`h-4 w-4 transition-transform ${showAllFaqs ? "rotate-180" : ""}`} />
+                  </Button>
+                </div>
+              )}
             </div>
 
             {/* Contact Box */}
