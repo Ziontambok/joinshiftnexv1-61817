@@ -280,7 +280,7 @@ const Careers = () => {
         </section>
 
         {/* Growth & Development Section */}
-        <section className="pt-[50px] pb-[15px] bg-gradient-to-br from-brand-blue to-brand-teal text-white mb-[20px]">
+        <section className="pt-[50px] pb-[30px] bg-gradient-to-br from-brand-blue to-brand-teal text-white mb-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Award className="h-16 w-16 mx-auto mb-6" />
