@@ -5,154 +5,113 @@ import Footer from '@/components/Footer';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import {
-  ShoppingCart,
-  Building2,
-  Stethoscope,
-  Scale,
-  GraduationCap,
-  Home,
-  TrendingUp,
-  Briefcase,
-  Heart,
-  Truck,
-  Smartphone,
-  Users,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
-
+import { ShoppingCart, Building2, Stethoscope, Scale, GraduationCap, Home, TrendingUp, Briefcase, Heart, Truck, Smartphone, Users, ArrowRight, CheckCircle } from 'lucide-react';
 const Industries = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const industries = [
-    {
-      icon: ShoppingCart,
-      title: "E-commerce & Retail",
-      description: "Customer support, order processing, inventory management, and product listing services",
-      services: ["Customer Service", "Order Management", "Data Entry", "Social Media"],
-      color: "text-blue-600",
-      bg: "bg-blue-50"
-    },
-    {
-      icon: Building2,
-      title: "Real Estate",
-      description: "Administrative support, lead management, scheduling, and client communication",
-      services: ["Lead Qualification", "Appointment Setting", "CRM Management", "Document Prep"],
-      color: "text-teal-600",
-      bg: "bg-teal-50"
-    },
-    {
-      icon: Stethoscope,
-      title: "Healthcare",
-      description: "Medical billing, appointment scheduling, patient support, and record management",
-      services: ["Appointment Scheduling", "Medical Billing", "Patient Support", "Data Entry"],
-      color: "text-purple-600",
-      bg: "bg-purple-50"
-    },
-    {
-      icon: Scale,
-      title: "Legal Services",
-      description: "Document preparation, research, case management, and client communication",
-      services: ["Legal Research", "Document Drafting", "Case Management", "Client Intake"],
-      color: "text-indigo-600",
-      bg: "bg-indigo-50"
-    },
-    {
-      icon: GraduationCap,
-      title: "Education & Training",
-      description: "Student support, course administration, content creation, and enrollment services",
-      services: ["Student Support", "Course Admin", "Content Creation", "Enrollment"],
-      color: "text-pink-600",
-      bg: "bg-pink-50"
-    },
-    {
-      icon: TrendingUp,
-      title: "Marketing Agencies",
-      description: "Content creation, social media management, campaign support, and analytics",
-      services: ["Content Writing", "Social Media", "Project Coordination", "Reporting"],
-      color: "text-orange-600",
-      bg: "bg-orange-50"
-    },
-    {
-      icon: Briefcase,
-      title: "Professional Services",
-      description: "Administrative support, client management, bookkeeping, and project coordination",
-      services: ["Admin Support", "Bookkeeping", "Client Relations", "Scheduling"],
-      color: "text-green-600",
-      bg: "bg-green-50"
-    },
-    {
-      icon: Truck,
-      title: "Logistics & Transportation",
-      description: "Dispatch support, route planning, customer service, and documentation",
-      services: ["Dispatch Support", "Customer Service", "Documentation", "Data Management"],
-      color: "text-red-600",
-      bg: "bg-red-50"
-    },
-    {
-      icon: Smartphone,
-      title: "Technology & SaaS",
-      description: "Technical support, customer success, onboarding, and documentation",
-      services: ["Tech Support", "Customer Success", "Onboarding", "Documentation"],
-      color: "text-cyan-600",
-      bg: "bg-cyan-50"
-    },
-    {
-      icon: Home,
-      title: "Hospitality",
-      description: "Reservations, guest services, review management, and concierge support",
-      services: ["Reservations", "Guest Services", "Review Management", "Concierge"],
-      color: "text-violet-600",
-      bg: "bg-violet-50"
-    },
-    {
-      icon: Heart,
-      title: "Wellness & Fitness",
-      description: "Member support, scheduling, content creation, and community management",
-      services: ["Member Support", "Class Scheduling", "Content Creation", "Community Mgmt"],
-      color: "text-rose-600",
-      bg: "bg-rose-50"
-    },
-    {
-      icon: Users,
-      title: "Nonprofit Organizations",
-      description: "Donor management, volunteer coordination, event planning, and communications",
-      services: ["Donor Management", "Event Planning", "Volunteer Coord", "Communications"],
-      color: "text-emerald-600",
-      bg: "bg-emerald-50"
-    }
-  ];
-
-  const expertise = [
-    {
-      title: "Compliance-Ready",
-      description: "Our team is trained in industry-specific regulations, from HIPAA for healthcare to data privacy laws for e-commerce."
-    },
-    {
-      title: "Domain Knowledge",
-      description: "Virtual assistants with experience in your industry hit the ground running, understanding terminology and workflows from day one."
-    },
-    {
-      title: "Best Practices",
-      description: "We apply proven methodologies and tools specific to your sector, ensuring optimal efficiency and results."
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Whether you're a startup or enterprise, our solutions scale with your business growth and changing needs."
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const industries = [{
+    icon: ShoppingCart,
+    title: "E-commerce & Retail",
+    description: "Customer support, order processing, inventory management, and product listing services",
+    services: ["Customer Service", "Order Management", "Data Entry", "Social Media"],
+    color: "text-blue-600",
+    bg: "bg-blue-50"
+  }, {
+    icon: Building2,
+    title: "Real Estate",
+    description: "Administrative support, lead management, scheduling, and client communication",
+    services: ["Lead Qualification", "Appointment Setting", "CRM Management", "Document Prep"],
+    color: "text-teal-600",
+    bg: "bg-teal-50"
+  }, {
+    icon: Stethoscope,
+    title: "Healthcare",
+    description: "Medical billing, appointment scheduling, patient support, and record management",
+    services: ["Appointment Scheduling", "Medical Billing", "Patient Support", "Data Entry"],
+    color: "text-purple-600",
+    bg: "bg-purple-50"
+  }, {
+    icon: Scale,
+    title: "Legal Services",
+    description: "Document preparation, research, case management, and client communication",
+    services: ["Legal Research", "Document Drafting", "Case Management", "Client Intake"],
+    color: "text-indigo-600",
+    bg: "bg-indigo-50"
+  }, {
+    icon: GraduationCap,
+    title: "Education & Training",
+    description: "Student support, course administration, content creation, and enrollment services",
+    services: ["Student Support", "Course Admin", "Content Creation", "Enrollment"],
+    color: "text-pink-600",
+    bg: "bg-pink-50"
+  }, {
+    icon: TrendingUp,
+    title: "Marketing Agencies",
+    description: "Content creation, social media management, campaign support, and analytics",
+    services: ["Content Writing", "Social Media", "Project Coordination", "Reporting"],
+    color: "text-orange-600",
+    bg: "bg-orange-50"
+  }, {
+    icon: Briefcase,
+    title: "Professional Services",
+    description: "Administrative support, client management, bookkeeping, and project coordination",
+    services: ["Admin Support", "Bookkeeping", "Client Relations", "Scheduling"],
+    color: "text-green-600",
+    bg: "bg-green-50"
+  }, {
+    icon: Truck,
+    title: "Logistics & Transportation",
+    description: "Dispatch support, route planning, customer service, and documentation",
+    services: ["Dispatch Support", "Customer Service", "Documentation", "Data Management"],
+    color: "text-red-600",
+    bg: "bg-red-50"
+  }, {
+    icon: Smartphone,
+    title: "Technology & SaaS",
+    description: "Technical support, customer success, onboarding, and documentation",
+    services: ["Tech Support", "Customer Success", "Onboarding", "Documentation"],
+    color: "text-cyan-600",
+    bg: "bg-cyan-50"
+  }, {
+    icon: Home,
+    title: "Hospitality",
+    description: "Reservations, guest services, review management, and concierge support",
+    services: ["Reservations", "Guest Services", "Review Management", "Concierge"],
+    color: "text-violet-600",
+    bg: "bg-violet-50"
+  }, {
+    icon: Heart,
+    title: "Wellness & Fitness",
+    description: "Member support, scheduling, content creation, and community management",
+    services: ["Member Support", "Class Scheduling", "Content Creation", "Community Mgmt"],
+    color: "text-rose-600",
+    bg: "bg-rose-50"
+  }, {
+    icon: Users,
+    title: "Nonprofit Organizations",
+    description: "Donor management, volunteer coordination, event planning, and communications",
+    services: ["Donor Management", "Event Planning", "Volunteer Coord", "Communications"],
+    color: "text-emerald-600",
+    bg: "bg-emerald-50"
+  }];
+  const expertise = [{
+    title: "Compliance-Ready",
+    description: "Our team is trained in industry-specific regulations, from HIPAA for healthcare to data privacy laws for e-commerce."
+  }, {
+    title: "Domain Knowledge",
+    description: "Virtual assistants with experience in your industry hit the ground running, understanding terminology and workflows from day one."
+  }, {
+    title: "Best Practices",
+    description: "We apply proven methodologies and tools specific to your sector, ensuring optimal efficiency and results."
+  }, {
+    title: "Scalable Solutions",
+    description: "Whether you're a startup or enterprise, our solutions scale with your business growth and changing needs."
+  }];
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <title>Industries We Serve - E-commerce, Healthcare, Legal & More | Prime Virtual Solutions</title>
-        <meta
-          name="description"
-          content="Prime Virtual Solutions serves multiple industries including e-commerce, real estate, legal, healthcare, and professional services with specialized virtual assistant solutions."
-        />
+        <meta name="description" content="Prime Virtual Solutions serves multiple industries including e-commerce, real estate, legal, healthcare, and professional services with specialized virtual assistant solutions." />
         <link rel="canonical" href="https://primevirtualsolutions.com/industries" />
       </Helmet>
 
@@ -160,7 +119,7 @@ const Industries = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-white py-24">
+        <section className="bg-white py-[35px]">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-brand-blue mb-6">
@@ -179,12 +138,8 @@ const Industries = () => {
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {industries.map((industry, index) => {
-                  const IconComponent = industry.icon;
-                  return (
-                    <Card
-                      key={index}
-                      className="group border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-                    >
+                const IconComponent = industry.icon;
+                return <Card key={index} className="group border-0 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                       <CardContent className="p-8">
                         <div className={`w-14 h-14 ${industry.bg} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                           <IconComponent className={`h-7 w-7 ${industry.color}`} />
@@ -199,17 +154,14 @@ const Industries = () => {
                         </p>
                         
                         <div className="space-y-2">
-                          {industry.services.map((service, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                          {industry.services.map((service, idx) => <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
                               <div className="w-1 h-1 bg-brand-teal rounded-full"></div>
                               <span>{service}</span>
-                            </div>
-                          ))}
+                            </div>)}
                         </div>
                       </CardContent>
-                    </Card>
-                  );
-                })}
+                    </Card>;
+              })}
               </div>
             </div>
           </div>
@@ -229,8 +181,7 @@ const Industries = () => {
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                {expertise.map((item, index) => (
-                  <div key={index} className="flex gap-4">
+                {expertise.map((item, index) => <div key={index} className="flex gap-4">
                     <div className="flex-shrink-0">
                       <div className="w-10 h-10 bg-brand-teal/10 rounded-lg flex items-center justify-center">
                         <CheckCircle className="h-6 w-6 text-brand-teal" />
@@ -244,8 +195,7 @@ const Industries = () => {
                         {item.description}
                       </p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -272,8 +222,6 @@ const Industries = () => {
       </main>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Industries;
