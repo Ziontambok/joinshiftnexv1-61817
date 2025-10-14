@@ -57,7 +57,7 @@ const Footer = ({ className }: { className?: string }) => {
             <h3 className="text-lg font-bold text-brand-blue mb-4">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/#about" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   About
                 </Link>
               </li>
