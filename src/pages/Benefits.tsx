@@ -160,7 +160,7 @@ const Benefits = () => {
         </section>
 
         {/* Statistics Section */}
-        <section className="py-16 bg-white -mt-16 relative z-10">
+        <section className="bg-white -mt-16 relative z-10 my-0 py-[27px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -182,7 +182,7 @@ const Benefits = () => {
         </section>
 
         {/* Benefits Grid Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="bg-gray-50 py-0">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-[20px]">
