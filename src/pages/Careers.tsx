@@ -251,7 +251,7 @@ const Careers = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-white mb-[20px]">
+        <section className="bg-white mb-[20px] py-[30px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
