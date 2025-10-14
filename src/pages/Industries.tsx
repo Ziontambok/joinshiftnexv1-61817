@@ -119,7 +119,7 @@ const Industries = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="bg-white py-[35px]">
+        <section className="bg-white pt-[40px] pb-0">
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-6xl font-bold text-brand-blue mb-6">
