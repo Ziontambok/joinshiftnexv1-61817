@@ -62,12 +62,12 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/#services" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/services" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link to="/#industries" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/industries" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Industries
                 </Link>
               </li>
@@ -77,7 +77,7 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               </li>
               <li>
-                <Link to="/#benefits" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/benefits" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Benefits
                 </Link>
               </li>
