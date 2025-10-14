@@ -187,7 +187,7 @@ const Careers = () => {
               </div>
 
               {/* Core Values */}
-              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12">
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12 py-0">
                 <h3 className="text-3xl font-bold text-center mb-12 text-brand-blue">Our Core Values</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {values.map((value, index) => <div key={index} className="text-center">
