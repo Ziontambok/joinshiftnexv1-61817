@@ -240,7 +240,7 @@ const Careers = () => {
                     <p className="text-lg mb-6 text-white/90">
                       We're always looking for talented individuals with diverse skills. Send us your resume and let's explore opportunities together.
                     </p>
-                    <Button onClick={handleApplyNow} className="bg-white text-brand-blue hover:bg-gray-100 hover:text-brand-teal px-6 py-3 text-lg font-semibold transition-all shadow-lg">
+                    <Button onClick={handleApplyNow} className="bg-white text-brand-blue hover:bg-brand-blue hover:text-white px-8 py-4 text-lg font-bold transition-all shadow-xl hover:shadow-2xl hover:scale-105 rounded-lg border-2 border-white/20">
                       Submit Your Application
                     </Button>
                   </CardContent>
