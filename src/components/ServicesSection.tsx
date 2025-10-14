@@ -100,7 +100,7 @@ const ServicesSection = () => {
             </div>)}
         </div>
 
-        <div className="mt-20 bg-gradient-to-r from-brand-blue to-blue-800 rounded-2xl p-12 text-center reveal">
+        <div className="mt-10 bg-gradient-to-r from-brand-blue to-blue-800 rounded-2xl p-12 text-center reveal">
           <h3 className="text-3xl font-bold text-white mb-4">Need a Custom Solution?</h3>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             We can tailor our services to match your specific business requirements. Let's discuss how we can help.
