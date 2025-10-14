@@ -100,25 +100,21 @@ const Support = () => {
 
   const displayedFaqs = showAllFaqs ? faqs : faqs.slice(0, 10);
 
-  // Function to open Chatwoot chat widget
-  const openChatwootWidget = () => {
-    // This is a workaround since TypeScript doesn't know about the toggleBubble method
-    if (window.chatwootSDK) {
-      // Using bracket notation to access the method even if TypeScript doesn't know about it
-      const chatwootSdk = window.chatwootSDK as any;
-      if (typeof chatwootSdk.toggle === "function") {
-        chatwootSdk.toggle();
-      } else if (typeof chatwootSdk.toggleBubble === "function") {
-        chatwootSdk.toggleBubble();
-      } else {
-        console.log("Chatwoot widget methods not available");
-        // Fallback - try to find and click the widget button
-        const widgetButton = document.querySelector(".woot-widget-bubble");
-        if (widgetButton instanceof HTMLElement) {
-          widgetButton.click();
-        }
-      }
-    }
+  // Function to open Facebook Messenger
+  const openMessenger = () => {
+    window.open('https://m.me/PrimeVSolutions', '_blank');
+  };
+
+  // Function to compose email with template
+  const composeEmail = () => {
+    const subject = encodeURIComponent('Support Request - Prime Virtual Solutions');
+    const body = encodeURIComponent(
+      'Name: [Your Full Name]\n\n' +
+      'Phone: [Your Phone Number]\n\n' +
+      'Email: [Your Email Address]\n\n' +
+      'Issue/Question:\n[Please describe your issue or question here]\n\n'
+    );
+    window.location.href = `mailto:info@primevsolutions.com?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -151,7 +147,7 @@ const Support = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Live Chat</h3>
                 <p className="text-gray-600 mb-4">Chat with our support team in real-time for immediate assistance</p>
-                <Button variant="outline" onClick={openChatwootWidget}>
+                <Button variant="outline" onClick={openMessenger}>
                   Start Chat
                 </Button>
               </div>
@@ -162,12 +158,7 @@ const Support = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Email Support</h3>
                 <p className="text-gray-600 mb-4">Send us an email and we'll get back to you within 24 hours</p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    window.location.href = "mailto:info@primevsolutions.com";
-                  }}
-                >
+                <Button variant="outline" onClick={composeEmail}>
                   Email Us
                 </Button>
               </div>
@@ -224,17 +215,11 @@ const Support = () => {
                 possible.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
-                <Button className="flex items-center gap-2" onClick={openChatwootWidget}>
+                <Button className="flex items-center gap-2" onClick={openMessenger}>
                   <MessageCircle size={18} />
                   Chat Now
                 </Button>
-                <Button
-                  variant="outline"
-                  className="flex items-center gap-2"
-                  onClick={() => {
-                    window.location.href = "mailto:info@primevsolutions.com";
-                  }}
-                >
+                <Button variant="outline" className="flex items-center gap-2" onClick={composeEmail}>
                   <Mail size={18} />
                   Email Support
                 </Button>
