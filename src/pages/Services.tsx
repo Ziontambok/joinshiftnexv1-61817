@@ -246,7 +246,7 @@ const Services = () => {
                         <Button className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold" onClick={() => window.open("https://www.primevsolutions.com", "_blank")}>
                           Request a Custom Quote
                         </Button>
-                        <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold" onClick={() => {
+                        <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg font-semibold transition-all" onClick={() => {
                         const message = encodeURIComponent("Hi! I'd like to learn more about your services.");
                         window.open(`https://wa.me/639173132145?text=${message}`, "_blank");
                       }}>
