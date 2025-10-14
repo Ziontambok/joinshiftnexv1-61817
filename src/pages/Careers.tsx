@@ -204,7 +204,7 @@ const Careers = () => {
         </section>
 
         {/* Open Positions Section */}
-        <section id="open-positions" className="py-20 bg-gray-50 mb-[20px]">
+        <section id="open-positions" className="bg-gray-50 mb-[20px] py-[20px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
