@@ -154,7 +154,7 @@ const Services = () => {
                       <CardContent className="p-0">
                         {/* Header with gradient */}
                         <div className={`bg-gradient-to-br ${service.color} p-6 relative overflow-hidden`}>
-                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16 my-0"></div>
                           <div className="relative z-10">
                             <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                               <IconComponent className="h-8 w-8 text-white" />
