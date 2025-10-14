@@ -35,29 +35,6 @@ const HowItWorksSection = () => {
   const toggleCategory = (category: string) => {
     setOpenCategories(current => current.includes(category) ? current.filter(c => c !== category) : [...current, category]);
   };
-  return <section id="how-it-works" className="py-20 bg-gradient-to-b from-gray-50 to-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-          
-          
-          
-          <div className="grid md:grid-cols-3 gap-8 mb-20">
-            {steps.map(step => <Card key={step.id} className="backdrop-blur-sm bg-white/70 border border-gray-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 reveal overflow-hidden" style={{
-            animationDelay: step.delay
-          }}>
-                
-              </Card>)}
-          </div>
-        </div>
-        
-        <div className="mt-20 mb-20 reveal">
-          
-        </div>
-        
-        <div className="mt-20 text-center reveal">
-          
-        </div>
-      </div>
-    </section>;
+  return;
 };
 export default HowItWorksSection;
