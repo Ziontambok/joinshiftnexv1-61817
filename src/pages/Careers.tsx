@@ -150,7 +150,7 @@ const Careers = () => {
         </section>
 
         {/* Mission & Vision Section */}
-        <section className="bg-white mb-[20px] py-[10px]">
+        <section className="bg-white mb-[20px] py-[15px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
