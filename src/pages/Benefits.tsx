@@ -133,7 +133,7 @@ const Benefits = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue overflow-hidden pt-[50px] pb-[70px]">
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{
@@ -160,7 +160,7 @@ const Benefits = () => {
         </section>
 
         {/* Statistics Section */}
-        <section className="bg-white -mt-16 relative z-10 my-[30px] py-[15px]">
+        <section className="py-16 bg-white -mt-16 relative z-10">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -182,10 +182,10 @@ const Benefits = () => {
         </section>
 
         {/* Benefits Grid Section */}
-        <section className="pt-[20px] pb-[20px] bg-gray-50">
+        <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
+              <div className="text-center mb-[20px]">
                 <span className="text-brand-teal font-semibold text-lg uppercase tracking-wider mb-3 inline-block">
                   Key Advantages
                 </span>
@@ -216,7 +216,7 @@ const Benefits = () => {
         </section>
 
         {/* Case Studies Section */}
-        <section className="pt-[20px] pb-20 bg-white">
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
