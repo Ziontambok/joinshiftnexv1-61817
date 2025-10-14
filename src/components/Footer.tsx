@@ -72,7 +72,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/become-partner" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/become-partner" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Become a Partner
                 </Link>
               </li>
@@ -82,12 +82,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/careers" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/careers" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Careers
                 </Link>
               </li>
               <li>
-                <Link to="/support" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/support" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Support
                 </Link>
               </li>
@@ -98,17 +98,17 @@ const Footer = () => {
             <h3 className="text-lg font-bold text-brand-blue mb-4">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/privacy-policy" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/privacy-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/terms-of-service" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/cookie-policy" className="text-gray-600 hover:text-brand-teal transition-colors">
+                <Link to="/cookie-policy" onClick={() => window.scrollTo(0, 0)} className="text-gray-600 hover:text-brand-teal transition-colors">
                   Cookie Policy
                 </Link>
               </li>
