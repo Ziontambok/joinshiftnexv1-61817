@@ -19,7 +19,7 @@ const Services = () => {
         <section id="services" className="gap-y-20 bg-white py-16">
           <div className="container mx-auto px-4">
             <div className="text-center max-w-3xl mx-auto mb-20">
-              <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">Our Services</span>
+              <span className="text-brand-teal font-medium text-2xl uppercase tracking-wider mb-3 inline-block">Our Services</span>
               <h1 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Comprehensive Virtual Support Solutions</h1>
               <p className="text-lg text-gray-700">
                 From virtual assistants to technical support, we provide a complete range of services to help your SME thrive.
