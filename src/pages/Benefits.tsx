@@ -266,7 +266,7 @@ const Benefits = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 bg-gray-50">
+        <section className="bg-gray-50 py-[25px]">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
