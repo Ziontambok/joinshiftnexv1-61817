@@ -44,7 +44,7 @@ const Footer = () => {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:contact@primevsolutions.com"
+                href="mailto:info@primevsolutions.com"
                 className="text-brand-blue hover:text-brand-teal transition-colors"
                 aria-label="Email"
               >
