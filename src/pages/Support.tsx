@@ -47,7 +47,7 @@ const Support = () => {
             <div className="mb-12 text-center">
               <h1 className="text-3xl md:text-4xl font-bold text-shiftnex-deep-blue mb-4">How Can We Help You?</h1>
               <p className="text-lg text-gray-600 max-w-xl mx-auto">
-                Get the support you need to make the most of the ShiftNex AI platform
+                Get the support you need to make the most of out of Prime Virtual Solutions.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ const Support = () => {
                 <Button
                   variant="outline"
                   onClick={() => {
-                    window.location.href = "mailto:support@shiftnex.app";
+                    window.location.href = "mailto:info@primevsolutions.com";
                   }}
                 >
                   Email Us
