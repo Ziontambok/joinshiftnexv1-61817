@@ -63,7 +63,7 @@ const services = [{
 }];
 const ServicesSection = () => {
   return <section id="services" className="gap-y-20 bg-white">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-20">
         <div className="text-center max-w-3xl mx-auto mb-10 reveal">
           <span className="text-brand-teal font-medium text-4xl uppercase tracking-wider mb-3 inline-block mt-[20px]">
             Our Services
