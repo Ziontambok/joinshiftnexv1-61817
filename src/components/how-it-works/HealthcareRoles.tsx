@@ -14,6 +14,8 @@ export const HealthcareRoles = ({
   roleDescriptions
 }: HealthcareRolesProps) => {
   return <div className="grid md:grid-cols-3 gap-6 mt-10">
-      {categories.map(category => {})}
+      {categories.map(category => (
+        <div key={category.id}>{category.name}</div>
+      ))}
     </div>;
 };
