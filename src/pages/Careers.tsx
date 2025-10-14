@@ -1,503 +1,381 @@
-
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { 
-  ChevronRight, 
-  Building, 
-  UserCircle, 
-  Info, 
-  Heart, 
-  Calendar, 
-  Shield, 
-  Hospital, 
-  Home, 
-  Brain, 
-  Book, 
-  Activity,
-  Briefcase,
-  MapPin,
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import ChatwootWidget from "@/components/ChatwootWidget";
+import {
   Users,
-  ExternalLink,
-  CheckCircle,
+  Headphones,
+  Code,
+  TrendingUp,
+  FileText,
+  Phone,
+  Settings,
+  BookOpen,
+  Briefcase,
+  Calendar,
+  Mail,
+  Database,
+  Heart,
+  Globe,
   Award,
-  CreditCard,
-  Clipboard
-} from 'lucide-react';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from '@/components/ui/badge';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { Separator } from '@/components/ui/separator';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import ChatwootWidget from '@/components/ChatwootWidget';
+  Target,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Sparkles,
+  TrendingUpIcon,
+  Shield,
+  Clock
+} from "lucide-react";
 
-import { roleDescriptions } from '@/data/roleData';
+const Careers = () => {
+  const handleApplyNow = () => {
+    const message = encodeURIComponent("Hi! I'm interested in career opportunities at Prime Virtual Solutions. I'd like to learn more about open positions.");
+    window.open(`https://wa.me/639173132145?text=${message}`, '_blank');
+  };
 
-const healthcareSettings = [
-  {
-    category: "Hospital Settings",
-    items: [
-      { name: "Hospitals", icon: <Hospital size={24} className="text-shiftnex-teal" /> },
-      { name: "Urgent Care", icon: <Activity size={24} className="text-shiftnex-teal" /> }
-    ]
-  },
-  {
-    category: "Residential Care",
-    items: [
-      { name: "Skilled Nursing", icon: <UserCircle size={24} className="text-shiftnex-teal" /> },
-      { name: "Assisted Living", icon: <Home size={24} className="text-shiftnex-teal" /> },
-      { name: "Memory Care", icon: <Brain size={24} className="text-shiftnex-teal" /> }
-    ]
-  },
-  {
-    category: "Specialized Care",
-    items: [
-      { name: "Rehabilitation", icon: <Activity size={24} className="text-shiftnex-teal" /> },
-      { name: "Home Health", icon: <Home size={24} className="text-shiftnex-teal" /> },
-      { name: "Hospice", icon: <Heart size={24} className="text-shiftnex-teal" /> }
-    ]
-  }
-];
+  const skills = [
+    { icon: <Users className="h-8 w-8" />, title: "Virtual Assistants", color: "from-blue-500 to-blue-600" },
+    { icon: <Headphones className="h-8 w-8" />, title: "Customer Support", color: "from-teal-500 to-teal-600" },
+    { icon: <Settings className="h-8 w-8" />, title: "Technical Support", color: "from-purple-500 to-purple-600" },
+    { icon: <Code className="h-8 w-8" />, title: "Web Development", color: "from-indigo-500 to-indigo-600" },
+    { icon: <TrendingUp className="h-8 w-8" />, title: "Digital Marketing", color: "from-pink-500 to-pink-600" },
+    { icon: <Database className="h-8 w-8" />, title: "Data Management", color: "from-orange-500 to-orange-600" },
+    { icon: <FileText className="h-8 w-8" />, title: "Content & Writing", color: "from-green-500 to-green-600" },
+    { icon: <Phone className="h-8 w-8" />, title: "Call Center Services", color: "from-red-500 to-red-600" },
+    { icon: <Calendar className="h-8 w-8" />, title: "Project Management", color: "from-yellow-500 to-yellow-600" },
+    { icon: <Mail className="h-8 w-8" />, title: "Sales Support", color: "from-cyan-500 to-cyan-600" },
+    { icon: <BookOpen className="h-8 w-8" />, title: "Bookkeeping & Finance", color: "from-violet-500 to-violet-600" },
+    { icon: <Briefcase className="h-8 w-8" />, title: "HR & Recruitment", color: "from-emerald-500 to-emerald-600" }
+  ];
 
-const testimonials = [
-  {
-    name: "Sarah Johnson, RN",
-    role: "Registered Nurse",
-    image: "/placeholder.svg",
-    quote: "ShiftNex has completely transformed how I approach my nursing career. I can pick shifts that fit around my family life, and the pay is consistently better than what I was making at the hospital.",
-    experience: "3 years with ShiftNex"
-  },
-  {
-    name: "Michael Chen",
-    role: "Respiratory Therapist",
-    image: "/placeholder.svg",
-    quote: "As an RT, finding flexible work that still pays well was always a challenge. With ShiftNex, I've been able to work in different facilities and expand my skills while maintaining control of my schedule.",
-    experience: "2 years with ShiftNex"
-  },
-  {
-    name: "Latisha Williams",
-    role: "Licensed Practical Nurse",
-    image: "/placeholder.svg",
-    quote: "The credential verification process was so quick compared to other agencies. I was verified and booking shifts within days, not weeks. The app is incredibly easy to use.",
-    experience: "1.5 years with ShiftNex"
-  }
-];
-
-const CareerPage = () => {
-  useEffect(() => {
-    document.title = "Healthcare Careers & Job Opportunities | ShiftNex";
-    
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", "Find flexible healthcare jobs with ShiftNex. Nursing, respiratory care, and caregiver positions with competitive pay and work-life balance.");
+  const benefits = [
+    {
+      icon: <TrendingUpIcon className="h-6 w-6" />,
+      title: "Competitive Compensation",
+      description: "Industry-leading salaries and performance bonuses"
+    },
+    {
+      icon: <Clock className="h-6 w-6" />,
+      title: "Flexible Work Hours",
+      description: "Work-life balance with flexible scheduling options"
+    },
+    {
+      icon: <Award className="h-6 w-6" />,
+      title: "Career Development",
+      description: "Continuous learning and professional growth opportunities"
+    },
+    {
+      icon: <Heart className="h-6 w-6" />,
+      title: "Health & Wellness",
+      description: "Comprehensive health benefits and wellness programs"
+    },
+    {
+      icon: <Globe className="h-6 w-6" />,
+      title: "Remote-First Culture",
+      description: "Work from anywhere with a global team"
+    },
+    {
+      icon: <Shield className="h-6 w-6" />,
+      title: "Job Security",
+      description: "Stable employment with a growing company"
     }
-    
-    window.scrollTo(0, 0);
-  }, []);
+  ];
 
-  const roleKeys = Object.keys(roleDescriptions);
+  const values = [
+    {
+      title: "Excellence",
+      description: "We pursue excellence in every interaction, delivering world-class service that exceeds expectations",
+      icon: <Sparkles className="h-12 w-12 text-brand-teal" />
+    },
+    {
+      title: "Innovation",
+      description: "We embrace cutting-edge solutions and continuously improve our processes to stay ahead",
+      icon: <Zap className="h-12 w-12 text-brand-teal" />
+    },
+    {
+      title: "Integrity",
+      description: "We operate with transparency, honesty, and ethical standards in everything we do",
+      icon: <Shield className="h-12 w-12 text-brand-teal" />
+    },
+    {
+      title: "Collaboration",
+      description: "We believe in the power of teamwork and foster a culture of mutual support and respect",
+      icon: <Users className="h-12 w-12 text-brand-teal" />
+    }
+  ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Helmet>
+        <title>Careers - Join Our Global Team | Prime Virtual Solutions</title>
+        <meta
+          name="description"
+          content="Join Prime Virtual Solutions and build a rewarding career in virtual assistance, customer support, tech support, development, marketing, and more. Work remotely with competitive benefits."
+        />
+      </Helmet>
+
       <Header />
-      
-      <main className="pt-16 sm:pt-0">
+
+      <main className="flex-grow pt-24 pb-16">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-b from-blue-50 to-white pt-20 md:pt-28 pb-12 md:pb-20">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-              <div className="w-full text-center">
-                <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  Join our healthcare network
-                </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 md:mb-6 text-shiftnex-deep-blue">
-                  Build a Healthcare Career That Works For <span className="text-shiftnex-teal">You</span>
-                </h1>
-                <p className="text-lg sm:text-xl text-gray-700 mb-6 md:mb-8 max-w-3xl mx-auto">
-                  Join thousands of healthcare professionals who have discovered a better way to work. Take control of your schedule and advance your career with ShiftNex.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-6 md:mb-8 justify-center">
-                  <Button className="bg-shiftnex-teal hover:bg-opacity-90 px-4 sm:px-6 py-4 sm:py-6 text-base sm:text-lg flex items-center gap-2 w-full sm:w-auto">
-                    Find Opportunities <Briefcase size={18} />
-                  </Button>
-                  <Link to="/how-it-works">
-                    <Button variant="outline" className="border-blue-200 text-blue-800 px-4 sm:px-6 py-4 sm:py-6 text-base sm:text-lg flex items-center gap-2 w-full sm:w-auto">
-                      How It Works <ExternalLink size={18} />
-                    </Button>
-                  </Link>
-                </div>
-                
-                <div className="flex items-center gap-4 text-sm text-gray-600 justify-center">
-                  <div className="flex -space-x-2">
-                    <Avatar className="border-2 border-white w-8 h-8">
-                      <AvatarFallback>HC</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="border-2 border-white w-8 h-8">
-                      <AvatarFallback>RN</AvatarFallback>
-                    </Avatar>
-                    <Avatar className="border-2 border-white w-8 h-8">
-                      <AvatarFallback>RT</AvatarFallback>
-                    </Avatar>
-                  </div>
-                  <span>Join 5,000+ healthcare professionals</span>
-                </div>
-              </div>
-            </div>
+        <section className="relative bg-gradient-to-br from-brand-blue via-brand-teal to-brand-blue py-24 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute top-10 left-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-10 right-10 w-96 h-96 bg-white rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           </div>
           
-          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-50 -z-10">
-            <div className="absolute top-20 left-10 w-40 sm:w-64 h-40 sm:h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
-            <div className="absolute bottom-10 right-10 w-48 sm:w-72 h-48 sm:h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          </div>
-        </section>
-        
-        {/* Featured Roles Section */}
-        <section className="py-14 sm:py-20 bg-white" id="featured-roles">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-10 sm:mb-12">
-                <div className="text-center md:text-left">
-                  <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                    In-demand positions
-                  </div>
-                  <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-3 sm:mb-4">
-                    Featured Healthcare Roles
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-600 max-w-2xl">
-                    Explore our most in-demand healthcare positions with competitive pay and flexible scheduling.
-                  </p>
-                </div>
-                <div className="mt-4 md:mt-0 text-center md:text-left">
-                  <Link to="#all-roles" className="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors text-base">
-                    View all roles <ChevronRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="max-w-4xl mx-auto text-center text-white">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 animate-fade-in">
+                <Briefcase className="h-5 w-5" />
+                <span className="font-semibold">We're Hiring Talented Professionals</span>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {roleKeys.slice(0, 3).map(role => (
-                  <Card key={role} className="overflow-hidden hover:shadow-md transition-shadow duration-300 border-gray-200 hover:border-blue-200 flex flex-col h-full">
-                    <CardHeader className="bg-gradient-to-r from-blue-50 to-teal-50 border-b p-4 sm:p-6">
-                      <div className="flex justify-between items-start">
-                        <CardTitle className="text-xl">{roleDescriptions[role].title}</CardTitle>
-                        <TooltipProvider>
-                          <Tooltip>
-                            <TooltipTrigger asChild>
-                              <Button variant="ghost" size="icon" className="h-8 w-8">
-                                <Info className="h-4 w-4 text-blue-600" />
-                              </Button>
-                            </TooltipTrigger>
-                            <TooltipContent className="max-w-xs">
-                              <p>Average annual salary: {roleDescriptions[role].salary}</p>
-                              <p>Job outlook: {roleDescriptions[role].growth}</p>
-                            </TooltipContent>
-                          </Tooltip>
-                        </TooltipProvider>
-                      </div>
-                      <CardDescription className="text-sm sm:text-base">{roleDescriptions[role].shortDescription}</CardDescription>
-                    </CardHeader>
-                    <CardContent className="p-4 sm:p-6 pt-5 sm:pt-6 flex-grow">
-                      <h4 className="font-semibold text-gray-800 mb-3 text-base sm:text-lg">Common Work Settings:</h4>
-                      <div className="flex flex-wrap gap-2 mb-5 sm:mb-6">
-                        {roleDescriptions[role].settings.map((setting: string, idx: number) => (
-                          <Badge key={idx} variant="secondary" className="bg-gray-100 text-xs sm:text-sm py-1.5">
-                            {setting}
-                          </Badge>
-                        ))}
-                      </div>
-                      <h4 className="font-semibold text-gray-800 mb-3 text-base sm:text-lg">Requirements:</h4>
-                      <p className="text-sm sm:text-base text-gray-600 mb-5 sm:mb-6 line-clamp-4">{roleDescriptions[role].requirements}</p>
-                    </CardContent>
-                    <CardFooter className="border-t bg-gray-50 flex flex-col sm:flex-row sm:justify-between gap-3 sm:gap-0 p-4 sm:p-6 mt-auto">
-                      <Link to={`/careers/${role.toLowerCase()}`} className="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center text-center sm:text-left">
-                        View details
-                      </Link>
-                      <Link to={`/careers/${role.toLowerCase()}`} className="w-full sm:w-auto">
-                        <Button className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2 w-full sm:w-auto justify-center">
-                          Apply Now <ExternalLink size={16} />
-                        </Button>
-                      </Link>
-                    </CardFooter>
-                  </Card>
-                ))}
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in leading-tight">
+                Build Your Dream Career<br />With Prime Virtual Solutions
+              </h1>
+              
+              <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto animate-fade-in">
+                Join a global team of professionals transforming how businesses operate. Work remotely, grow continuously, and make a real impact.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+                <Button
+                  onClick={handleApplyNow}
+                  className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold flex items-center gap-2"
+                >
+                  Apply Now <ArrowRight className="h-5 w-5" />
+                </Button>
+                <Button
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold"
+                  onClick={() => document.getElementById('open-positions')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  View Open Positions
+                </Button>
               </div>
             </div>
           </div>
         </section>
-        
-        <section className="py-14 sm:py-20 bg-gradient-to-r from-blue-50 to-teal-50">
+
+        {/* Mission & Vision Section */}
+        <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-10 sm:mb-16">
-                <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  Success stories
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-4 sm:mb-6">
-                  What Healthcare Professionals Say About ShiftNex
-                </h2>
-                <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-                  Hear from professionals like you who have transformed their careers with our platform.
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-brand-blue">Our Mission & Vision</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Empowering businesses globally through exceptional virtual support while creating meaningful careers for talented professionals
                 </p>
               </div>
-              
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-                {testimonials.map((testimonial, index) => (
-                  <Card key={index} className="overflow-hidden border-0 shadow-lg">
-                    <CardContent className="p-5 sm:p-8">
-                      <div className="flex items-center mb-5 sm:mb-6">
-                        <Avatar className="h-14 w-14 sm:h-16 sm:w-16 border-4 border-white shadow-sm">
-                          <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                          <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                        </Avatar>
-                        <div className="ml-4">
-                          <h3 className="font-bold text-base sm:text-lg text-gray-800">{testimonial.name}</h3>
-                          <p className="text-sm sm:text-base text-gray-600">{testimonial.role}</p>
-                        </div>
+
+              <div className="grid md:grid-cols-2 gap-12 mb-16">
+                <Card className="border-t-4 border-t-brand-teal shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-brand-teal/10 rounded-full flex items-center justify-center mb-6">
+                      <Target className="h-8 w-8 text-brand-teal" />
+                    </div>
+                    <h3 className="text-3xl font-bold mb-4 text-brand-blue">Our Mission</h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      To provide world-class virtual support solutions that empower businesses to scale efficiently while creating rewarding career opportunities for professionals worldwide. We bridge the gap between talent and opportunity, delivering exceptional value to both our clients and our team members.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="border-t-4 border-t-brand-blue shadow-xl hover:shadow-2xl transition-all duration-300">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 bg-brand-blue/10 rounded-full flex items-center justify-center mb-6">
+                      <Globe className="h-8 w-8 text-brand-blue" />
+                    </div>
+                    <h3 className="text-3xl font-bold mb-4 text-brand-blue">Our Vision</h3>
+                    <p className="text-lg text-gray-700 leading-relaxed">
+                      To be the global leader in virtual support services, recognized for our excellence, innovation, and the positive impact we create. We envision a future where businesses of all sizes have access to top-tier talent, and professionals have unlimited opportunities to grow and thrive in their careers.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Core Values */}
+              <div className="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-12">
+                <h3 className="text-3xl font-bold text-center mb-12 text-brand-blue">Our Core Values</h3>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                  {values.map((value, index) => (
+                    <div key={index} className="text-center">
+                      <div className="w-20 h-20 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                        {value.icon}
                       </div>
-                      
-                      <p className="text-sm sm:text-base text-gray-700 mb-5 sm:mb-6 italic">"{testimonial.quote}"</p>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs sm:text-sm font-medium text-blue-600">{testimonial.experience}</span>
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <svg key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" viewBox="0 0 24 24">
-                              <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z" />
-                            </svg>
-                          ))}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-14 sm:py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-10 sm:mb-16">
-                <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
-                  Our advantages
-                </div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-4 sm:mb-6">
-                  Why Healthcare Professionals Choose ShiftNex
-                </h2>
-                <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto">
-                  Join a platform designed specifically for healthcare professionals who want more control over their careers.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <Card className="border-t-4 border-t-blue-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-100 text-blue-600">
-                      <Calendar className="h-5 w-5 sm:h-6 sm:w-6" />
+                      <h4 className="text-xl font-bold mb-3 text-brand-blue">{value.title}</h4>
+                      <p className="text-gray-600">{value.description}</p>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Flexible Scheduling</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Choose when and where you work. Take control of your schedule with shifts that fit your lifestyle.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-t-4 border-t-teal-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-teal-100 text-teal-600">
-                      <Building className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Diverse Healthcare Settings</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Experience different facilities and specialties. Expand your skills across various healthcare environments.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-t-4 border-t-purple-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-100 text-purple-600">
-                      <Shield className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Competitive Pay</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Earn what you're worth with transparent, competitive rates. Track earnings in real-time.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-t-4 border-t-pink-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-pink-100 text-pink-600">
-                      <Book className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Professional Growth</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Access continuing education and skill development opportunities. Advance your healthcare career.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-t-4 border-t-amber-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-amber-100 text-amber-600">
-                      <Users className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Supportive Community</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Connect with fellow healthcare professionals. Share experiences and build your network.
-                    </p>
-                  </CardContent>
-                </Card>
-                
-                <Card className="border-t-4 border-t-emerald-500 hover:shadow-md transition-all">
-                  <CardContent className="p-5 sm:p-6 pt-5 sm:pt-6">
-                    <div className="mb-4 sm:mb-5 inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-emerald-100 text-emerald-600">
-                      <Activity className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 text-gray-800">Streamlined Onboarding</h3>
-                    <p className="text-sm sm:text-base text-gray-600">
-                      Quick credential verification and facility orientation. Start working sooner with less paperwork.
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </section>
-        
-        <section className="py-14 sm:py-20 bg-gray-50" id="all-roles">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl font-bold text-shiftnex-deep-blue mb-8 sm:mb-12 text-center">
-                Explore All Healthcare Careers
-              </h2>
-              
-              <Tabs defaultValue={roleKeys[0]} className="w-full">
-                <TabsList className="flex w-full flex-wrap justify-center mb-8 sm:mb-12 bg-transparent max-w-full overflow-x-auto p-2">
-                  {roleKeys.map(role => (
-                    <TabsTrigger 
-                      key={role}
-                      value={role}
-                      className="m-1 px-3 py-2 text-xs sm:text-sm rounded-full data-[state=active]:bg-blue-100 data-[state=active]:text-blue-800 flex-shrink-0"
-                    >
-                      {roleDescriptions[role].title}
-                    </TabsTrigger>
                   ))}
-                </TabsList>
-                
-                {roleKeys.map(role => (
-                  <TabsContent key={role} value={role} className="mt-0">
-                    <Card className="border-0 shadow-sm">
-                      <CardHeader className="bg-gradient-to-r from-blue-50 to-teal-50 p-4 sm:p-6">
-                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                          <div>
-                            <CardTitle className="text-xl sm:text-2xl">{roleDescriptions[role].title}</CardTitle>
-                            <CardDescription className="text-sm sm:text-base mt-2">
-                              {roleDescriptions[role].growth} | Salary Range: {roleDescriptions[role].salary}
-                            </CardDescription>
-                          </div>
-                          <Link to={`/careers/${role.toLowerCase()}`} className="w-full md:w-auto">
-                            <Button className="bg-blue-600 hover:bg-blue-700 self-start w-full md:w-auto">
-                              Apply Now
-                            </Button>
-                          </Link>
-                        </div>
-                      </CardHeader>
-                      
-                      <CardContent className="p-4 sm:p-6 pt-5 sm:pt-6">
-                        <div className="prose max-w-none">
-                          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Overview</h3>
-                          <p className="text-sm sm:text-base text-gray-700 mb-5 sm:mb-6">{roleDescriptions[role].fullDescription}</p>
-                          
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-6 sm:mb-8">
-                            <div>
-                              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Key Responsibilities</h3>
-                              <ul className="space-y-2">
-                                {roleDescriptions[role].responsibilities.map((item, idx) => (
-                                  <li key={idx} className="flex items-start text-sm sm:text-base">
-                                    <span className="text-blue-500 mr-2 mt-0.5">•</span>
-                                    <span>{item}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                            
-                            <div>
-                              <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Requirements</h3>
-                              <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">{roleDescriptions[role].requirements}</p>
-                              
-                              <h4 className="text-base sm:text-lg font-semibold text-gray-800 mb-2 mt-4 sm:mt-6">Preferred Qualifications</h4>
-                              <ul className="space-y-2">
-                                {roleDescriptions[role].preferredQualifications?.map((item, idx) => (
-                                  <li key={idx} className="flex items-start text-sm sm:text-base">
-                                    <span className="text-teal-500 mr-2 mt-0.5">•</span>
-                                    <span>{item}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                          
-                          <Separator className="my-6 sm:my-8" />
-                          
-                          <h3 className="text-lg sm:text-xl font-semibold text-gray-800 mb-3 sm:mb-4">Work Settings</h3>
-                          <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
-                            As a {roleDescriptions[role].title} with ShiftNex, you can work in various healthcare environments:
-                          </p>
-                          
-                          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-6 sm:mb-8">
-                            {roleDescriptions[role].settings.map((setting, idx) => {
-                              let icon = <Building size={20} className="text-shiftnex-teal" />;
-                              
-                              healthcareSettings.forEach(category => {
-                                category.items.forEach(item => {
-                                  if (item.name === setting) {
-                                    icon = item.icon;
-                                  }
-                                });
-                              });
-                              
-                              return (
-                                <div key={idx} className="flex flex-col items-center justify-center p-3 bg-white rounded-lg shadow-sm border border-gray-100">
-                                  <div className="mb-2">{icon}</div>
-                                  <span className="text-xs sm:text-sm font-medium text-center text-gray-700">{setting}</span>
-                                </div>
-                              );
-                            })}
-                          </div>
-                          
-                          <div className="mt-6 sm:mt-10 text-center">
-                            <p className="text-sm sm:text-base text-gray-700 mb-4 max-w-xl mx-auto">
-                              Our streamlined verification process typically takes <span className="font-bold text-blue-600">2-48 hours</span>. Most qualified applicants can start working within <span className="font-bold text-blue-600">1-2 Days</span> of applying.
-                            </p>
-                            <Link to={`/careers/${role.toLowerCase()}`}>
-                              <Button className="bg-blue-600 hover:bg-blue-700 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg">
-                                Apply Now <ExternalLink size={18} className="ml-2" />
-                              </Button>
-                            </Link>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </TabsContent>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Open Positions Section */}
+        <section id="open-positions" className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <span className="text-brand-teal font-semibold text-lg uppercase tracking-wider mb-3 inline-block">
+                  Join Our Team
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-brand-blue">We're Hiring Across All Disciplines</h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  Whether you're a seasoned professional or just starting your career, we have opportunities in these areas and more
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                {skills.map((skill, index) => (
+                  <Card
+                    key={index}
+                    className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-2 border-transparent hover:border-brand-teal"
+                  >
+                    <CardContent className="p-6">
+                      <div className={`w-16 h-16 bg-gradient-to-br ${skill.color} rounded-xl flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform duration-300`}>
+                        {skill.icon}
+                      </div>
+                      <h3 className="text-xl font-bold text-brand-blue mb-2">{skill.title}</h3>
+                      <p className="text-gray-600 text-sm mb-4">Multiple positions available</p>
+                      <div className="flex items-center text-brand-teal font-semibold">
+                        <span>Learn More</span>
+                        <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
                 ))}
-              </Tabs>
+              </div>
+
+              <div className="text-center">
+                <Card className="inline-block bg-gradient-to-r from-brand-teal to-brand-blue text-white">
+                  <CardContent className="p-8">
+                    <h3 className="text-2xl font-bold mb-4">Don't see your specialty?</h3>
+                    <p className="text-lg mb-6 text-white/90">
+                      We're always looking for talented individuals with diverse skills. Send us your resume and let's explore opportunities together.
+                    </p>
+                    <Button
+                      onClick={handleApplyNow}
+                      className="bg-white text-brand-teal hover:bg-gray-100 px-6 py-3 text-lg font-semibold"
+                    >
+                      Submit Your Application
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <span className="text-brand-teal font-semibold text-lg uppercase tracking-wider mb-3 inline-block">
+                  Why Join Us
+                </span>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-brand-blue">
+                  Benefits That Matter
+                </h2>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  We invest in our people because we know that your success is our success
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-teal"
+                  >
+                    <div className="w-14 h-14 bg-brand-teal/10 rounded-full flex items-center justify-center mb-4 text-brand-teal">
+                      {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-brand-blue">{benefit.title}</h3>
+                    <p className="text-gray-600">{benefit.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Growth & Development Section */}
+        <section className="py-20 bg-gradient-to-br from-brand-blue to-brand-teal text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Award className="h-16 w-16 mx-auto mb-6" />
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">Continuous Growth & Development</h2>
+              <p className="text-xl mb-12 text-white/90">
+                At Prime Virtual Solutions, we're committed to your professional development. From day one, you'll have access to training programs, mentorship opportunities, and career advancement paths that help you reach your full potential.
+              </p>
+              <div className="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="text-5xl font-bold mb-2">100+</div>
+                  <div className="text-lg text-white/80">Training Programs</div>
+                </div>
+                <div>
+                  <div className="text-5xl font-bold mb-2">95%</div>
+                  <div className="text-lg text-white/80">Employee Satisfaction</div>
+                </div>
+                <div>
+                  <div className="text-5xl font-bold mb-2">50+</div>
+                  <div className="text-lg text-white/80">Countries Represented</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <Card className="bg-gradient-to-br from-gray-50 to-white border-2 border-brand-teal shadow-2xl">
+                <CardContent className="p-12 text-center">
+                  <Sparkles className="h-16 w-16 text-brand-teal mx-auto mb-6" />
+                  <h2 className="text-4xl font-bold mb-6 text-brand-blue">Ready to Start Your Journey?</h2>
+                  <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Join a team that values your talent, supports your growth, and celebrates your success. Your dream career awaits.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button
+                      onClick={handleApplyNow}
+                      className="bg-brand-teal hover:bg-brand-teal/90 text-white px-8 py-6 text-lg font-semibold flex items-center gap-2"
+                    >
+                      <CheckCircle className="h-5 w-5" />
+                      Apply for a Position
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/5 px-8 py-6 text-lg font-semibold flex items-center gap-2"
+                      onClick={() => window.location.href = 'mailto:info@primevsolutions.com'}
+                    >
+                      <Mail className="h-5 w-5" />
+                      Email Us Your Resume
+                    </Button>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-6">
+                    We review all applications and respond within 48 hours
+                  </p>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
       </main>
-      
+
       <Footer />
-      
-      <ChatwootWidget websiteToken="YOUR_CHATWOOT_TOKEN" />
+      <ChatwootWidget />
     </div>
   );
 };
 
-export default CareerPage;
+export default Careers;
