@@ -1,5 +1,5 @@
 import React from "react";
-import { Users, Headphones, Code, Database, TrendingUp, FileText, Mail, Calendar, Phone, Settings } from "lucide-react";
+import { Users, Headphones, Code, Database, TrendingUp, FileText, Mail, Calendar, Phone, Settings, BookOpen, Briefcase } from "lucide-react";
 const services = [
   {
     icon: <Users size={48} className="text-brand-teal" />,
@@ -89,6 +89,20 @@ const services = [
     description:
       "Dedicated sales assistants to support your team with lead generation, follow-ups, and CRM management.",
     features: ["Lead Generation", "Sales Follow-ups", "CRM Management", "Proposal Preparation", "Sales Reporting"],
+  },
+  {
+    icon: <BookOpen size={48} className="text-brand-teal" />,
+    title: "Bookkeeping & Finance",
+    description:
+      "Professional bookkeeping and financial support to keep your accounts accurate and up-to-date.",
+    features: ["Accounts Payable/Receivable", "Invoice Processing", "Financial Reporting", "Expense Tracking", "Payroll Support"],
+  },
+  {
+    icon: <Briefcase size={48} className="text-brand-teal" />,
+    title: "HR & Recruitment",
+    description:
+      "Human resources support including recruitment assistance, onboarding, and employee management tasks.",
+    features: ["Resume Screening", "Interview Scheduling", "Onboarding Support", "HR Documentation", "Employee Records"],
   },
 ];
 const ServicesSection = () => {
