@@ -47,7 +47,7 @@ const IndustriesSection = () => {
     <section id="industries" className="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-20 reveal">
-          <span className="text-brand-teal font-medium text-sm uppercase tracking-wider mb-3 inline-block">
+          <span className="text-brand-teal font-medium text-4l uppercase tracking-wider mb-3 inline-block">
             Industries We Serve
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-blue mb-6">Specialized Support for Your Industry</h2>
