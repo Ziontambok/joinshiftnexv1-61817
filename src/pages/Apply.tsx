@@ -61,8 +61,8 @@ const Apply = () => {
     setIsSubmitting(true);
     
     try {
-      // Create WhatsApp message with application details
-      const message = encodeURIComponent(
+      // Create email body with application details
+      const emailBody = encodeURIComponent(
         `New Job Application\n\n` +
         `Name: ${data.firstName} ${data.lastName}\n` +
         `Email: ${data.email}\n` +
@@ -72,16 +72,18 @@ const Apply = () => {
         `Cover Letter:\n${data.coverLetter}`
       );
       
-      window.open(`https://wa.me/639173132145?text=${message}`, "_blank");
+      const emailSubject = encodeURIComponent("Applicant");
+      
+      window.location.href = `mailto:info@primevsolutions.com?subject=${emailSubject}&body=${emailBody}`;
       
       toast({
-        title: "Application Submitted!",
-        description: "We'll review your application and get back to you soon.",
+        title: "Opening Email Client",
+        description: "Your email client will open with the application details pre-filled.",
       });
     } catch (error) {
       toast({
-        title: "Submission Error",
-        description: "Please try again or contact us directly.",
+        title: "Error",
+        description: "Please ensure you have an email client configured.",
         variant: "destructive",
       });
     } finally {
