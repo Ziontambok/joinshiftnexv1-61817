@@ -61,18 +61,18 @@ const Apply = () => {
     setIsSubmitting(true);
     
     try {
-      // Create email body with application details
+      // Create email body with application details in specified format
       const emailBody = encodeURIComponent(
-        `New Job Application\n\n` +
-        `Name: ${data.firstName} ${data.lastName}\n` +
-        `Email: ${data.email}\n` +
-        `Phone: ${data.phone}\n` +
-        `Position: ${data.position}\n\n` +
-        `Experience:\n${data.experience}\n\n` +
-        `Cover Letter:\n${data.coverLetter}`
+        `Last name: ${data.lastName}\n` +
+        `First name: ${data.firstName}\n` +
+        `Email address: ${data.email}\n` +
+        `Phone number: ${data.phone}\n` +
+        `Position applied for: ${data.position}\n\n` +
+        `Relevant experience:\n${data.experience}\n\n` +
+        `Cover letter:\n${data.coverLetter}`
       );
       
-      const emailSubject = encodeURIComponent("Applicant");
+      const emailSubject = encodeURIComponent(`Job Application: ${data.position} - ${data.firstName} ${data.lastName}`);
       
       window.location.href = `mailto:info@primevsolutions.com?subject=${emailSubject}&body=${emailBody}`;
       
