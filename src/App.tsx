@@ -18,6 +18,7 @@ import Services from "./pages/Services";
 import Industries from "./pages/Industries";
 import Benefits from "./pages/Benefits";
 import BecomePartner from "./pages/BecomePartner";
+import Apply from "./pages/Apply";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/careers/:roleId" element={<JobDescription />} />
             <Route path="/support" element={<Support />} />
             <Route path="/become-partner" element={<BecomePartner />} />
+            <Route path="/apply" element={<Apply />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

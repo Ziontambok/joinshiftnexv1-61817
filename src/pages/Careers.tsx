@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -7,9 +8,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import ChatwootWidget from "@/components/ChatwootWidget";
 import { Users, Headphones, Code, TrendingUp, FileText, Phone, Settings, BookOpen, Briefcase, Calendar, Mail, Database, Heart, Globe, Award, Target, Zap, CheckCircle, ArrowRight, Sparkles, TrendingUpIcon, Shield, Clock } from "lucide-react";
 const Careers = () => {
+  const navigate = useNavigate();
+  
   const handleApplyNow = () => {
-    const message = encodeURIComponent("Hi! I'm interested in career opportunities at Prime Virtual Solutions. I'd like to learn more about open positions.");
-    window.open(`https://wa.me/639173132145?text=${message}`, '_blank');
+    navigate('/apply');
   };
   const skills = [{
     icon: <Users className="h-8 w-8" />,
