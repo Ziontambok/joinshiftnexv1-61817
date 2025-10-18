@@ -324,7 +324,11 @@ const Careers = () => {
                       <CheckCircle className="h-5 w-5" />
                       Apply for a Position
                     </Button>
-                    <Button variant="outline" className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/5 px-8 py-6 text-lg font-semibold flex items-center gap-2" onClick={() => window.location.href = 'mailto:info@primevsolutions.com'}>
+                    <Button 
+                      variant="outline" 
+                      className="border-2 border-brand-teal text-brand-teal hover:bg-brand-teal/5 px-8 py-6 text-lg font-semibold flex items-center gap-2" 
+                      onClick={() => window.location.href = 'mailto:info@primevsolutions.com'}
+                    >
                       <Mail className="h-5 w-5" />
                       Email Us Your Resume
                     </Button>
