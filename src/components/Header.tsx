@@ -92,9 +92,7 @@ const Header = () => {
             <Link to="/industries" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Industries
             </Link>
-            <Link to="/become-partner" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
-              Become a Partner
-            </Link>
+            <Link to="/become-partner" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>Collaboration </Link>
             <Link to="/benefits" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Benefits
             </Link>
