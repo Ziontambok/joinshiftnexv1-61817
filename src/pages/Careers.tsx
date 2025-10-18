@@ -120,7 +120,7 @@ const Careers = () => {
           }}></div>
           </div>
           
-          <div className="container relative z-10 mx-0 px-0 my-0 py-0">
+          <div className="container relative z-10 mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center text-white">
               <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6 animate-fade-in">
                 <Briefcase className="h-5 w-5" />
