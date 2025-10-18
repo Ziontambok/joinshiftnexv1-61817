@@ -64,14 +64,6 @@ const Header = () => {
           <Link to="/support" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
             Support
           </Link>
-          <div className="flex items-center space-x-4">
-            <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-teal font-medium transition-colors">
-              Login
-            </a>
-            <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="btn-primary">
-              Get Started
-            </a>
-          </div>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -102,14 +94,6 @@ const Header = () => {
             <Link to="/support" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left" onClick={() => setIsMenuOpen(false)}>
               Support
             </Link>
-            <div className="flex flex-col space-y-4">
-              <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="text-brand-blue hover:text-brand-teal font-medium transition-colors py-2 px-4 text-left">
-                Login
-              </a>
-              <a href="https://www.primevirtualsolutions.com" target="_blank" rel="noopener noreferrer" className="btn-primary w-full text-center">
-                Get Started
-              </a>
-            </div>
           </div>
         </div>}
     </header>;
