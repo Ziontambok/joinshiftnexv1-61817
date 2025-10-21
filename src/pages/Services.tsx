@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import { Users, Headphones, Code, Database, TrendingUp, FileText, Mail, Calendar, Phone, Settings, BookOpen, Briefcase, CheckCircle, ArrowRight, Sparkles } from "lucide-react";
 const services = [{
   icon: Users,
@@ -182,15 +183,13 @@ const Services = () => {
                           </div>
 
                           <div className="mt-6 pt-4 border-t border-gray-100">
-                            <a 
-                              href="https://primevsolutions.com/become-partner" 
-                              target="_blank" 
-                              rel="noopener noreferrer"
+                            <Link 
+                              to="/become-partner" 
                               className="text-brand-teal font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
                             >
                               Learn More
                               <ArrowRight className="h-4 w-4" />
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </CardContent>
@@ -248,9 +247,11 @@ const Services = () => {
                       </p>
 
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold" onClick={() => window.open("https://primevsolutions.com/become-partner", "_blank")}>
-                          Request a Custom Quote
-                        </Button>
+                        <Link to="/become-partner">
+                          <Button className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold">
+                            Request a Custom Quote
+                          </Button>
+                        </Link>
                         <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg font-semibold transition-all" onClick={() => window.open("https://m.me/PrimeVSolutions", "_blank")}>
                           Chat With Us
                         </Button>

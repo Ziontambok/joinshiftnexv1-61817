@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const VisionSection = () => {
   return (
@@ -58,14 +59,12 @@ const VisionSection = () => {
         </div>
         
         <div className="mt-16 text-center reveal">
-          <a 
-            href="https://primevsolutions.com/become-partner" 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <Link 
+            to="/become-partner" 
             className="btn-accent text-lg px-10 py-4 rounded-xl inline-block"
           >
             Get Started Now
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Users, Headphones, Code, Database, TrendingUp, FileText, Mail, Calendar, Phone, Settings, BookOpen, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 const services = [{
   icon: <Users size={48} className="text-brand-teal" />,
   title: "Virtual Assistants",
@@ -105,9 +106,9 @@ const ServicesSection = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             We can tailor our services to match your specific business requirements. Let's discuss how we can help.
           </p>
-          <a href="https://primevsolutions.com/become-partner" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg">
+          <Link to="/become-partner" className="bg-white text-brand-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg">
             Request a Custom Quote
-          </a>
+          </Link>
         </div>
       </div>
     </section>;
