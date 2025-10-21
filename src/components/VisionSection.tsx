@@ -59,7 +59,7 @@ const VisionSection = () => {
         
         <div className="mt-16 text-center reveal">
           <a 
-            href="https://www.primevirtualsolutions.com/" 
+            href="https://primevsolutions.com/become-partner" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="btn-accent text-lg px-10 py-4 rounded-xl inline-block"

@@ -325,11 +325,12 @@ const Benefits = () => {
                       </p>
 
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Link to="/support">
-                          <Button className="bg-white text-brand-blue hover:bg-gray-100 text-lg px-8 py-6 rounded-lg font-semibold flex items-center gap-2">
-                            Start Your Free Consultation <ArrowRight className="h-5 w-5" />
-                          </Button>
-                        </Link>
+                        <Button 
+                          className="bg-white text-brand-blue hover:bg-gray-100 text-lg px-8 py-6 rounded-lg font-semibold flex items-center gap-2"
+                          onClick={() => window.open("https://primevsolutions.com/become-partner", "_blank")}
+                        >
+                          Start Your Free Consultation <ArrowRight className="h-5 w-5" />
+                        </Button>
                         <Link to="/services">
                           <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue text-lg px-8 py-6 rounded-lg font-semibold transition-all">
                             Explore Our Services

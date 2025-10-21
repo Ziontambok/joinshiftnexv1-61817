@@ -105,7 +105,7 @@ const ServicesSection = () => {
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
             We can tailor our services to match your specific business requirements. Let's discuss how we can help.
           </p>
-          <a href="https://www.primevirtualsolutions.com/contact" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg">
+          <a href="https://primevsolutions.com/become-partner" target="_blank" rel="noopener noreferrer" className="bg-white text-brand-blue px-8 py-4 rounded-lg hover:bg-gray-100 transition-all inline-block font-semibold text-lg">
             Request a Custom Quote
           </a>
         </div>

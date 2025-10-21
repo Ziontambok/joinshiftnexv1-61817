@@ -182,10 +182,15 @@ const Services = () => {
                           </div>
 
                           <div className="mt-6 pt-4 border-t border-gray-100">
-                            <button className="text-brand-teal font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+                            <a 
+                              href="https://primevsolutions.com/become-partner" 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-brand-teal font-semibold flex items-center gap-2 group-hover:gap-3 transition-all"
+                            >
                               Learn More
                               <ArrowRight className="h-4 w-4" />
-                            </button>
+                            </a>
                           </div>
                         </div>
                       </CardContent>
@@ -243,13 +248,10 @@ const Services = () => {
                       </p>
 
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold" onClick={() => window.open("https://www.primevsolutions.com", "_blank")}>
+                        <Button className="bg-white text-brand-blue hover:bg-gray-100 px-8 py-6 text-lg font-semibold" onClick={() => window.open("https://primevsolutions.com/become-partner", "_blank")}>
                           Request a Custom Quote
                         </Button>
-                        <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg font-semibold transition-all" onClick={() => {
-                        const message = encodeURIComponent("Hi! I'd like to learn more about your services.");
-                        window.open(`https://wa.me/639173132145?text=${message}`, "_blank");
-                      }}>
+                        <Button variant="outline" className="border-2 border-white bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-brand-blue px-8 py-6 text-lg font-semibold transition-all" onClick={() => window.open("https://m.me/PrimeVSolutions", "_blank")}>
                           Chat With Us
                         </Button>
                       </div>

@@ -20,7 +20,7 @@ const NetworkSection = () => {
                 Looking for reliable virtual assistant services for your business? 
                 Partner with Prime Virtual Solutions to access our network of skilled professionals.
               </p>
-              <a href="https://www.primevirtualsolutions.com/partners" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-brand-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
+              <a href="https://primevsolutions.com/become-partner" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-white text-brand-blue px-6 py-3 rounded-lg hover:bg-gray-100 transition-all">
                 Become a Partner <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </div>

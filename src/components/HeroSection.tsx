@@ -83,7 +83,7 @@ const HeroSection = () => {
           <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
             Join Prime Virtual Solutions today and discover how expert virtual assistants can help you scale efficiently.
           </p>
-          <a href="https://www.primevirtualsolutions.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://primevsolutions.com/become-partner" target="_blank" rel="noopener noreferrer">
             <Button className="bg-white text-blue-700 hover:bg-gray-100 text-lg px-8 py-6 rounded-lg hover:shadow-lg transition-all duration-300">
               Get Started Today
             </Button>
