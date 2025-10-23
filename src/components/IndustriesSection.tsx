@@ -1,5 +1,6 @@
 import React from "react";
 import { ShoppingCart, Home, Scale, Heart, Briefcase, TrendingUp } from "lucide-react";
+import { Link } from "react-router-dom";
 const industries = [{
   icon: <ShoppingCart size={48} className="text-brand-teal" />,
   title: "E-commerce",
@@ -73,9 +74,9 @@ const IndustriesSection = () => {
             We work with Enterprises and SMEs across many sectors. Contact us to discuss how our virtual assistants can
             support your specific business needs.
           </p>
-          <a href="https://www.primevirtualsolutions.com/contact" target="_blank" rel="noopener noreferrer" className="bg-brand-teal text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all inline-block">
+          <Link to="/support" className="bg-brand-teal text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all inline-block">
             Contact Us
-          </a>
+          </Link>
         </div>
       </div>
     </section>;
