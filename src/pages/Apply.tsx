@@ -24,8 +24,20 @@ const Apply = () => {
     setIsSubmitting(true);
 
     const formData = new FormData(e.currentTarget);
+    
+    // Debug: Log form data
+    console.log("Form data:", {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      position: formData.get("position"),
+      experience: formData.get("experience"),
+      coverLetter: formData.get("coverLetter"),
+    });
+    
     const applicationData = {
-      name: `${formData.get("firstName")} ${formData.get("lastName")}`,
+      name: `${formData.get("firstName")} ${formData.get("lastName")}`.trim(),
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       position: formData.get("position") as string,
@@ -33,10 +45,14 @@ const Apply = () => {
       coverLetter: formData.get("coverLetter") as string,
     };
 
+    console.log("Application data being sent:", applicationData);
+
     try {
-      const { error } = await supabase.functions.invoke("send-application-email", {
+      const { data, error } = await supabase.functions.invoke("send-application-email", {
         body: applicationData,
       });
+
+      console.log("Function response:", { data, error });
 
       if (error) throw error;
 
