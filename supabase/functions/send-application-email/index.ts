@@ -66,7 +66,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: "Prime Virtual Solutions <onboarding@resend.dev>",
-        to: ["pizonzachary560@gmail.com"],
+        to: ["info@primevsolutions.com"],
         subject: `New Application: ${position} - ${name}`,
         html: `
           <h2>New Job Application Received</h2>
