@@ -25,12 +25,12 @@ const Apply = () => {
 
     const formData = new FormData(e.currentTarget);
     const applicationData = {
-      name: formData.get("name") as string,
+      name: `${formData.get("firstName")} ${formData.get("lastName")}`,
       email: formData.get("email") as string,
       phone: formData.get("phone") as string,
       position: formData.get("position") as string,
       experience: formData.get("experience") as string,
-      coverLetter: formData.get("cover-letter") as string,
+      coverLetter: formData.get("coverLetter") as string,
     };
 
     try {
@@ -45,7 +45,7 @@ const Apply = () => {
         description: "We'll review your application and get back to you soon.",
       });
 
-      e.currentTarget.reset();
+      (e.target as HTMLFormElement).reset();
     } catch (error) {
       console.error("Error submitting application:", error);
       toast({
