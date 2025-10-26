@@ -62,6 +62,12 @@ const Apply = () => {
                   </div>
 
                   <form action="https://formsubmit.co/pizonzachary560@gmail.com" method="POST" className="space-y-6">
+                    {/* FormSubmit Configuration */}
+                    <input type="hidden" name="_subject" value="New Job Application - Prime Virtual Solutions" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="text" name="_honey" style={{ display: 'none' }} />
+
                     {/* Personal Information */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-semibold text-brand-blue flex items-center gap-2">
