@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -10,86 +7,12 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { useToast } from "@/hooks/use-toast";
-import { Briefcase, Send, Upload, CheckCircle, Sparkles } from "lucide-react";
-
-const positions = [
-  "Virtual Assistant",
-  "Customer Support Representative",
-  "Technical Support Specialist",
-  "Web Developer",
-  "Digital Marketing Specialist",
-  "Data Entry Specialist",
-  "Content Writer",
-  "Call Center Agent",
-  "Project Coordinator",
-  "Sales Support",
-  "Bookkeeper",
-  "HR Assistant",
-  "Other"
-];
-
-const applicationSchema = z.object({
-  firstName: z.string().trim().min(1, "First name is required").max(50, "First name must be less than 50 characters"),
-  lastName: z.string().trim().min(1, "Last name is required").max(50, "Last name must be less than 50 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  phone: z.string().trim().min(10, "Phone number must be at least 10 digits").max(20, "Phone number must be less than 20 characters"),
-  position: z.string().min(1, "Please select a position"),
-  experience: z.string().trim().min(1, "Experience is required").max(2000, "Experience must be less than 2000 characters"),
-  coverLetter: z.string().trim().min(50, "Cover letter must be at least 50 characters").max(2000, "Cover letter must be less than 2000 characters"),
-  resume: z.string().optional()
-});
-
-type ApplicationForm = z.infer<typeof applicationSchema>;
+import { Briefcase, Send, CheckCircle, Sparkles } from "lucide-react";
 
 const Apply = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const { register, handleSubmit, formState: { errors }, setValue, watch } = useForm<ApplicationForm>({
-    resolver: zodResolver(applicationSchema),
-  });
-
-  const position = watch("position");
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  const onSubmit = async (data: ApplicationForm) => {
-    setIsSubmitting(true);
-    
-    try {
-      // Create email body with application details in specified format
-      const emailBody = encodeURIComponent(
-        `Last name: ${data.lastName}\n` +
-        `First name: ${data.firstName}\n` +
-        `Email address: ${data.email}\n` +
-        `Phone number: ${data.phone}\n` +
-        `Position applied for: ${data.position}\n\n` +
-        `Relevant experience:\n${data.experience}\n\n` +
-        `Cover letter:\n${data.coverLetter}`
-      );
-      
-      const emailSubject = encodeURIComponent(`Job Application: ${data.position} - ${data.firstName} ${data.lastName}`);
-      
-      window.location.href = `mailto:info@primevsolutions.com?subject=${emailSubject}&body=${emailBody}`;
-      
-      toast({
-        title: "Opening Email Client",
-        description: "Your email client will open with the application details pre-filled.",
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Please ensure you have an email client configured.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -138,7 +61,7 @@ const Apply = () => {
                     <p className="text-gray-600">Please provide accurate information to help us process your application.</p>
                   </div>
 
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  <form action="https://formsubmit.co/pizonzachary560@gmail.com" method="POST" className="space-y-6">
                     {/* Personal Information */}
                     <div className="space-y-4">
                       <h3 className="text-xl font-semibold text-brand-blue flex items-center gap-2">
@@ -151,26 +74,22 @@ const Apply = () => {
                           <Label htmlFor="firstName">First Name *</Label>
                           <Input
                             id="firstName"
-                            {...register("firstName")}
-                            className={errors.firstName ? "border-red-500" : ""}
+                            name="firstName"
+                            required
+                            maxLength={50}
                             placeholder="John"
                           />
-                          {errors.firstName && (
-                            <p className="text-sm text-red-500 mt-1">{errors.firstName.message}</p>
-                          )}
                         </div>
 
                         <div>
                           <Label htmlFor="lastName">Last Name *</Label>
                           <Input
                             id="lastName"
-                            {...register("lastName")}
-                            className={errors.lastName ? "border-red-500" : ""}
+                            name="lastName"
+                            required
+                            maxLength={50}
                             placeholder="Doe"
                           />
-                          {errors.lastName && (
-                            <p className="text-sm text-red-500 mt-1">{errors.lastName.message}</p>
-                          )}
                         </div>
                       </div>
 
@@ -179,28 +98,25 @@ const Apply = () => {
                           <Label htmlFor="email">Email Address *</Label>
                           <Input
                             id="email"
+                            name="email"
                             type="email"
-                            {...register("email")}
-                            className={errors.email ? "border-red-500" : ""}
+                            required
+                            maxLength={255}
                             placeholder="john.doe@example.com"
                           />
-                          {errors.email && (
-                            <p className="text-sm text-red-500 mt-1">{errors.email.message}</p>
-                          )}
                         </div>
 
                         <div>
                           <Label htmlFor="phone">Phone Number *</Label>
                           <Input
                             id="phone"
+                            name="phone"
                             type="tel"
-                            {...register("phone")}
-                            className={errors.phone ? "border-red-500" : ""}
+                            required
+                            minLength={10}
+                            maxLength={20}
                             placeholder="+1 234 567 8900"
                           />
-                          {errors.phone && (
-                            <p className="text-sm text-red-500 mt-1">{errors.phone.message}</p>
-                          )}
                         </div>
                       </div>
                     </div>
@@ -214,35 +130,39 @@ const Apply = () => {
 
                       <div>
                         <Label htmlFor="position">Position Applied For *</Label>
-                        <Select onValueChange={(value) => setValue("position", value)} value={position}>
-                          <SelectTrigger className={errors.position ? "border-red-500" : ""}>
-                            <SelectValue placeholder="Select a position" />
-                          </SelectTrigger>
-                          <SelectContent>
-                            {positions.map((pos) => (
-                              <SelectItem key={pos} value={pos}>
-                                {pos}
-                              </SelectItem>
-                            ))}
-                          </SelectContent>
-                        </Select>
-                        {errors.position && (
-                          <p className="text-sm text-red-500 mt-1">{errors.position.message}</p>
-                        )}
+                        <select
+                          id="position"
+                          name="position"
+                          required
+                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        >
+                          <option value="">Select a position</option>
+                          <option value="Virtual Assistant">Virtual Assistant</option>
+                          <option value="Customer Support Representative">Customer Support Representative</option>
+                          <option value="Technical Support Specialist">Technical Support Specialist</option>
+                          <option value="Web Developer">Web Developer</option>
+                          <option value="Digital Marketing Specialist">Digital Marketing Specialist</option>
+                          <option value="Data Entry Specialist">Data Entry Specialist</option>
+                          <option value="Content Writer">Content Writer</option>
+                          <option value="Call Center Agent">Call Center Agent</option>
+                          <option value="Project Coordinator">Project Coordinator</option>
+                          <option value="Sales Support">Sales Support</option>
+                          <option value="Bookkeeper">Bookkeeper</option>
+                          <option value="HR Assistant">HR Assistant</option>
+                          <option value="Other">Other</option>
+                        </select>
                       </div>
 
                       <div>
                         <Label htmlFor="experience">Relevant Experience *</Label>
                         <Textarea
                           id="experience"
-                          {...register("experience")}
-                          className={errors.experience ? "border-red-500" : ""}
+                          name="experience"
+                          required
+                          maxLength={2000}
                           placeholder="Describe your relevant work experience, skills, and achievements..."
                           rows={5}
                         />
-                        {errors.experience && (
-                          <p className="text-sm text-red-500 mt-1">{errors.experience.message}</p>
-                        )}
                       </div>
                     </div>
 
@@ -257,14 +177,13 @@ const Apply = () => {
                         <Label htmlFor="coverLetter">Why do you want to join Prime Virtual Solutions? *</Label>
                         <Textarea
                           id="coverLetter"
-                          {...register("coverLetter")}
-                          className={errors.coverLetter ? "border-red-500" : ""}
+                          name="coverLetter"
+                          required
+                          minLength={50}
+                          maxLength={2000}
                           placeholder="Tell us why you're interested in this position and what makes you a great fit for our team..."
                           rows={6}
                         />
-                        {errors.coverLetter && (
-                          <p className="text-sm text-red-500 mt-1">{errors.coverLetter.message}</p>
-                        )}
                       </div>
                     </div>
 
@@ -272,17 +191,10 @@ const Apply = () => {
                     <div className="pt-6 border-t border-gray-200">
                       <Button
                         type="submit"
-                        disabled={isSubmitting}
                         className="w-full bg-gradient-to-r from-brand-blue to-brand-teal hover:opacity-90 text-white py-6 text-lg font-semibold"
                       >
-                        {isSubmitting ? (
-                          <>Processing...</>
-                        ) : (
-                          <>
-                            <Send className="h-5 w-5 mr-2" />
-                            Submit Application
-                          </>
-                        )}
+                        <Send className="h-5 w-5 mr-2" />
+                        Submit Application
                       </Button>
                       <p className="text-sm text-gray-500 text-center mt-4">
                         By submitting this form, you agree to our terms and conditions.
