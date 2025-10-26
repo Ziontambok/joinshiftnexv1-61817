@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,11 +8,55 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Briefcase, Send, CheckCircle, Sparkles } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Apply = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.currentTarget);
+    const applicationData = {
+      name: formData.get("name") as string,
+      email: formData.get("email") as string,
+      phone: formData.get("phone") as string,
+      position: formData.get("position") as string,
+      experience: formData.get("experience") as string,
+      coverLetter: formData.get("cover-letter") as string,
+    };
+
+    try {
+      const { error } = await supabase.functions.invoke("send-application-email", {
+        body: applicationData,
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Application Submitted!",
+        description: "We'll review your application and get back to you soon.",
+      });
+
+      e.currentTarget.reset();
+    } catch (error) {
+      console.error("Error submitting application:", error);
+      toast({
+        title: "Submission Failed",
+        description: "Please try again or contact us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -61,12 +105,7 @@ const Apply = () => {
                     <p className="text-gray-600">Please provide accurate information to help us process your application.</p>
                   </div>
 
-                  <form action="https://formsubmit.co/pizonzachary560@gmail.com" method="POST" className="space-y-6">
-                    {/* FormSubmit Configuration */}
-                    <input type="hidden" name="_subject" value="New Job Application - Prime Virtual Solutions" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input type="text" name="_honey" style={{ display: 'none' }} />
+                  <form onSubmit={handleSubmit} className="space-y-6">
 
                     {/* Personal Information */}
                     <div className="space-y-4">
@@ -197,10 +236,11 @@ const Apply = () => {
                     <div className="pt-6 border-t border-gray-200">
                       <Button
                         type="submit"
+                        disabled={isSubmitting}
                         className="w-full bg-gradient-to-r from-brand-blue to-brand-teal hover:opacity-90 text-white py-6 text-lg font-semibold"
                       >
                         <Send className="h-5 w-5 mr-2" />
-                        Submit Application
+                        {isSubmitting ? "Submitting..." : "Submit Application"}
                       </Button>
                       <p className="text-sm text-gray-500 text-center mt-4">
                         By submitting this form, you agree to our terms and conditions.
