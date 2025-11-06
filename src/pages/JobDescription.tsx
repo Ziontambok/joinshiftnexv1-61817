@@ -111,7 +111,7 @@ const JobDescription = () => {
               <Button variant="outline" size="sm" className="hidden sm:flex">
                 Share <ExternalLink size={14} className="ml-1" />
               </Button>
-              <Button size="sm">Apply Now</Button>
+              <Button size="sm" onClick={() => window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd_zUalZNP3KHriNSeqqwYi1B-EU8-O45i8ZvPhYsaLOVUZ-A/viewform'}>Apply Now</Button>
             </div>
           </div>
         </div>

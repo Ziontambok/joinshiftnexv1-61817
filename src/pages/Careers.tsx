@@ -11,7 +11,7 @@ const Careers = () => {
   const navigate = useNavigate();
   
   const handleApplyNow = () => {
-    navigate('/apply');
+    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSd_zUalZNP3KHriNSeqqwYi1B-EU8-O45i8ZvPhYsaLOVUZ-A/viewform';
   };
   const skills = [{
     icon: <Users className="h-8 w-8" />,
