@@ -44,7 +44,7 @@ const App = () => (
             <Route path="/careers/:roleId" element={<JobDescription />} />
             <Route path="/support" element={<Support />} />
             <Route path="/become-partner" element={<BecomePartner />} />
-            <Route path="/apply" element={<Apply />} />
+            <Route path="/hidden_apply" element={<Apply />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
